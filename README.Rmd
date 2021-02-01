@@ -83,7 +83,6 @@ clinical commissioning groups.
 
 <img src='man/figures/hierarchy-poster.png' align="centre"/>
 
-
 ## Contributing
 
 To contribute to this project, please follow [GitHub Flow](https://guides.github.com/introduction/flow/) when submitting changes.
