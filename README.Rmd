@@ -82,3 +82,15 @@ clinical commissioning groups.
 - [Hierarchical Representation of UK Statistical Geographies](https://ago-item-storage.s3.us-east-1.amazonaws.com/c2eb89ab698144bf825873c1ae161c06/hierarchy_poster_v2.9_DEC_2020_A3.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjENn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDAL%2FT0GCi8M4ch%2BKZhePRnEqg570td%2Bq1%2BQsHm8Bk7rAIgEODOCg%2BzG5NNDM7ttvYHkglQ1api0q8DzOwn5C8fkfYqvQMIwf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2MDQ3NTgxMDI2NjUiDPWhmGDGAtKVDrhj%2FyqRA5wSnsEpPXSefA2SiRZPp5VEuQrmBVwkNk4cC1GTQPB%2Fq904en17D%2FwdbD6ULn06InAt%2FNfTlvwL%2FfOiWM%2FLtueChurCHq3uqBk0sb2fuiCx8WTvyC76xdYweNf%2FrbKZXxp7R35hO6aSBpuOXm5iJjdp4jZOcjoJ2C2TbZwJai8t3QRvZpMpmlP6mX%2BaMpYbrGfPeq1TJRUW7jiYysBwiPgrGnyuIOyt15aYC2mAslP%2B3kZQLDVNTXBILjVNaexwa3LvC2uzGyrwN51l2AgOAvvVDIhWNsoJiuJFCdBHdRAUzqfwHNCLW2nQMH34mJN%2FqqHBk5tfD%2FAB2NJa4g9KpayhmMeLnXN4%2BMFSlSjHiCHTtrex%2FO7u829LwU%2BQaxDQRCfxDIKdmYoNSeNPT3gGd34GDEgjdqw0d7dBOYCn6gAgo2saeQgxbsnS7xOmXWCtUAmiLyW%2FIdSgcmibrlvhEyDWDz5Hk3JazEQumZYuRMw7hObULpFu1NNfS%2B1%2B315jCvgxExQnJ2aVyCKhI1pVfjzUMLfN4IAGOusBxtOpXGw%2B1CtcsIqGS45TxYfJWp32Z%2BxcyrIWHVpP%2BkP%2F7nFnPI3Pqdz5mxUNZOFPH7h1nJr%2BJEp0ozKozoTdldI9rvkx4B1UmQB99gWpPREaKD44FqFQO58lSl%2BT8IK67fAy1WTT3Qm6avFEV0fkO%2Fx0aOjXIVdR%2F3h4P39f%2Fe13JvTd%2FJPv8YSTOb9HD0NfkYNZaupjWA0jSN86M9qWfSkTBqHW%2B0iWJgHH%2BC3HyAoUL%2FgDdDE4thaEGvYAWY8H4lKPWGQ3%2B3j84nzqibA%2Fz%2FO4JWt8oqNC9Qo30NEeQ6BUtQxlaB66%2Fz6Wqw%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20210201T163018Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAYZTTEKKETT2RHOPR%2F20210201%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=8e0897a4597f0d29ee589a6316b1070fd414a7d31ddb2cca1855bf915fd5e7b5):
 
 <img src='man/figures/hierarchy-poster.png' align="centre"/>
+
+
+## Contributing
+
+To contribute to this project, please follow [GitHub Flow](https://guides.github.com/introduction/flow/) when submitting changes.
+
+> Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
+
+## Credits
+Developed by [Mike Page](https://github.com/MikeJohnPage) and [Matt Thomas](https://twitter.com/matthewgthomas) at the British Red Cross.
+
+[Contains public sector information licensed under the Open Government Licence v3.0.](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
