@@ -1,6 +1,6 @@
-#' Primary Care Network (PCN) shapefile
+#' Primary care network (PCN) shapefile
 #'
-#' A data set containing primary network geometries calculated using their
+#' A data set containing primary care network geometries calculated using their
 #' member GP practices.
 #'
 #' @format A data frame of class "sf" with 1,278 rows and 3 variables:
@@ -11,3 +11,4 @@
 #'   ...
 #' }
 #' @source \url{https://digital.nhs.uk/}
+"pcn_shp"
