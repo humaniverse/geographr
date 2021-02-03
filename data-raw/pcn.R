@@ -60,10 +60,10 @@ pcn_shp_all <-
   filter(!is.na(pcn_code))
 
 # Create union in overlapping GP areas
-pcn_shp <-
+pcn <-
   pcn_shp_all %>%
   group_by(pcn_code, pcn_name) %>%
   summarise()
 
 # Save output to data/ folder
-usethis::use_data(pcn_shp, overwrite = TRUE)
+usethis::use_data(pcn, overwrite = TRUE)
