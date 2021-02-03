@@ -5,6 +5,10 @@ library(httr)
 library(sf)
 
 # ---- Build Primary Care Network boundaries ----
+# - license -
+# All the publicly accessible NHS Digital data is available under the Open
+# Government License: https://digital.nhs.uk/services/supporting-open-data-and-transparency
+
 # PCNs don't have boundaries, but we can build them from the boundaries of their
 # member GPs
 # Load GP submitted inner catchment areas - Jan-Mar 2020
