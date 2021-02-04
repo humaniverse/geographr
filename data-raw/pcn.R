@@ -65,5 +65,8 @@ pcn <-
   group_by(pcn_code, pcn_name) %>%
   summarise()
 
+# Make sure geometries are valid
+pcn <- st_make_valid(pcn)
+
 # Save output to data/ folder
 usethis::use_data(pcn, overwrite = TRUE)

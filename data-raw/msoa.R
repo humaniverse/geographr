@@ -18,5 +18,8 @@ msoa_2011 <-
     geometry
   )
 
+# Make sure geometries are valid
+msoa_2011 <- st_make_valid(msoa_2011)
+
 # Save output to data/ folder
 usethis::use_data(msoa_2011, overwrite = TRUE)
