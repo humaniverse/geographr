@@ -11,7 +11,7 @@
 #'   ...
 #' }
 #' @source \url{https://digital.nhs.uk/}
-"pcn_shp"
+"pcn"
 
 #' Middle super output areas (2011)
 #'
