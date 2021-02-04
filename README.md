@@ -37,10 +37,11 @@ To add datasets to the package:
 
 -   Add a script to generate the data in `/data-raw`, adding
     `usethis::use_data(DATASET, overwrite = TRUE)` to the end of the
-    file, replacing the name of the dataset with the object in the R
+    file, replacing the name of `DATASET` with the object in the R
     environment containing the data. This will save the generated data
     into `/data`.
 -   Add documentation for the dataset in `R/data.R`.
+-   Update `LICENSE` by adding the license of the new data set.
 
 To add functions:
 
