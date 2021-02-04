@@ -14,6 +14,7 @@ msoa_2011 <-
   msoa_2011 %>%
   select(
     msoa_name = Name,
+    msoa_code = Code,
     geometry
   )
 
