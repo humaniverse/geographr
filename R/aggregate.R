@@ -4,7 +4,7 @@
 # Source: https://geocompr.robinlovelace.net/spatial-operations.html#spatial-aggr
 msoa_pcn <- function(metric, extensive = TRUE) {
   sf::st_interpolate_aw(
-    geographr::msoa_11[, metric],
+    geographr::msoa_2011[, metric],
     geographr::pcn,
     extensive = extensive
   )
@@ -17,15 +17,15 @@ msoa_pcn <- function(metric, extensive = TRUE) {
 #   scores appended. Ignore the warning errors and notice the new PCN
 #   vulnerability scores that are calculated:
 
-# library(tidyverse)
-# library(sf)
-#
-# msoa_temp <-
-#   read_sf("https://raw.githubusercontent.com/britishredcrosssociety/covid-19-vulnerability/master/output/vulnerability-MSOA-England.geojson") %>%
-#   st_make_valid()
-#
-# sf::st_interpolate_aw(
-#   msoa_temp[, "Vulnerability.quintile"],
-#   sf::st_make_valid(geographr::pcn),
-#   extensive = FALSE
-# )
+library(tidyverse)
+library(sf)
+
+msoa_temp <-
+  read_sf("https://raw.githubusercontent.com/britishredcrosssociety/covid-19-vulnerability/master/output/vulnerability-MSOA-England.geojson") %>%
+  st_make_valid()
+
+st_interpolate_aw(
+  msoa_temp[, "Vulnerability.quintile"],
+  geographr::pcn,
+  extensive = FALSE
+)
