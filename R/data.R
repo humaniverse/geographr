@@ -42,3 +42,18 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "ccg"
+
+#' Sustainability and Transformation Partnerships (April 2020)
+#'
+#' A data set containing 2020 Sustainability and Transformation Partnerships
+#' (STP) geometries and their associated names and codes.
+#'
+#' @format A data frame of class "sf" with 42 rows and 3 variables:
+#' \describe{
+#'   \item{stp_code}{STP code}
+#'   \item{stp_name}{STP name}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"stp"
