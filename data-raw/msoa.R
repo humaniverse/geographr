@@ -3,6 +3,7 @@ library(tidyverse)
 library(sf)
 library(httr)
 library(rmapshaper)
+library(lobstr)
 
 # ---- Load shapefile ----
 # Middle Layer Super Output Areas (December 2011) Boundaries Full Clipped (BFC) EW V3
@@ -36,6 +37,14 @@ msoa <-
 
 # Make sure geometries are valid
 msoa <- st_make_valid(msoa)
+
+# Simplify shape to reduce file size
+msoa <- ms_simplify(msoa)
+
+# Check simplified shape is below 50Mb GitHub warning limit
+if(obj_size(msoa) > 50000000) {
+  stop("File is too large")
+}
 
 # Save output to data/ folder
 # usethis::use_data(stp, overwrite = TRUE)
