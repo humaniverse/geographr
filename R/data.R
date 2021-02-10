@@ -48,9 +48,11 @@
 #' Middle Super Output Areas (2011)
 #'
 #' A data set containing 2011 Middle Super Output Area (MSOA) geometries and
-#' their associated names and codes.
+#' their associated names and codes. Full clipped boundaries were simplified
+#' using the Visvalingam algorithm set to a weighting of 0.7 with a retaining
+#' proportion of 0.05 points.
 #'
-#' @format A data frame of class "sf" with 6,791 rows and 3 variables:
+#' @format A data frame of class "sf" with 7,201 rows and 3 variables:
 #' \describe{
 #'   \item{msoa_code}{MSOA code}
 #'   \item{msoa_name}{MSOA name}
@@ -58,7 +60,7 @@
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
-"msoa_2011"
+"msoa"
 
 #' Local Authority Districts (December 2019)
 #'
