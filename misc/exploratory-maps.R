@@ -258,7 +258,7 @@ map <-
   addMapPane("ccg", zIndex = 430) %>%
   addMapPane("stp", zIndex = 440) %>%
   addPolygons(
-    data = geographr::msoa_2011,
+    data = geographr::msoa,
     fillColor = "#73aeea",
     weight = 0.7,
     opacity = 0.8,
