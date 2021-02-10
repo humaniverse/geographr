@@ -47,4 +47,4 @@ if(obj_size(msoa) > 50000000) {
 }
 
 # Save output to data/ folder
-# usethis::use_data(stp, overwrite = TRUE)
+usethis::use_data(msoa, overwrite = TRUE)
