@@ -2,6 +2,7 @@
 library(tidyverse)
 library(sf)
 library(httr)
+library(lobstr)
 
 # ---- Load shapefile ----
 # Sustainability and Transformation Partnerships (April 2020) Boundaries EN BUC
@@ -35,6 +36,11 @@ stp <-
 
 # Make sure geometries are valid
 stp <- st_make_valid(stp)
+
+# Check object is below 50Mb GitHub warning limit
+if(obj_size(stp) > 50000000) {
+  stop("File is too large")
+}
 
 # Save output to data/ folder
 usethis::use_data(stp, overwrite = TRUE)

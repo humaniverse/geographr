@@ -3,6 +3,7 @@ library(tidyverse)
 library(readxl)
 library(httr)
 library(sf)
+library(lobstr)
 
 # ---- Build Primary Care Network boundaries ----
 # - license -
@@ -67,6 +68,11 @@ pcn <-
 
 # Make sure geometries are valid
 pcn <- st_make_valid(pcn)
+
+# Check object is below 50Mb GitHub warning limit
+if(obj_size(pcn) > 50000000) {
+  stop("File is too large")
+}
 
 # Save output to data/ folder
 usethis::use_data(pcn, overwrite = TRUE)

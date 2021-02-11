@@ -2,6 +2,7 @@
 library(tidyverse)
 library(sf)
 library(httr)
+library(lobstr)
 
 # ---- Load shapefile ----
 # Clinical Commissioning Groups (April 2020) Ultra Generalised Boundaries EN
@@ -35,6 +36,11 @@ ccg <-
 
 # Make sure geometries are valid
 ccg <- st_make_valid(ccg)
+
+# Check object is below 50Mb GitHub warning limit
+if(obj_size(ccg) > 50000000) {
+  stop("File is too large")
+}
 
 # Save output to data/ folder
 usethis::use_data(ccg, overwrite = TRUE)

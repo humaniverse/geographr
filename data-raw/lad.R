@@ -2,6 +2,7 @@
 library(tidyverse)
 library(sf)
 library(httr)
+library(lobstr)
 
 # ---- Load shapefile ----
 # Local Authority Districts (December 2019) Boundaries UK BUC
@@ -35,6 +36,11 @@ la <-
 
 # Make sure geometries are valid
 la <- st_make_valid(la)
+
+# Check object is below 50Mb GitHub warning limit
+if(obj_size(lad) > 50000000) {
+  stop("File is too large")
+}
 
 # Save output to data/ folder
 usethis::use_data(la, overwrite = TRUE)
