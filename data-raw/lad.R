@@ -21,21 +21,21 @@ shapefile <- paste0(
   "/Local_Authority_Districts_(December_2019)_Boundaries_UK_BUC.shp"
 )
 
-la <-
+lad <-
   read_sf(shapefile) %>%
   st_transform(crs = 4326)
 
 # Select and rename vars
-la <-
-  la %>%
+lad <-
+  lad %>%
   select(
-    la_name = lad19nm,
-    la_code = lad19cd,
+    lad_name = lad19nm,
+    lad_code = lad19cd,
     geometry
   )
 
 # Make sure geometries are valid
-la <- st_make_valid(la)
+lad <- st_make_valid(lad)
 
 # Check object is below 50Mb GitHub warning limit
 if(obj_size(lad) > 50000000) {
@@ -43,4 +43,4 @@ if(obj_size(lad) > 50000000) {
 }
 
 # Save output to data/ folder
-usethis::use_data(la, overwrite = TRUE)
+usethis::use_data(lad, overwrite = TRUE)
