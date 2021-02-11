@@ -69,6 +69,11 @@ pcn <-
 # Make sure geometries are valid
 pcn <- st_make_valid(pcn)
 
+# Reorder cols to be consistent with other data sets
+pcn <-
+  pcn %>%
+  select(pcn_name, pcn_code, geometry)
+
 # Check object is below 50Mb GitHub warning limit
 if(obj_size(pcn) > 50000000) {
   stop("File is too large")

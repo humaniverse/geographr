@@ -5,8 +5,8 @@
 #'
 #' @format A data frame of class "sf" with 1,278 rows and 3 variables:
 #' \describe{
-#'   \item{pcn_code}{PCN code}
 #'   \item{pcn_name}{PCN name}
+#'   \item{pcn_code}{PCN code}
 #'   \item{geometry}{multipolygon coordinates}
 #'   ...
 #' }
@@ -20,8 +20,8 @@
 #'
 #' @format A data frame of class "sf" with 135 rows and 3 variables:
 #' \describe{
-#'   \item{ccg_code}{CCG code}
 #'   \item{ccg_name}{CCG name}
+#'   \item{ccg_code}{CCG code}
 #'   \item{geometry}{multipolygon coordinates}
 #'   ...
 #' }
@@ -36,8 +36,8 @@
 #'
 #' @format A data frame of class "sf" with 42 rows and 3 variables:
 #' \describe{
-#'   \item{stp_code}{STP code}
 #'   \item{stp_name}{STP name}
+#'   \item{stp_code}{STP code}
 #'   \item{geometry}{multipolygon coordinates}
 #'   ...
 #' }
@@ -54,8 +54,8 @@
 #'
 #' @format A data frame of class "sf" with 7,201 rows and 3 variables:
 #' \describe{
-#'   \item{msoa_code}{MSOA code}
 #'   \item{msoa_name}{MSOA name}
+#'   \item{msoa_code}{MSOA code}
 #'   \item{geometry}{multipolygon coordinates}
 #'   ...
 #' }
@@ -69,8 +69,8 @@
 #'
 #' @format A data frame of class "sf" with 382 rows and 3 variables:
 #' \describe{
-#'   \item{lad_code}{LAD code}
 #'   \item{lad_name}{LAD name}
+#'   \item{lad_code}{LAD code}
 #'   \item{geometry}{multipolygon coordinates}
 #'   ...
 #' }
@@ -85,8 +85,8 @@
 #'
 #' @format A data frame of class "sf" with 8,887 rows and 3 variables:
 #' \describe{
-#'   \item{ward_code}{ward code}
 #'   \item{ward_name}{ward name}
+#'   \item{ward_code}{ward code}
 #'   \item{geometry}{multipolygon coordinates}
 #'   ...
 #' }
