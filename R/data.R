@@ -77,7 +77,7 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lad"
 
-#' Wards (December 2020)
+#' Wards / Electoral Divisions (December 2020)
 #'
 #' A data set containing 2020 Ward / Electoral Division geometries and their
 #' associated names and codes. Boundaries are Super generalised (200m) - clipped
@@ -87,6 +87,22 @@
 #' \describe{
 #'   \item{ward_code}{ward code}
 #'   \item{ward_name}{ward name}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"wards"
+
+#' Major Towns and Cities (December 2015)
+#'
+#' A data set containing 2015 Major Town and City (December 2015) geometries
+#' and their associated names and codes. Boundaries are Super generalised (200m)
+#' - clipped to the coastline (Mean High Water mark).
+#'
+#' @format A data frame of class "sf" with 112 rows and 3 variables:
+#' \describe{
+#'   \item{town_city_name}{town and City name}
+#'   \item{town_city_code}{town and city code}
 #'   \item{geometry}{multipolygon coordinates}
 #'   ...
 #' }
