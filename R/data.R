@@ -76,3 +76,19 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lad"
+
+#' Wards (December 2020)
+#'
+#' A data set containing 2020 Ward / Electoral Division geometries and their
+#' associated names and codes. Boundaries are Super generalised (200m) - clipped
+#' to the coastline (Mean High Water mark).
+#'
+#' @format A data frame of class "sf" with 8,887 rows and 3 variables:
+#' \describe{
+#'   \item{ward_code}{ward code}
+#'   \item{ward_name}{ward name}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"wards"
