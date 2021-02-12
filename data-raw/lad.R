@@ -1,28 +1,20 @@
-# ---- Load libraries ----
+# ---- Load ----
 library(tidyverse)
 library(sf)
-library(httr)
 library(lobstr)
+library(devtools)
 
-# ---- Load shapefile ----
-# Local Authority Districts (December 2019) Boundaries UK BUC
-# source: https://geoportal.statistics.gov.uk/datasets/local-authority-districts-december-2019-boundaries-uk-buc
-GET(
-  "https://opendata.arcgis.com/datasets/3a4fa2ce68f642e399b4de07643eeed3_0.zip?outSR=%7B%22latestWkid%22%3A27700%2C%22wkid%22%3A27700%7D",
-  write_disk(tf <- tempfile(fileext = ".zip"))
-)
+# Load package
+load_all(".")
 
-unzip(tf, exdir = tempdir())
-unlink(tf)
-rm(tf)
-
-shapefile <- paste0(
-  tempdir(),
-  "/Local_Authority_Districts_(December_2019)_Boundaries_UK_BUC.shp"
-)
+# Set query url
+query_url <-
+  query_urls %>%
+  filter(data_set == "lad") %>%
+  pull(query_url)
 
 lad <-
-  read_sf(shapefile) %>%
+  read_sf(query_url) %>%
   st_transform(crs = 4326)
 
 # Select and rename vars
@@ -37,10 +29,18 @@ lad <-
 # Make sure geometries are valid
 lad <- st_make_valid(lad)
 
+# Check geometry types are homogenous
+if(lad %>% st_geometry_type() %>% unique() != "MULTIPOLYGON"){
+  stop("Incorrect geometry types")
+}
+
 # Check object is below 50Mb GitHub warning limit
 if(obj_size(lad) > 50000000) {
   stop("File is too large")
 }
 
+# rename
+boundaries_lad <- lad
+
 # Save output to data/ folder
-usethis::use_data(lad, overwrite = TRUE)
+usethis::use_data(boundaries_lad, overwrite = TRUE)
