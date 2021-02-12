@@ -1,0 +1,18 @@
+# ---- Load libraries ----
+library(tibble)
+
+# ---- Build data ----
+# ONS geoportal query urls can be found on the "API Explorer" tab.
+query_urls <-
+  tribble(
+    ~data_set, ~query_url, ~source,
+    "ccg", "https://ons-inspire.esriuk.com/arcgis/rest/services/Health_Boundaries/Clinical_Commissioning_Groups_April_2020_EN_BUC/MapServer/1/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/clinical-commissioning-groups-april-2020-ultra-generalised-boundaries-en?geometry=-41.190%2C48.021%2C36.901%2C57.304",
+    "counties_ua", "https://ons-inspire.esriuk.com/arcgis/rest/services/Administrative_Boundaries/Counties_and_Unitary_Authorities_December_2019_Boundaries_UK_BUC2/MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/counties-and-unitary-authorities-december-2019-boundaries-uk-buc?geometry=-39.482%2C47.293%2C38.609%2C56.716",
+    "lad", "https://ons-inspire.esriuk.com/arcgis/rest/services/Administrative_Boundaries/Local_Authority_Districts_December_2019_Boundaries_UK_BUC/MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/local-authority-districts-december-2019-boundaries-uk-buc",
+    "msoa", "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Middle_Layer_Super_Output_Areas_December_2011_EW_BFC_V2/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/middle-layer-super-output-areas-december-2011-boundaries-full-clipped-bfc-ew-v3?geometry=-41.548%2C48.013%2C37.202%2C57.298",
+    "stp", "https://ons-inspire.esriuk.com/arcgis/rest/services/Health_Boundaries/Sustainability_and_Transformation_Partnerships_April_2020_Boundaries_EN_BUC/MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/sustainability-and-transformation-partnerships-april-2020-boundaries-en-buc?geometry=-41.520%2C48.021%2C37.230%2C57.304",
+    "towns_cities", "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Major_Towns_and_Cities_December_2015_EW_BGG/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/major-towns-and-cities-december-2015-boundaries",
+    "wards", "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Wards_December_2020_UK_BSC_V2/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/wards-december-2020-uk-bsc-v2"
+  )
+
+usethis::use_data(query_urls, internal = TRUE, overwrite = TRUE)
