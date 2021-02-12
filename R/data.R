@@ -11,7 +11,7 @@
 #'   ...
 #' }
 #' @source \url{https://digital.nhs.uk/}
-"pcn"
+"boundaries_pcn"
 
 #' Clinical Commissioning Groups (April 2020)
 #'
@@ -26,7 +26,7 @@
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
-"ccg"
+"boundaries_ccg"
 
 #' Sustainability and Transformation Partnerships (April 2020)
 #'
@@ -42,7 +42,7 @@
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
-"stp"
+"boundaries_stp"
 
 
 #' Middle Super Output Areas (2011)
@@ -60,7 +60,7 @@
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
-"msoa"
+"boundaries_msoa"
 
 #' Local Authority Districts (December 2019)
 #'
@@ -75,7 +75,7 @@
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
-"lad"
+"boundaries_lad"
 
 #' Wards / Electoral Divisions (December 2020)
 #'
@@ -91,7 +91,7 @@
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
-"wards"
+"boundaries_wards"
 
 #' Major Towns and Cities (December 2015)
 #'
@@ -107,7 +107,7 @@
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
-"towns_cities"
+"boundaries_towns_cities"
 
 #' Counties and Unitary Authorities (December 2019)
 #'
@@ -123,4 +123,4 @@
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
-"counties_ua"
+"boundaries_counties_ua"
