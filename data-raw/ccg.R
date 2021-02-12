@@ -39,7 +39,7 @@ if(obj_size(ccg) > 50000000) {
   stop("File is too large")
 }
 
-# Rename for package
+# Rename
 boundaries_ccg <- ccg
 
 # Save output to data/ folder
