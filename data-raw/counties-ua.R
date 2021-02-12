@@ -30,12 +30,21 @@ counties_ua <-
 counties_ua <- st_make_valid(counties_ua)
 
 # Check geometry types are homogenous
-if(counties_ua %>% st_geometry_type() %>% unique() != "MULTIPOLYGON"){
+if (counties_ua %>%
+  st_geometry_type() %>%
+  unique() %>%
+  length() > 1) {
+  stop("Incorrect geometry types")
+}
+
+if (counties_ua %>%
+  st_geometry_type() %>%
+  unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }
 
 # Check object is below 50Mb GitHub warning limit
-if(obj_size(counties_ua) > 50000000) {
+if (obj_size(counties_ua) > 50000000) {
   stop("File is too large")
 }
 

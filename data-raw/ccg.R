@@ -30,12 +30,21 @@ ccg <-
 ccg <- st_make_valid(ccg)
 
 # Check geometry types are homogenous
-if(ccg %>% st_geometry_type() %>% unique() != "MULTIPOLYGON"){
+if (ccg %>%
+  st_geometry_type() %>%
+  unique() %>%
+  length() > 1) {
+  stop("Incorrect geometry types")
+}
+
+if (ccg %>%
+  st_geometry_type() %>%
+  unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }
 
 # Check object is below 50Mb GitHub warning limit
-if(obj_size(ccg) > 50000000) {
+if (obj_size(ccg) > 50000000) {
   stop("File is too large")
 }
 

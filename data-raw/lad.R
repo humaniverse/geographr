@@ -30,12 +30,21 @@ lad <-
 lad <- st_make_valid(lad)
 
 # Check geometry types are homogenous
-if(lad %>% st_geometry_type() %>% unique() != "MULTIPOLYGON"){
+if (lad %>%
+  st_geometry_type() %>%
+  unique() %>%
+  length() > 1) {
+  stop("Incorrect geometry types")
+}
+
+if (lad %>%
+  st_geometry_type() %>%
+  unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }
 
 # Check object is below 50Mb GitHub warning limit
-if(obj_size(lad) > 50000000) {
+if (obj_size(lad) > 50000000) {
   stop("File is too large")
 }
 

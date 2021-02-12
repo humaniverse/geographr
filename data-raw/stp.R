@@ -30,16 +30,25 @@ stp <-
 stp <- st_make_valid(stp)
 
 # Check geometry types are homogenous
-if(ccg %>% st_geometry_type() %>% unique() != "MULTIPOLYGON"){
+if (stp %>%
+  st_geometry_type() %>%
+  unique() %>%
+  length() > 1) {
+  stop("Incorrect geometry types")
+}
+if (stp %>%
+  st_geometry_type() %>%
+  unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }
 
 # Check object is below 50Mb GitHub warning limit
-if(obj_size(stp) > 50000000) {
+if (obj_size(stp) > 50000000) {
   stop("File is too large")
 }
 
 # Rename
 boundaries_stp <- stp
+
 # Save output to data/ folder
 usethis::use_data(boundaries_stp, overwrite = TRUE)
