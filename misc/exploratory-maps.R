@@ -254,6 +254,7 @@ map <-
   setView(lat = 54.00366, lng = -2.547855, zoom = 7) %>%
   addProviderTiles(providers$CartoDB.Positron) %>%
   addMapPane("boundaries_msoa", zIndex = 410) %>%
+  # addMapPane("boundaries_pcn", zIndex = 420) %>%
   addMapPane("boundaries_ccg", zIndex = 430) %>%
   addMapPane("boundaries_stp", zIndex = 440) %>%
   addMapPane("boundaries_lad", zIndex = 450) %>%
@@ -279,6 +280,25 @@ map <-
     label = ~msoa_name,
     group = "boundaries_msoa"
   ) %>%
+  # addPolygons(
+  #   data = boundaries_pcn,
+  #   fillColor = "#73aeea",
+  #   weight = 0.7,
+  #   opacity = 0.8,
+  #   color = "black",
+  #   dashArray = "2",
+  #   fillOpacity = 0.7,
+  #   options = pathOptions(pane = "boundaries_pcn"),
+  #   highlight = highlightOptions(
+  #     weight = 5,
+  #     color = "#666",
+  #     dashArray = "",
+  #     fillOpacity = 0.7,
+  #     bringToFront = TRUE
+  #   ),
+  #   label = ~pcn_name,
+  #   group = "boundaries_pcn"
+  # ) %>%
   addPolygons(
     data = boundaries_ccg,
     fillColor = "#e3bf7a",
