@@ -74,10 +74,18 @@ pcn <-
   pcn %>%
   select(pcn_name, pcn_code, geometry)
 
+# Check geometry types are homogenous
+if(pcn %>% st_geometry_type() %>% unique() != "MULTIPOLYGON"){
+  stop("Incorrect geometry types")
+}
+
 # Check object is below 50Mb GitHub warning limit
 if(obj_size(pcn) > 50000000) {
   stop("File is too large")
 }
+
+# Rename
+boundaries_pcn <- pcn
 
 # Save output to data/ folder
 usethis::use_data(pcn, overwrite = TRUE)
