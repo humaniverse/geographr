@@ -253,19 +253,22 @@ map <-
 ) %>%
   setView(lat = 54.00366, lng = -2.547855, zoom = 7) %>%
   addProviderTiles(providers$CartoDB.Positron) %>%
-  addMapPane("msoa", zIndex = 410) %>%
-  addMapPane("pcn", zIndex = 420) %>%
-  addMapPane("ccg", zIndex = 430) %>%
-  addMapPane("stp", zIndex = 440) %>%
+  addMapPane("boundaries_msoa", zIndex = 410) %>%
+  addMapPane("boundaries_ccg", zIndex = 430) %>%
+  addMapPane("boundaries_stp", zIndex = 440) %>%
+  addMapPane("boundaries_lad", zIndex = 450) %>%
+  addMapPane("boundaries_wards", zIndex = 460) %>%
+  addMapPane("boundaries_counties_ua", zIndex = 470) %>%
+  addMapPane("boundaries_towns_cities", zIndex = 480) %>%
   addPolygons(
-    data = geographr::msoa,
+    data = boundaries_msoa,
     fillColor = "#73aeea",
     weight = 0.7,
     opacity = 0.8,
     color = "black",
     dashArray = "2",
     fillOpacity = 0.7,
-    options = pathOptions(pane = "msoa"),
+    options = pathOptions(pane = "boundaries_msoa"),
     highlight = highlightOptions(
       weight = 5,
       color = "#666",
@@ -274,36 +277,17 @@ map <-
       bringToFront = TRUE
     ),
     label = ~msoa_name,
-    group = "msoa"
+    group = "boundaries_msoa"
   ) %>%
   addPolygons(
-    data = st_collection_extract(geographr::pcn, "POLYGON"),
-    fillColor = "#bb7ed7",
-    weight = 0.7,
-    opacity = 0.8,
-    color = "black",
-    dashArray = "2",
-    fillOpacity = 0.7,
-    options = pathOptions(pane = "pcn"),
-    highlight = highlightOptions(
-      weight = 5,
-      color = "#666",
-      dashArray = "",
-      fillOpacity = 0.7,
-      bringToFront = TRUE
-    ),
-    label = ~pcn_name,
-    group = "pcn"
-  ) %>%
-  addPolygons(
-    data = geographr::ccg,
+    data = boundaries_ccg,
     fillColor = "#e3bf7a",
     weight = 0.7,
     opacity = 0.8,
     color = "black",
     dashArray = "2",
     fillOpacity = 0.7,
-    options = pathOptions(pane = "ccg"),
+    options = pathOptions(pane = "boundaries_ccg"),
     highlight = highlightOptions(
       weight = 5,
       color = "#666",
@@ -312,17 +296,17 @@ map <-
       bringToFront = TRUE
     ),
     label = ~ccg_name,
-    group = "ccg"
+    group = "boundaries_ccg"
   ) %>%
   addPolygons(
-    data = geographr::stp,
+    data = boundaries_stp,
     fillColor = "#98c379",
     weight = 0.7,
     opacity = 0.8,
     color = "black",
     dashArray = "2",
     fillOpacity = 0.7,
-    options = pathOptions(pane = "stp"),
+    options = pathOptions(pane = "boundaries_stp"),
     highlight = highlightOptions(
       weight = 5,
       color = "#666",
@@ -331,10 +315,93 @@ map <-
       bringToFront = TRUE
     ),
     label = ~stp_name,
-    group = "stp"
+    group = "boundaries_stp"
+  ) %>%
+  addPolygons(
+    data = boundaries_lad,
+    fillColor = "#e3bf7a",
+    weight = 0.7,
+    opacity = 0.8,
+    color = "black",
+    dashArray = "2",
+    fillOpacity = 0.7,
+    options = pathOptions(pane = "boundaries_lad"),
+    highlight = highlightOptions(
+      weight = 5,
+      color = "#666",
+      dashArray = "",
+      fillOpacity = 0.7,
+      bringToFront = TRUE
+    ),
+    label = ~lad_name,
+    group = "boundaries_lad"
+  ) %>%
+  addPolygons(
+    data = boundaries_wards,
+    fillColor = "#e3bf7a",
+    weight = 0.7,
+    opacity = 0.8,
+    color = "black",
+    dashArray = "2",
+    fillOpacity = 0.7,
+    options = pathOptions(pane = "boundaries_wards"),
+    highlight = highlightOptions(
+      weight = 5,
+      color = "#666",
+      dashArray = "",
+      fillOpacity = 0.7,
+      bringToFront = TRUE
+    ),
+    label = ~ward_name,
+    group = "boundaries_wards"
+  ) %>%
+  addPolygons(
+    data = boundaries_counties_ua,
+    fillColor = "#e3bf7a",
+    weight = 0.7,
+    opacity = 0.8,
+    color = "black",
+    dashArray = "2",
+    fillOpacity = 0.7,
+    options = pathOptions(pane = "boundaries_counties_ua"),
+    highlight = highlightOptions(
+      weight = 5,
+      color = "#666",
+      dashArray = "",
+      fillOpacity = 0.7,
+      bringToFront = TRUE
+    ),
+    label = ~county_ua_name,
+    group = "boundaries_counties_ua"
+  ) %>%
+  addPolygons(
+    data = boundaries_towns_cities,
+    fillColor = "#e3bf7a",
+    weight = 0.7,
+    opacity = 0.8,
+    color = "black",
+    dashArray = "2",
+    fillOpacity = 0.7,
+    options = pathOptions(pane = "boundaries_towns_cities"),
+    highlight = highlightOptions(
+      weight = 5,
+      color = "#666",
+      dashArray = "",
+      fillOpacity = 0.7,
+      bringToFront = TRUE
+    ),
+    label = ~town_city_name,
+    group = "boundaries_towns_cities"
   ) %>%
   addLayersControl(
-    overlayGroups = c("msoa", "pcn", "ccg", "stp"),
+    overlayGroups = c(
+      "boundaries_msoa",
+      "boundaries_ccg",
+      "boundaries_stp",
+      "boundaries_lad",
+      "boundaries_wards",
+      "boundaries_counties_ua",
+      "boundaties_towns_cities"),
     options = layersControlOptions(collapsed = FALSE)
   )
 
