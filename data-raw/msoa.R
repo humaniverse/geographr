@@ -15,7 +15,10 @@ query_url <-
   pull(query_url)
 
 msoa <-
-  read_sf(query_url) %>%
+  read_sf(query_url)
+
+msoa <-
+  msoa %>%
   st_transform(crs = 4326)
 
 # Select and rename vars
