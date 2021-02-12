@@ -39,7 +39,7 @@ if(obj_size(lad) > 50000000) {
   stop("File is too large")
 }
 
-# rename
+# Rename
 boundaries_lad <- lad
 
 # Save output to data/ folder
