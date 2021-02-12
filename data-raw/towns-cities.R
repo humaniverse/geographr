@@ -1,28 +1,20 @@
-# ---- Load libraries ----
+# ---- Load ----
 library(tidyverse)
 library(sf)
-library(httr)
 library(lobstr)
+library(devtools)
 
-# ---- Load shapefile ----
-# Major Towns and Cities (December 2015) Boundaries - Generalised Grid (50m) - clipped to the coastline (Mean High Water mark).
-# source: https://geoportal.statistics.gov.uk/datasets/major-towns-and-cities-december-2015-boundaries
-GET(
-  "https://opendata.arcgis.com/datasets/5048387903bc49ca964cf04cd42b790d_0.zip?outSR=%7B%22latestWkid%22%3A27700%2C%22wkid%22%3A27700%7D",
-  write_disk(tf <- tempfile(fileext = ".zip"))
-)
+# Load package
+load_all(".")
 
-unzip(tf, exdir = tempdir())
-unlink(tf)
-rm(tf)
-
-shapefile <- paste0(
-  tempdir(),
-  "/Major_Towns_and_Cities__December_2015__Boundaries.shp"
-)
+# Set query url
+query_url <-
+  query_urls %>%
+  filter(data_set == "towns_cities") %>%
+  pull(query_url)
 
 towns_cities <-
-  read_sf(shapefile) %>%
+  read_sf(query_url) %>%
   st_transform(crs = 4326)
 
 # Select and rename vars
@@ -37,10 +29,25 @@ towns_cities <-
 # Make sure geometries are valid
 towns_cities <- st_make_valid(towns_cities)
 
+# Check geometry types are homogenous
+if(towns_cities %>%
+   st_geometry_type() %>%
+   unique() %>%
+   length() > 1){
+  stop("Incorrect geometry types")
+}
+
+if(towns_cities %>% st_geometry_type() %>% unique() != "MULTIPOLYGON"){
+  stop("Incorrect geometry types")
+}
+
 # Check object is below 50Mb GitHub warning limit
 if(obj_size(towns_cities) > 50000000) {
   stop("File is too large")
 }
 
+# Rename
+boundaries_towns_cities <- towns_cities
+
 # Save output to data/ folder
-usethis::use_data(towns_cities, overwrite = TRUE)
+usethis::use_data(boundaries_towns_cities, overwrite = TRUE)
