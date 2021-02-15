@@ -124,3 +124,19 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_counties_ua"
+
+#' Middle Layer Super Output Area (2011) to LAD (December 2019) Lookup
+#'
+#' A data set containing a lookup between 2011 Middle Super Output Areas (MSOA)
+#' and 2019 Local Authority Districts (LAD).
+#'
+#' @format A data frame of class "sf" with 7,201 rows and 4 variables:
+#' \describe{
+#'   \item{msoa_name}{MSOA name}
+#'   \item{msoa_code}{MSOA code}
+#'   \item{lad_name}{LAD name}
+#'   \item{lad_code}{LAD code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_msoa_lad"
