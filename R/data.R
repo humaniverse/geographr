@@ -140,3 +140,20 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_msoa_lad"
+
+#' Clinical Commissioning Group to Sustainability and Transformation
+#' Partnerships (April 2020) Lookup
+#'
+#' A data set containing a lookup between 2020 Clinical Commissioning Groups
+#' (CCG) and  Sustainability and Transformation Partnerships (STP).
+#'
+#' @format A data frame of class "sf" with 135 rows and 4 variables:
+#' \describe{
+#'   \item{ccg_name}{CCG name}
+#'   \item{ccg_code}{CCG code}
+#'   \item{stp_name}{STP name}
+#'   \item{stp_code}{STP code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_ccg_stp"
