@@ -7,8 +7,7 @@ library(htmltools)
 
 devtools::load_all(".")
 
-map <-
-  leaflet(
+map <- leaflet(
   options = leafletOptions(minZoom = 5, maxZoom = 15, attributionControl = F)
 ) %>%
   setView(lat = 54.00366, lng = -2.547855, zoom = 7) %>%
@@ -19,7 +18,7 @@ map <-
   addMapPane("boundaries_stp", zIndex = 440) %>%
   addMapPane("boundaries_lad", zIndex = 450) %>%
   # addMapPane("boundaries_wards", zIndex = 460) %>%
-  # addMapPane("boundaries_counties_ua", zIndex = 470) %>%
+  addMapPane("boundaries_counties_ua", zIndex = 470) %>%
   # addMapPane("boundaries_towns_cities", zIndex = 480) %>%
   # addPolygons(
   #   data = boundaries_msoa,
@@ -135,25 +134,25 @@ map <-
   #   label = ~ward_name,
   #   group = "boundaries_wards"
   # ) %>%
-  # addPolygons(
-  #   data = boundaries_counties_ua,
-  #   fillColor = "#e3bf7a",
-  #   weight = 0.7,
-  #   opacity = 0.8,
-  #   color = "black",
-  #   dashArray = "2",
-  #   fillOpacity = 0.7,
-  #   options = pathOptions(pane = "boundaries_counties_ua"),
-  #   highlight = highlightOptions(
-  #     weight = 5,
-  #     color = "#666",
-  #     dashArray = "",
-  #     fillOpacity = 0.7,
-  #     bringToFront = TRUE
-  #   ),
-  #   label = ~county_ua_name,
-  #   group = "boundaries_counties_ua"
-  # ) %>%
+  addPolygons(
+    data = boundaries_counties_ua,
+    fillColor = "#e3bf7a",
+    weight = 0.7,
+    opacity = 0.8,
+    color = "black",
+    dashArray = "2",
+    fillOpacity = 0.7,
+    options = pathOptions(pane = "boundaries_counties_ua"),
+    highlight = highlightOptions(
+      weight = 5,
+      color = "#666",
+      dashArray = "",
+      fillOpacity = 0.7,
+      bringToFront = TRUE
+    ),
+    label = ~county_ua_name,
+    group = "boundaries_counties_ua"
+  ) %>%
   # addPolygons(
   #   data = boundaries_towns_cities,
   #   fillColor = "#e3bf7a",
@@ -178,11 +177,15 @@ map <-
       # "boundaries_msoa",
       "boundaries_ccg",
       "boundaries_stp",
-      "boundaries_lad"
-      # ,
+      "boundaries_lad",
       # "boundaries_wards",
-      # "boundaries_counties_ua",
+      "boundaries_counties_ua"
+      # ,
       # "boundaties_towns_cities"
       ),
     options = layersControlOptions(collapsed = FALSE)
   )
+
+map
+
+saveWidget(map, "misc/compare-geographies.html")
