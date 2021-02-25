@@ -90,14 +90,18 @@ unitary authorities and the London boroughs in England; unitary
 authorities in Wales; council areas in Scotland; and district council
 areas in Northern Ireland.
 
-#### Local Authorities
+#### Local Authority Districts
 
 English local authority districts (LAD) (both metropolitan and
 non-metropolitan), London boroughs and unitary authorities average
 around 23 electoral wards/divisions each, Northern Irish district
 council areas around 22, Scottish council areas around 11 and Welsh
 unitary authorities about 40. Population counts can vary substantially,
-even within a single LAD, but the national average is about 5,500.
+even within a single LAD, but the national average is about 5,500. LA’s
+are split by Lower Tier Local Authorities (LTLA’s) and Upper Tier Local
+Authorities (UTLA’s). The difference between the two being LTLA’s use
+district councils and UTLA’s use county councils. The ONS refers to
+LTLA’s as LAD’s, and UTLA’s as Counties and Unitary Authorities.
 
 ### Health
 
