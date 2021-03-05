@@ -82,6 +82,11 @@ trusts_geocoded <-
   trusts_geocoded %>%
   select(-postcode)
 
+# Reorder cols
+trusts_geocoded <-
+  trusts_geocoded %>%
+  relocate(nhs_trust_name)
+
 # Convert to sf object
 trusts_sf <-
   trusts_geocoded %>%
