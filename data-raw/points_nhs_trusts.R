@@ -10,19 +10,15 @@ library(readxl)
 # Load package
 load_all(".")
 
-# Load data
-# Source:
-# - https://digital.nhs.uk/services/organisation-data-service/data-downloads/other-nhs-organisations
-# - see page 85 of the Standards Repository Document for metadata
-
-# Other potential (unused) sources of Trusts:
-# - https://www.england.nhs.uk/publication/nhs-provider-directory/
-# - https://odsportal.digital.nhs.uk/Organisation/Search
-# - https://www.nhs.uk/ServiceDirectories/Pages/NHSTrustListing.aspx
+# Set query url
+query_url <-
+  query_urls %>%
+  filter(data_set == "nhs_trusts") %>%
+  pull(query_url)
 
 # Load raw trust data
 GET(
-  "https://files.digital.nhs.uk/assets/ods/current/etr.zip",
+  query_url,
   write_disk(tf <- tempfile(fileext = ".zip"))
 )
 unzip(tf, exdir = tempdir())
