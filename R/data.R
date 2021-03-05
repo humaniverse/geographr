@@ -157,3 +157,19 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_ccg_stp"
+
+#' NHS Trusts (February 2021)
+#'
+#' A data set containing February 2021 NHS Trusts point geometries (i.e.,
+#' lat/long coordinates) and their associated names, codes, and open status.
+#'
+#' @format A data frame of class "sf" with 228 rows and 4 variables:
+#' \describe{
+#'   \item{nhs_trust_name}{NHS Trust name}
+#'   \item{nhs_trust_code}{NHS Trust code}
+#'   \item{status}{whether the Trust is 'open' or 'closed'}
+#'   \item{geometry}{point coordinates}
+#'   ...
+#' }
+#' @source \url{https://digital.nhs.uk/}
+"points_nhs_trusts"
