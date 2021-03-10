@@ -86,7 +86,7 @@ trusts_geocoded <-
 # Convert to sf object
 trusts_sf <-
   trusts_geocoded %>%
-  st_as_sf(coords = c("lat", "long"), crs = 4326)
+  st_as_sf(coords = c("long", "lat"), crs = 4326)
 
 # Make sure geometries are valid
 trusts_sf <- st_make_valid(trusts_sf)
