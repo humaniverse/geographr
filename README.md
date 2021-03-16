@@ -175,6 +175,11 @@ characters and an inward code of three characters.
 
 <img src='man/figures/hierarchy-poster.png' align="centre"/>
 
+-   Mappings of coterminous geographies from [PHE’s Technical
+    Aggregation Guide](https://fingertips.phe.org.uk/profile/guidance):
+
+<img src='man/figures/coterminous-geographies.png' align="centre"/>
+
 ## Contributing
 
 To contribute to this project, please follow [GitHub
