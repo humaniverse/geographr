@@ -188,3 +188,33 @@
 #' }
 #' @source \url{https://digital.nhs.uk/}
 "points_nhs_trusts"
+
+#' Rural-Urban Classifications for Lower Layer Super Output Areas (2011) in England and Wales
+#'
+#' A data set containing rural-urban classifications for LSOAs in England and Wales.
+#'
+#' @format A data frame of class "tbl" with 34,753 rows and 4 variables:
+#' \describe{
+#'   \item{lsoa_code}{LSOA code}
+#'   \item{RUC11CD}{Rural-Urban Classification code}
+#'   \item{RUC}{Whether the LSOA is classified as 'Rural' or 'Urban'}
+#'   \item{Classification}{A more detailed description of the classification}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"ruc_england_wales_lsoa"
+
+#' Rural-Urban Classifications for Middle Layer Super Output Areas (2011) in England and Wales
+#'
+#' A data set containing rural-urban classifications for MSOAs in England and Wales.
+#'
+#' @format A data frame of class "tbl" with 7,201 rows and 4 variables:
+#' \describe{
+#'   \item{msoa_code}{MSOA code}
+#'   \item{RUC11CD}{Rural-Urban Classification code}
+#'   \item{RUC}{Whether the LSOA is classified as 'Rural' or 'Urban'}
+#'   \item{Classification}{A more detailed description of the classification}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"ruc_england_wales_msoa"
