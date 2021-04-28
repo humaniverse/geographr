@@ -125,6 +125,21 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_counties_ua"
 
+#' Lower Layer Super Output Area (2011) to Middle Layer Super Output Area (2011) Lookup
+#'
+#' A data set containing a lookup between 2011 Lower (LSOA) and Middle Layer Super Output Areas (MSOA).
+#'
+#' @format A data frame of class "tbl" with 41,729 rows and 4 variables:
+#' \describe{
+#'   \item{lsoa_name}{LSOA name}
+#'   \item{lsoa_code}{LSOA code}
+#'   \item{msoa_name}{MSOA name}
+#'   \item{msoa_code}{MSOA code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_lsoa_msoa"
+
 #' Middle Layer Super Output Area (2011) to LAD (December 2019) Lookup
 #'
 #' A data set containing a lookup between 2011 Middle Super Output Areas (MSOA)
