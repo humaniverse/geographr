@@ -15,18 +15,18 @@ lsoa_ward <-
   read_csv(query_url)
 
 # Select and rename vars
-lsoa_msoa <-
-  lsoa_msoa %>%
+lsoa_ward <-
+  lsoa_ward %>%
   select(
     lsoa_name = LSOA11NM,
     lsoa_code = LSOA11CD,
-    ward_name = MSOA11NM,
-    ward_code = MSOA11CD
+    ward_name = WD19NM,
+    ward_code = WD19CD
   ) %>%
   distinct()
 
 # Rename
-lookup_lsoa_msoa <- lsoa_msoa
+lookup_lsoa_ward <- lsoa_ward
 
 # Save output to data/ folder
-usethis::use_data(lookup_lsoa_msoa, overwrite = TRUE)
+usethis::use_data(lookup_lsoa_ward, overwrite = TRUE)
