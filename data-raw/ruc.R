@@ -76,3 +76,39 @@ ruc_england_wales_msoa <- ruc_ew_msoa %>%
 
 # Save output to data/ folder
 usethis::use_data(ruc_england_wales_msoa, overwrite = TRUE)
+
+# - Wards -
+# Classify wards by dichotomising into rural or urban
+ruc_ew_ward <- ruc_ew %>%
+  left_join(lookup_lsoa_ward, by = c("LSOA11CD" = "lsoa_code")) %>%
+
+  tabyl(ward_code, RUC) %>%
+  mutate(`Proportion of urban LSOAs` = Urban / (Urban + Rural)) %>%
+
+  # categorise
+  mutate(RUC = ifelse(`Proportion of urban LSOAs` > 0.5, "Urban", "Rural")) %>%
+
+  select(-Rural, -Urban)
+
+# Classify wards by whether they mostly contain urban connurbations, cities/towns, etc. in their constituent LSOAs
+ruc_ew_ward_class <- ruc_ew %>%
+  left_join(lookup_lsoa_ward, by = c("LSOA11CD" = "lsoa_code")) %>%
+
+  tabyl(ward_code, Classification) %>%
+
+  pivot_longer(cols = -ward_code, names_to = "Classification") %>%
+
+  # Keep only the categories that appears most times in each MSOA
+  # Source: https://stackoverflow.com/a/49587178
+  group_by(ward_code) %>%
+  slice(which.max(value)) %>%
+  ungroup() %>%
+
+  select(-value)
+
+ruc_england_wales_ward <- ruc_ew_ward %>%
+  left_join(ruc_ew_ward_class, by = "ward_code") %>%
+  as_tibble()
+
+# Save output to data/ folder
+usethis::use_data(ruc_england_wales_ward, overwrite = TRUE)
