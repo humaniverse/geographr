@@ -112,7 +112,16 @@ of the Health and Social Care Act 2012, with their work taken over by
 clinical commissioning groups.
 
 #### Health Boards
-To be added soon.
+*Scotland*: Delivery of frontline healthcare services in Scotland are the responsibility
+of 14 regional National Health Service (NHS) Boards that report to the Scottish
+Government. Current boundaries of NHS Health Boards in Scotland are defined by
+National Health Service (Variation of Areas of Health Boards) (Scotland) Order
+2013 (SSI 2013/347), which came into force on April 1st 2014, and replaces the
+previous definition based upon the former Regions and Districts of the Local
+Government (Scotland) Act 1973. This change was made in order to re-align
+Health Boards with the combined area of each Local Authority that they serve.
+Subsequent changes to Local Authorities will result in corresponding amendments
+to Health Board boundaries in order to maintain alignment.
 
 ### Postal
 
