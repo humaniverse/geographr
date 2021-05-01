@@ -263,3 +263,33 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "ruc_england_wales_ward"
+
+#' Population estimates for LSOAs in England and Wales (mid-2019 estimates)
+#'
+#' A data set containing mid-2019 population estimates for Lower Layer Super Output Areas in England and Wales.
+#'
+#' @format A data frame of class "tbl" with 34,753 rows and 94 variables:
+#' \describe{
+#'   \item{lsoa_name}{LSOA name}
+#'   \item{lsoa_code}{LSOA code}
+#'   \item{total_population}{Total number of people living in each LSOA}
+#'   \item{`0`:`90+`}{Number of people in each single age group}
+#'   ...
+#' }
+#' @source \url{https://ons.gov.uk/}
+"population_lsoa"
+
+#' Population estimates for MSOAs in England and Wales (mid-2019 estimates)
+#'
+#' A data set containing mid-2019 population estimates for Middle Layer Super Output Areas in England and Wales.
+#'
+#' @format A data frame of class "tbl" with 7,201 rows and 94 variables:
+#' \describe{
+#'   \item{msoa_name}{MSOA name}
+#'   \item{msoa_code}{MSOA code}
+#'   \item{total_population}{Total number of people living in each MSOA}
+#'   \item{`0`:`90+`}{Number of people in each single age group}
+#'   ...
+#' }
+#' @source \url{https://ons.gov.uk/}
+"population_msoa"

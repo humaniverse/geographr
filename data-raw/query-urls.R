@@ -6,6 +6,8 @@ library(tibble)
 query_urls <-
   tribble(
     ~data_set, ~type, ~notes, ~query_url, ~source,
+
+    # Boundaries
     "ccg", "boundaries", "April 2020 - Ultra generalised", "https://ons-inspire.esriuk.com/arcgis/rest/services/Health_Boundaries/Clinical_Commissioning_Groups_April_2020_EN_BUC/MapServer/1/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/clinical-commissioning-groups-april-2020-ultra-generalised-boundaries-en?geometry=-41.190%2C48.021%2C36.901%2C57.304",
     "counties_ua", "boundaries", "December 2019 - Ultra generalised", "https://ons-inspire.esriuk.com/arcgis/rest/services/Administrative_Boundaries/Counties_and_Unitary_Authorities_December_2019_Boundaries_UK_BUC2/MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/counties-and-unitary-authorities-december-2019-boundaries-uk-buc?geometry=-39.482%2C47.293%2C38.609%2C56.716",
     "lad", "boundaries", "December 2019 - Ultra generalised", "https://ons-inspire.esriuk.com/arcgis/rest/services/Administrative_Boundaries/Local_Authority_Districts_December_2019_Boundaries_UK_BUC/MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/local-authority-districts-december-2019-boundaries-uk-buc",
@@ -14,14 +16,24 @@ query_urls <-
     "towns_cities", "boundaries", "December 2015 - Generalised Grid (50m) - clipped to the coastline (Mean High Water mark)", "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Major_Towns_and_Cities_December_2015_EW_BGG/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/major-towns-and-cities-december-2015-boundaries",
     "wards", "boundaries", "December 2020 - Super generalised (200m) - clipped to the coastline (Mean High Water mark)", "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Wards_December_2020_UK_BSC_V2/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/wards-december-2020-uk-bsc-v2",
     "hb", "boundaries", "2019", "https://maps.gov.scot/ATOM/shapefiles/SG_NHS_HealthBoards_2019.zip", "https://spatialdata.gov.scot/geonetwork/srv/eng/catalog.search;jsessionid=2BA249588D00C49F254018A42F2C6958#/metadata/f12c3826-4b4b-40e6-bf4f-77b9ed01dc14",
+
+    # Points
     "nhs_trusts", "points", "Addresses of NHS Trusts to geocode", "https://files.digital.nhs.uk/assets/ods/current/etr.zip", "https://digital.nhs.uk/services/organisation-data-service/data-downloads/other-nhs-organisations",
+
+    # Lookups
     "lsoa_msoa", "lookup", "Output Area to LSOA to MSOA to Local Authority District (December 2017) Lookup with Area Classifications in Great Britain", "https://opendata.arcgis.com/datasets/fe6c55f0924b4734adf1cf7104a0173e_0.csv", "http://geoportal.statistics.gov.uk/datasets/fe6c55f0924b4734adf1cf7104a0173e_0",
     "lsoa_ward", "lookup", "Lower Layer Super Output Area (2011) to Ward (2019) Lookup in England and Wales", "https://opendata.arcgis.com/datasets/15299a7b8e6c498d94a08b687c75b73f_0.csv", "https://geoportal.statistics.gov.uk/datasets/lower-layer-super-output-area-2011-to-ward-2019-lookup-in-england-and-wales",
     "msoa_lad", "lookup", "Middle Layer Super Output Area (2011) to Ward to LAD (December 2019)", "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/MSOA11_WD19_LAD19_EW_LU/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/0b3c76d1eb5e4ffd98a3679ab8dea605_0/geoservice",
     "ccg_stp", "lookup", "Clinical Commissioning Group to STPs (April 2020) Lookup in England", "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/CCG20_STP20_EN_LU/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/clinical-commissioning-group-to-stps-april-2020-lookup-in-england/geoservice",
+
+    # Rural-Urban Classifications
     "ruc_england_wales", "ruc", "Rural-urban classifications in England and Wales", "https://opendata.arcgis.com/datasets/276d973d30134c339eaecfc3c49770b3_0.csv", "https://geoportal.statistics.gov.uk/datasets/rural-urban-classification-2011-of-lower-layer-super-output-areas-in-england-and-wales",
     "ruc_scotland", "ruc", "Rural-urban classifications in Scotland", "http://www.gov.scot/Resource/0046/00464793.zip", "https://www.gov.scot/publications/scottish-government-urban-rural-classification-2016/pages/2/",
-    "ruc_ni", "ruc", "Rural-urban classifications in Northern Ireland", "https://www.nisra.gov.uk/sites/nisra.gov.uk/files/publications/Settlement15-lookup_0.xls", "https://www.nisra.gov.uk/support/geography/urban-rural-classification"
+    "ruc_ni", "ruc", "Rural-urban classifications in Northern Ireland", "https://www.nisra.gov.uk/sites/nisra.gov.uk/files/publications/Settlement15-lookup_0.xls", "https://www.nisra.gov.uk/support/geography/urban-rural-classification",
+
+    # Population estimates
+    "pop_lsoa", "population", "Lower layer Super Output Area population estimates: mid-2019", "https://www.ons.gov.uk/file?uri=%2fpeoplepopulationandcommunity%2fpopulationandmigration%2fpopulationestimates%2fdatasets%2flowersuperoutputareamidyearpopulationestimates%2fmid2019sape22dt2/sape22dt2mid2019lsoasyoaestimatesunformatted.zip", "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/lowersuperoutputareamidyearpopulationestimates",
+    "pop_msoa", "population", "Middle layer Super Output Area population estimates: mid-2019", "https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/middlesuperoutputareamidyearpopulationestimates/mid2019sape22dt4/sape22dt4mid2019msoasyoaestimatesunformatted.zip", "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/middlesuperoutputareamidyearpopulationestimates"
   )
 
 usethis::use_data(query_urls, internal = TRUE, overwrite = TRUE)
