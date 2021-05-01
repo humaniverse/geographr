@@ -338,3 +338,22 @@
 #' }
 #' @source \url{https://www.opendata.nhs.scot/}
 "population_iz"
+
+#' Population estimates for Super Output Areas in Northern Ireland (mid-2019 estimates)
+#'
+#' A data set containing mid-2019 population estimates by age and sex for Super Output Areas in Northern Ireland.
+#'
+#' @format A data frame of class "tbl" with 2,670 rows and 8 variables:
+#' \describe{
+#'   \item{soa_name}{Super Output Area name}
+#'   \item{soa_code}{Super Output Area code}
+#'   \item{total_population}{Total number of people living in each MSOA}
+#'   \item{sex}{'Female', 'Male' or 'All'}
+#'   \item{`00-15`}{Number of people aged 0 to 15}
+#'   \item{`16-39`}{Number of people aged 16 to 39}
+#'   \item{`40-65`}{Number of people aged 40 to 64}
+#'   \item{`65+`}{Number of people aged 65+}
+#'   ...
+#' }
+#' @source \url{https://www.nisra.gov.uk}
+"population_soa"
