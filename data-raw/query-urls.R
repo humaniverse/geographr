@@ -33,7 +33,8 @@ query_urls <-
 
     # Population estimates
     "pop_lsoa", "population", "Lower layer Super Output Area population estimates: mid-2019", "https://www.ons.gov.uk/file?uri=%2fpeoplepopulationandcommunity%2fpopulationandmigration%2fpopulationestimates%2fdatasets%2flowersuperoutputareamidyearpopulationestimates%2fmid2019sape22dt2/sape22dt2mid2019lsoasyoaestimatesunformatted.zip", "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/lowersuperoutputareamidyearpopulationestimates",
-    "pop_msoa", "population", "Middle layer Super Output Area population estimates: mid-2019", "https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/middlesuperoutputareamidyearpopulationestimates/mid2019sape22dt4/sape22dt4mid2019msoasyoaestimatesunformatted.zip", "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/middlesuperoutputareamidyearpopulationestimates"
+    "pop_msoa", "population", "Middle layer Super Output Area population estimates: mid-2019", "https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/middlesuperoutputareamidyearpopulationestimates/mid2019sape22dt4/sape22dt4mid2019msoasyoaestimatesunformatted.zip", "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/middlesuperoutputareamidyearpopulationestimates",
+    "pop_iz", "population", "Scotland Intermediate Zone population estimates: mid-2019", "https://www.opendata.nhs.scot/dataset/7f010430-6ce1-4813-b25c-f7f335bdc4dc/resource/93df4c88-f74b-4630-abd8-459a19b12f47/download/iz2011-pop-est_02042020.csv", "https://www.opendata.nhs.scot/dataset/population-estimates/resource/93df4c88-f74b-4630-abd8-459a19b12f47"
   )
 
 usethis::use_data(query_urls, internal = TRUE, overwrite = TRUE)

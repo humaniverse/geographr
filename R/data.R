@@ -264,7 +264,6 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "ruc_england_wales_ward"
 
-
 #' Population estimates for Output Areas in England and Wales (mid-2019 estimates)
 #'
 #' A data set containing mid-2019 population estimates for Output Areas in England and Wales.
@@ -309,3 +308,18 @@
 #' }
 #' @source \url{https://ons.gov.uk/}
 "population_msoa"
+
+#' Population estimates for Intermediate Zones in Scotland (mid-2019 estimates)
+#'
+#' A data set containing mid-2019 population estimates by age and sex for Intermediate Zones in Scotland.
+#'
+#' @format A data frame of class "tbl" with 3,837 rows and 94 variables:
+#' \describe{
+#'   \item{iz_code}{Intermediate Zone code}
+#'   \item{total_population}{Total number of people living in each MSOA}
+#'   \item{sex}{'Female', 'Male' or 'All'}
+#'   \item{`0`:`90+`}{Number of people in each single age group}
+#'   ...
+#' }
+#' @source \url{https://ons.gov.uk/}
+"population_iz"
