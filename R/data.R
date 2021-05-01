@@ -309,6 +309,21 @@
 #' @source \url{https://ons.gov.uk/}
 "population_msoa"
 
+#' Population estimates for Data Zones in Scotland (mid-2019 estimates)
+#'
+#' A data set containing mid-2019 population estimates by age and sex for Data Zones in Scotland.
+#'
+#' @format A data frame of class "tbl" with 20,928 rows and 94 variables:
+#' \describe{
+#'   \item{dz_code}{Data Zone code}
+#'   \item{total_population}{Total number of people living in each MSOA}
+#'   \item{sex}{'Female', 'Male' or 'All'}
+#'   \item{`0`:`90+`}{Number of people in each single age group}
+#'   ...
+#' }
+#' @source \url{https://www.opendata.nhs.scot/}
+"population_dz"
+
 #' Population estimates for Intermediate Zones in Scotland (mid-2019 estimates)
 #'
 #' A data set containing mid-2019 population estimates by age and sex for Intermediate Zones in Scotland.
@@ -321,5 +336,5 @@
 #'   \item{`0`:`90+`}{Number of people in each single age group}
 #'   ...
 #' }
-#' @source \url{https://ons.gov.uk/}
+#' @source \url{https://www.opendata.nhs.scot/}
 "population_iz"
