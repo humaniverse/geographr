@@ -264,6 +264,22 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "ruc_england_wales_ward"
 
+
+#' Population estimates for Output Areas in England and Wales (mid-2019 estimates)
+#'
+#' A data set containing mid-2019 population estimates for Output Areas in England and Wales.
+#'
+#' @format A data frame of class "tbl" with 181,408 rows and 94 variables:
+#' \describe{
+#'   \item{oa_name}{OA code}
+#'   \item{lsoa_code}{LSOA code}
+#'   \item{total_population}{Total number of people living in each Output Area}
+#'   \item{`0`:`90+`}{Number of people in each single age group}
+#'   ...
+#' }
+#' @source \url{https://ons.gov.uk/}
+"population_msoa"
+
 #' Population estimates for LSOAs in England and Wales (mid-2019 estimates)
 #'
 #' A data set containing mid-2019 population estimates for Lower Layer Super Output Areas in England and Wales.
