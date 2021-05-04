@@ -5,6 +5,7 @@ library(tibble)
 # ONS geoportal query urls can be found on the "API Explorer" tab.
 query_urls <-
   tribble(
+    # Column Names
     ~data_set, ~type, ~notes, ~query_url, ~source,
 
     # Boundaries
@@ -26,6 +27,7 @@ query_urls <-
     "msoa_lad", "lookup", "Middle Layer Super Output Area (2011) to Ward to LAD (December 2019)", "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/MSOA11_WD19_LAD19_EW_LU/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/0b3c76d1eb5e4ffd98a3679ab8dea605_0/geoservice",
     "ccg_stp", "lookup", "Clinical Commissioning Group to STPs (April 2020) Lookup in England", "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/CCG20_STP20_EN_LU/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/clinical-commissioning-group-to-stps-april-2020-lookup-in-england/geoservice",
     "dz_iz_lad", "lookup", "Data zone to intermediate zone and local authority in Scotland", "https://www.gov.scot/binaries/content/documents/govscot/publications/statistics/2020/01/scottish-index-of-multiple-deprivation-2020-data-zone-look-up-file/documents/scottish-index-of-multiple-deprivation-data-zone-look-up/scottish-index-of-multiple-deprivation-data-zone-look-up/govscot%3Adocument/SIMD_2020_Datazone_lookup_tool.xlsx", "https://www.gov.scot/publications/scottish-index-of-multiple-deprivation-2020-data-zone-look-up/",
+    "hb_lad", "lookup", "NHS Health Boundaries to Local Authority Districts in Scotland", "https://www.opendata.nhs.scot/km/datastore/dump/967937c4-8d67-4f39-974f-fd58c4acfda5?bom=True", "https://www.opendata.nhs.scot/km/dataset/geography-codes-and-labels/resource/967937c4-8d67-4f39-974f-fd58c4acfda5",
 
     # Rural-Urban Classifications
     "ruc_england_wales", "ruc", "Rural-urban classifications in England and Wales", "https://opendata.arcgis.com/datasets/276d973d30134c339eaecfc3c49770b3_0.csv", "https://geoportal.statistics.gov.uk/datasets/rural-urban-classification-2011-of-lower-layer-super-output-areas-in-england-and-wales",
