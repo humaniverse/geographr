@@ -186,6 +186,23 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_msoa_lad"
 
+#' Data Zone (2011) to Intermediate Zone (2011) to LAD (December 2019) Lookup
+#'
+#' A data set containing a lookup between Data Zones, Intermediate Zones and Council Areas in Scotland
+#'
+#' @format A data frame of class "sf" with 6,976 rows and 6 variables:
+#' \describe{
+#'   \item{dz_name}{DZ name}
+#'   \item{dz_code}{DZ code}
+#'   \item{iz_name}{IZ name}
+#'   \item{iz_code}{IZ code}
+#'   \item{lad_name}{LAD name}
+#'   \item{lad_code}{LAD code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_dz_iz_lad"
+
 #' Clinical Commissioning Group to Sustainability and Transformation
 #' Partnerships (April 2020) Lookup
 #'
