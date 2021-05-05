@@ -16,6 +16,7 @@ query_urls <-
     "towns_cities", "boundaries", "December 2015 - Generalised Grid (50m) - clipped to the coastline (Mean High Water mark)", "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Major_Towns_and_Cities_December_2015_EW_BGG/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/major-towns-and-cities-december-2015-boundaries",
     "wards", "boundaries", "December 2020 - Super generalised (200m) - clipped to the coastline (Mean High Water mark)", "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Wards_December_2020_UK_BSC_V2/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/wards-december-2020-uk-bsc-v2",
     "hb", "boundaries", "2019", "https://maps.gov.scot/ATOM/shapefiles/SG_NHS_HealthBoards_2019.zip", "https://spatialdata.gov.scot/geonetwork/srv/eng/catalog.search;jsessionid=2BA249588D00C49F254018A42F2C6958#/metadata/f12c3826-4b4b-40e6-bf4f-77b9ed01dc14",
+    "dz", "boundaries", "Data Zone Boundaries 2011", "https://maps.gov.scot/ATOM/shapefiles/SG_DataZoneBdry_2011.zip", "https://spatialdata.gov.scot/geonetwork/srv/eng/catalog.search#/metadata/7d3e8709-98fa-4d71-867c-d5c8293823f2",
 
     # Points
     "nhs_trusts", "points", "Addresses of NHS Trusts to geocode", "https://files.digital.nhs.uk/assets/ods/current/etr.zip", "https://digital.nhs.uk/services/organisation-data-service/data-downloads/other-nhs-organisations",

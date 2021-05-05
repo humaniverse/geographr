@@ -140,6 +140,21 @@
 #' @source \url{https://spatialdata.gov.scot/}
 "boundaries_hb"
 
+#' Data Zones (2011)
+#'
+#' A data set containing 2011 Scottish Data Zones geometries and their associated
+#' names and codes.
+#'
+#' @format A data frame of class "sf" with 6,976 rows and 3 variables:
+#' \describe{
+#'   \item{dz_name}{Data Zone name}
+#'   \item{dz_code}{Data Zone code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://spatialdata.gov.scot/}
+"boundaries_dz"
+
 #' Lower Layer Super Output Area (2011) to Middle Layer Super Output Area (2011) Lookup
 #'
 #' A data set containing a lookup between 2011 Lower (LSOA) and Middle Layer Super Output Areas (MSOA).
