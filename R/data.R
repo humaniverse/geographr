@@ -142,7 +142,7 @@
 
 #' Data Zones (2011)
 #'
-#' A data set containing 2011 Scottish Data Zones geometries and their associated
+#' A data set containing 2011 Scottish Data Zone geometries and their associated
 #' names and codes.
 #'
 #' @format A data frame of class "sf" with 6,976 rows and 3 variables:
@@ -154,6 +154,21 @@
 #' }
 #' @source \url{https://spatialdata.gov.scot/}
 "boundaries_dz"
+
+#' Intermediate Zones (2011)
+#'
+#' A data set containing 2011 Scottish Intermediate Zone geometries and their associated
+#' names and codes.
+#'
+#' @format A data frame of class "sf" with 1,279 rows and 3 variables:
+#' \describe{
+#'   \item{iz_name}{Intermediate Zone name}
+#'   \item{iz_code}{Intermediate Zone code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://spatialdata.gov.scot/}
+"boundaries_iz"
 
 #' Lower Layer Super Output Area (2011) to Middle Layer Super Output Area (2011) Lookup
 #'
