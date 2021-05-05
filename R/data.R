@@ -235,6 +235,23 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_ccg_stp"
 
+#' NHS Health Boards (2019) to Local Authority Districts (2019) Lookup
+#'
+#' A data set containing a lookup between 2019 NHS Health Boards (HB)
+#' and Local Authority Districts (LAD), also called Council Areas in
+#' Scotland.
+#'
+#' @format A data frame of class "sf" with 32 rows and 4 variables:
+#' \describe{
+#'   \item{hb_name}{HB name}
+#'   \item{hb_code}{HB code}
+#'   \item{lad_name}{LAD name}
+#'   \item{lad_code}{LAD code}
+#'   ...
+#' }
+#' @source \url{https://www.opendata.nhs.scot/}
+"lookup_hb_lad"
+
 #' NHS Trusts (February 2021)
 #'
 #' A data set containing February 2021 NHS Trusts point geometries (i.e.,
