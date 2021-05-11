@@ -290,7 +290,7 @@
 #' @format A data frame of class "tbl" with 34,753 rows and 4 variables:
 #' \describe{
 #'   \item{lsoa_code}{LSOA code}
-#'   \item{RUC11CD}{Rural-Urban Classification code}
+#'   \item{ruc_code}{Rural-Urban Classification code}
 #'   \item{RUC}{Whether the LSOA is classified as 'Rural' or 'Urban'}
 #'   \item{Classification}{A more detailed description of the classification}
 #'   ...
@@ -305,7 +305,7 @@
 #' @format A data frame of class "tbl" with 7,201 rows and 4 variables:
 #' \describe{
 #'   \item{msoa_code}{MSOA code}
-#'   \item{Proportion of urban LSOAs}{The proportion of each MSOA's constituent LSOAs that are classified as urban}
+#'   \item{Proportion of urban areas}{The proportion of each MSOA's constituent LSOAs that are classified as urban}
 #'   \item{RUC}{Whether the MSOA is classified as 'Rural' or 'Urban' based on the proportion of urban LSOAs}
 #'   \item{Classification}{A more detailed description of the classification}
 #'   ...
@@ -320,7 +320,7 @@
 #' @format A data frame of class "tbl" with 8,023 rows and 4 variables:
 #' \describe{
 #'   \item{ward_code}{Ward code}
-#'   \item{Proportion of urban LSOAs}{The proportion of each Ward's constituent LSOAs that are classified as urban}
+#'   \item{Proportion of urban areas}{The proportion of each Ward's constituent LSOAs that are classified as urban}
 #'   \item{RUC}{Whether the Ward is classified as 'Rural' or 'Urban' based on the proportion of urban LSOAs}
 #'   \item{Classification}{A more detailed description of the classification}
 #'   ...

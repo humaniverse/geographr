@@ -36,7 +36,7 @@ ruc_ew <- ruc_ew %>%
   ))
 
 ruc_england_wales_lsoa <- ruc_ew %>%
-  rename(lsoa_code = LSOA11CD)
+  rename(lsoa_code = LSOA11CD, ruc_code = RUC11CD)
 
 # Save output to data/ folder
 usethis::use_data(ruc_england_wales_lsoa, overwrite = TRUE)
@@ -47,10 +47,10 @@ ruc_ew_msoa <- ruc_ew %>%
   left_join(lookup_lsoa_msoa, by = c("LSOA11CD" = "lsoa_code")) %>%
 
   tabyl(msoa_code, RUC) %>%
-  mutate(`Proportion of urban LSOAs` = Urban / (Urban + Rural)) %>%
+  mutate(`Proportion of urban areas` = Urban / (Urban + Rural)) %>%
 
   # categorise
-  mutate(RUC = ifelse(`Proportion of urban LSOAs` > 0.5, "Urban", "Rural")) %>%
+  mutate(RUC = ifelse(`Proportion of urban areas` > 0.5, "Urban", "Rural")) %>%
 
   select(-Rural, -Urban)
 
@@ -83,10 +83,10 @@ ruc_ew_ward <- ruc_ew %>%
   left_join(lookup_lsoa_ward, by = c("LSOA11CD" = "lsoa_code")) %>%
 
   tabyl(ward_code, RUC) %>%
-  mutate(`Proportion of urban LSOAs` = Urban / (Urban + Rural)) %>%
+  mutate(`Proportion of urban areas` = Urban / (Urban + Rural)) %>%
 
   # categorise
-  mutate(RUC = ifelse(`Proportion of urban LSOAs` > 0.5, "Urban", "Rural")) %>%
+  mutate(RUC = ifelse(`Proportion of urban areas` > 0.5, "Urban", "Rural")) %>%
 
   select(-Rural, -Urban)
 
