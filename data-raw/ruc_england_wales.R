@@ -1,5 +1,5 @@
 ##
-## Rural-urban classifications for LSOAs, MSOAs and Wards
+## Rural-urban classifications for LSOAs, MSOAs and Wards in England and Wales
 ##
 # ---- Load ----
 library(tidyverse)
