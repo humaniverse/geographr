@@ -340,7 +340,7 @@
 #'   \item{Classification}{A more detailed description of the classification}
 #'   ...
 #' }
-#' @source \url{https://geoportal.statistics.gov.uk/}
+#' @source \url{https://www.gov.scot/}
 "ruc_scotland_dz"
 
 #' Rural-Urban Classifications for Intermediate Zones (2011) in Scotland
@@ -355,8 +355,38 @@
 #'   \item{Classification}{A more detailed description of the classification}
 #'   ...
 #' }
-#' @source \url{https://geoportal.statistics.gov.uk/}
+#' @source \url{https://www.gov.scot/}
 "ruc_scotland_iz"
+
+#' Rural-Urban Classifications for Small Areas in Northern Ireland
+#'
+#' A data set containing rural-urban classifications for Small Areas in Northern Ireland.
+#'
+#' @format A data frame of class "tbl" with 4,537 rows and 4 variables:
+#' \describe{
+#'   \item{sa_code}{Small Area code}
+#'   \item{ruc_code}{Rural-Urban Classification code}
+#'   \item{RUC}{Whether the SA is classified as 'Rural' or 'Urban'}
+#'   \item{Classification}{A more detailed description of the classification}
+#'   ...
+#' }
+#' @source \url{https://www.nisra.gov.uk/}
+"ruc_northern_ireland_sa"
+
+#' Rural-Urban Classifications for Super Output Areas in Northern Ireland
+#'
+#' A data set containing rural-urban classifications for SOAs in Northern Ireland.
+#'
+#' @format A data frame of class "tbl" with 890 rows and 4 variables:
+#' \describe{
+#'   \item{soa_code}{Super Output Area code}
+#'   \item{Proportion of urban areas}{The proportion of each SOA's constituent Small Areas that are classified as urban}
+#'   \item{RUC}{Whether the SOA is classified as 'Rural' or 'Urban' based on the proportion of urban Small Areas}
+#'   \item{Classification}{A more detailed description of the classification}
+#'   ...
+#' }
+#' @source \url{https://www.nisra.gov.uk/}
+"ruc_northern_ireland_soa"
 
 #' Population estimates for Output Areas in England and Wales (mid-2019 estimates)
 #'
