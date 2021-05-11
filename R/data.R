@@ -328,6 +328,36 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "ruc_england_wales_ward"
 
+#' Rural-Urban Classifications for Data Zones (2011) in Scotland
+#'
+#' A data set containing rural-urban classifications for Data Zones in Scotland.
+#'
+#' @format A data frame of class "tbl" with 6,976 rows and 4 variables:
+#' \describe{
+#'   \item{dz_code}{Data Zone code}
+#'   \item{ruc_code}{Rural-Urban Classification code}
+#'   \item{RUC}{Whether the DZ is classified as 'Rural' or 'Urban'}
+#'   \item{Classification}{A more detailed description of the classification}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"ruc_scotland_dz"
+
+#' Rural-Urban Classifications for Intermediate Zones (2011) in Scotland
+#'
+#' A data set containing rural-urban classifications for IZs in Scotland.
+#'
+#' @format A data frame of class "tbl" with 1,279 rows and 4 variables:
+#' \describe{
+#'   \item{iz_code}{Intermediate Zone code}
+#'   \item{Proportion of urban areas}{The proportion of each Intermediate Zone's constituent Data Zones that are classified as urban}
+#'   \item{RUC}{Whether the IZ is classified as 'Rural' or 'Urban' based on the proportion of urban Data Zones}
+#'   \item{Classification}{A more detailed description of the classification}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"ruc_scotland_iz"
+
 #' Population estimates for Output Areas in England and Wales (mid-2019 estimates)
 #'
 #' A data set containing mid-2019 population estimates for Output Areas in England and Wales.

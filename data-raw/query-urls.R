@@ -33,7 +33,7 @@ query_urls <-
 
     # Rural-Urban Classifications
     "ruc_england_wales", "ruc", "Rural-urban classifications in England and Wales", "https://opendata.arcgis.com/datasets/276d973d30134c339eaecfc3c49770b3_0.csv", "https://geoportal.statistics.gov.uk/datasets/rural-urban-classification-2011-of-lower-layer-super-output-areas-in-england-and-wales",
-    "ruc_scotland", "ruc", "Rural-urban classifications in Scotland", "http://www.gov.scot/Resource/0046/00464793.zip", "https://www.gov.scot/publications/scottish-government-urban-rural-classification-2016/pages/2/",
+    "ruc_scotland", "ruc", "Rural-urban classifications in Scotland", "https://www.gov.scot/binaries/content/documents/govscot/publications/advice-and-guidance/2018/03/scottish-government-urban-rural-classification-2016/documents/scottish-government-urban-rural-classification-2016-data-zone-lookup/scottish-government-urban-rural-classification-2016-data-zone-lookup/govscot%3Adocument/00544928.csv", "https://www.gov.scot/publications/scottish-government-urban-rural-classification-2016/pages/2/",
     "ruc_ni", "ruc", "Rural-urban classifications in Northern Ireland", "https://www.nisra.gov.uk/sites/nisra.gov.uk/files/publications/Settlement15-lookup_0.xls", "https://www.nisra.gov.uk/support/geography/urban-rural-classification",
 
     # Population estimates
