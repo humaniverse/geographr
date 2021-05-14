@@ -81,3 +81,43 @@ ruc_scotland_iz <- ruc_iz %>%
 
 # Save output to data/ folder
 usethis::use_data(ruc_scotland_iz, overwrite = TRUE)
+
+# - Council Areas -
+# Classify MSOAs by dichotomising into rural or urban
+ruc_lad <-
+  ruc_scotland_dz %>%
+  left_join(lookup_dz_iz_lad, by = "dz_code") %>%
+
+  tabyl(lad_code, RUC) %>%
+  mutate(`Proportion of urban areas` = Urban / (Urban + Rural)) %>%
+
+  # categorise
+  mutate(RUC = ifelse(`Proportion of urban areas` > 0.5, "Urban", "Rural")) %>%
+
+  select(-Rural, -Urban) %>%
+  as_tibble()
+
+# Classify MSOAs by whether they mostly contain urban connurbations, cities/towns, etc. in their constituent LSOAs
+ruc_lad_class <-
+  ruc_scotland_dz %>%
+  left_join(lookup_dz_iz_lad, by = "dz_code") %>%
+
+  tabyl(lad_code, Classification) %>%
+
+  pivot_longer(cols = -lad_code, names_to = "Classification") %>%
+
+  # Keep only the categories that appears most times in each MSOA
+  # Source: https://stackoverflow.com/a/49587178
+  group_by(lad_code) %>%
+  slice(which.max(value)) %>%
+  ungroup() %>%
+
+  select(-value) %>%
+  as_tibble()
+
+ruc_scotland_lad <- ruc_lad %>%
+  left_join(ruc_lad_class, by = "lad_code") %>%
+  as_tibble()
+
+# Save output to data/ folder
+usethis::use_data(ruc_scotland_lad, overwrite = TRUE)

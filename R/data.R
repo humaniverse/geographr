@@ -358,6 +358,21 @@
 #' @source \url{https://www.gov.scot/}
 "ruc_scotland_iz"
 
+#' Rural-Urban Classifications for Council Areas in Scotland
+#'
+#' A data set containing rural-urban classifications for Council Areas in Scotland.
+#'
+#' @format A data frame of class "tbl" with 32 rows and 4 variables:
+#' \describe{
+#'   \item{lad_code}{Council Area code}
+#'   \item{Proportion of urban areas}{The proportion of each Council Area's constituent Data Zones that are classified as urban}
+#'   \item{RUC}{Whether the Council Area is classified as 'Rural' or 'Urban' based on the proportion of urban Data Zones}
+#'   \item{Classification}{A more detailed description of the classification}
+#'   ...
+#' }
+#' @source \url{https://www.gov.scot/}
+"ruc_scotland_lad"
+
 #' Rural-Urban Classifications for Small Areas in Northern Ireland
 #'
 #' A data set containing rural-urban classifications for Small Areas in Northern Ireland.
