@@ -463,6 +463,21 @@
 #' @source \url{https://ons.gov.uk/}
 "population_msoa"
 
+#' Population estimates for CCGs in England and Wales (mid-2019 estimates)
+#'
+#' A data set containing mid-2019 population estimates for Clinical Commissioning Groups in England and Wales.
+#'
+#' @format A data frame of class "tbl" with 135 rows and 94 variables:
+#' \describe{
+#'   \item{ccg_name}{CCG name}
+#'   \item{ccg_code}{CCG code}
+#'   \item{total_population}{Total number of people living in each CCG}
+#'   \item{`0`:`90+`}{Number of people in each single age group}
+#'   ...
+#' }
+#' @source \url{https://ons.gov.uk/}
+"population_ccg"
+
 #' Population estimates for Data Zones in Scotland (mid-2019 estimates)
 #'
 #' A data set containing mid-2019 population estimates by age and sex for Data Zones in Scotland.
