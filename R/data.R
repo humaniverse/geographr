@@ -157,8 +157,8 @@
 
 #' Intermediate Zones (2011)
 #'
-#' A data set containing 2011 Scottish Intermediate Zone geometries and their associated
-#' names and codes.
+#' A data set containing 2011 Scottish Intermediate Zone geometries and their
+#' associated names and codes.
 #'
 #' @format A data frame of class "sf" with 1,279 rows and 3 variables:
 #' \describe{
@@ -169,6 +169,21 @@
 #' }
 #' @source \url{https://spatialdata.gov.scot/}
 "boundaries_iz"
+
+#' Super Output Areas (2001)
+#'
+#' A data set containing 2001 Northern Ireland Super Output Area geometries and
+#' their associated names and codes as used following the 2011 Census results.
+#'
+#' @format A data frame of class "sf" with 890 rows and 3 variables:
+#' \describe{
+#'   \item{soa_name}{Super Output Area name}
+#'   \item{soa_code}{Super Output Area code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://www.opendatani.gov.uk/}
+"boundaries_soa"
 
 #' Lower Layer Super Output Area (2011) to Middle Layer Super Output Area (2011) Lookup
 #'

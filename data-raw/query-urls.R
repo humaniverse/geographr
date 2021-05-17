@@ -19,6 +19,7 @@ query_urls <-
     "hb", "boundaries", "2019", "https://maps.gov.scot/ATOM/shapefiles/SG_NHS_HealthBoards_2019.zip", "https://spatialdata.gov.scot/geonetwork/srv/eng/catalog.search;jsessionid=2BA249588D00C49F254018A42F2C6958#/metadata/f12c3826-4b4b-40e6-bf4f-77b9ed01dc14",
     "dz", "boundaries", "Data Zone Boundaries 2011", "https://maps.gov.scot/ATOM/shapefiles/SG_DataZoneBdry_2011.zip", "https://spatialdata.gov.scot/geonetwork/srv/eng/catalog.search#/metadata/7d3e8709-98fa-4d71-867c-d5c8293823f2",
     "iz", "boundaries", "Intermediate Zone Boundaries 2011", "https://maps.gov.scot/ATOM/shapefiles/SG_IntermediateZoneBdry_2011.zip", "https://spatialdata.gov.scot/geonetwork/srv/eng/catalog.search#/metadata/389787c0-697d-4824-9ca9-9ce8cb79d6f5",
+    "soa", "boundaries", "2001", "https://www.opendatani.gov.uk/dataset/678697e1-ae71-41f3-abba-0ef5f3f352c2/resource/80392e82-8bee-42de-a1e3-82d1cbaa983f/download/soa2001.json", "https://www.opendatani.gov.uk/dataset/nisra-open-data-boundaries-super-output-areas-2011/resource/80392e82-8bee-42de-a1e3-82d1cbaa983f",
 
     # Points
     "nhs_trusts", "points", "Addresses of NHS Trusts to geocode", "https://files.digital.nhs.uk/assets/ods/current/etr.zip", "https://digital.nhs.uk/services/organisation-data-service/data-downloads/other-nhs-organisations",
