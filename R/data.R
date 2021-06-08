@@ -236,7 +236,7 @@
 #' A data set containing a lookup between 2011 Middle Super Output Areas (MSOA)
 #' and 2019 Local Authority Districts (LAD).
 #'
-#' @format A data frame of class "sf" with 7,201 rows and 4 variables:
+#' @format A data frame of class "tbl" with 7,201 rows and 4 variables:
 #' \describe{
 #'   \item{msoa_name}{MSOA name}
 #'   \item{msoa_code}{MSOA code}
@@ -251,7 +251,7 @@
 #'
 #' A data set containing a lookup between Data Zones, Intermediate Zones and Council Areas in Scotland
 #'
-#' @format A data frame of class "sf" with 6,976 rows and 6 variables:
+#' @format A data frame of class "tbl" with 6,976 rows and 6 variables:
 #' \describe{
 #'   \item{dz_name}{DZ name}
 #'   \item{dz_code}{DZ code}
@@ -270,7 +270,7 @@
 #' A data set containing a lookup between 2020 Clinical Commissioning Groups
 #' (CCG) and  Sustainability and Transformation Partnerships (STP).
 #'
-#' @format A data frame of class "sf" with 135 rows and 4 variables:
+#' @format A data frame of class "tbl" with 135 rows and 4 variables:
 #' \describe{
 #'   \item{ccg_name}{CCG name}
 #'   \item{ccg_code}{CCG code}
@@ -287,7 +287,7 @@
 #' and Local Authority Districts (LAD), also called Council Areas in
 #' Scotland.
 #'
-#' @format A data frame of class "sf" with 32 rows and 4 variables:
+#' @format A data frame of class "tbl" with 32 rows and 4 variables:
 #' \describe{
 #'   \item{hb_name}{HB name}
 #'   \item{hb_code}{HB code}
@@ -297,6 +297,20 @@
 #' }
 #' @source \url{https://www.opendata.nhs.scot/}
 "lookup_hb_lad"
+
+#' NHS Trusts to STP/ICS (May 2021)
+#'
+#' A data set containing May 2021 NHS Trusts to STP/ICS codes
+#'
+#' @format A data frame of class "tbl" with 218 rows and 3 variables:
+#' \describe{
+#'   \item{nhs_trust_code}{NHS Trust code}
+#'   \item{stp_code}{STP/ICS code}
+#'   \item{status}{whether the Trust is 'open' or 'closed'}
+#'   ...
+#' }
+#' @source \url{https://digital.nhs.uk/}
+"lookup_trust_stp"
 
 #' NHS Trusts (February 2021)
 #'
