@@ -315,7 +315,7 @@
 #' Postcode to Local Authority District (2021) Lookup
 #'
 #' A data set containing a lookup between postcodes and 2021 Local Authority
-#' Districts.
+#' Districts, for England, Wales, and Scotland.
 #'
 #' @format A data frame of class "tbl" with 2,661,131 rows and 3 variables:
 #' \describe{

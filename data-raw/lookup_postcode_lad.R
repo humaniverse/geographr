@@ -41,6 +41,12 @@ postcode_lad <-
   mutate(postcode = str_remove_all(postcode, " ")) %>%
   distinct()
 
+# Remove NI Postcodes which are distributed under their own license:
+# https://www.ons.gov.uk/methodology/geography/licences
+postcode_lad <-
+  postcode_lad %>%
+  filter(!str_detect(lad_code, "^N"))
+
 # Rename
 lookup_postcode_lad <- postcode_lad
 
