@@ -312,6 +312,21 @@
 #' @source \url{https://digital.nhs.uk/}
 "lookup_trust_stp"
 
+#' Postcode to Local Authority District (2021) Lookup
+#'
+#' A data set containing a lookup between postcodes and 2021 Local Authority
+#' Districts.
+#'
+#' @format A data frame of class "tbl" with 2,661,131 rows and 3 variables:
+#' \describe{
+#'   \item{postcode}{Postcodes}
+#'   \item{lad_name}{LAD name}
+#'   \item{lad_code}{LAD code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_postcode_lad"
+
 #' NHS Trusts (February 2021)
 #'
 #' A data set containing February 2021 NHS Trusts point geometries (i.e.,
