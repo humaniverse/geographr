@@ -571,3 +571,19 @@
 #' }
 #' @source \url{https://www.nisra.gov.uk}
 "population_soa"
+
+#' Population estimates for Local Authority Districts (mid-2019)
+#'
+#' A data set containing mid-2019 population estimates for Local Authortiy
+#' Districts (April 2020 codes) in each devolved nation.
+#'
+#' @format A data frame of class "tbl" with 376 rows and 94 variables:
+#' \describe{
+#'   \item{lad_name}{LAD} name}
+#'   \item{lad_code}{LAD code}
+#'   \item{total_population}{Total number of people living in each MSOA}
+#'   \item{`0`:`90+`}{Number of people in each single age group}
+#'   ...
+#' }
+#' @source \url{https://ons.gov.uk/}
+"population_lad"
