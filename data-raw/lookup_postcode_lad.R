@@ -43,9 +43,16 @@ postcode_lad <-
 
 # Remove NI Postcodes which are distributed under their own license:
 # https://www.ons.gov.uk/methodology/geography/licences
+
+# Keep only Valid codes, as two "pseudo" codes appear in the data:
+# "L99999999" & "M99999999"
 postcode_lad <-
   postcode_lad %>%
-  filter(!str_detect(lad_code, "^N"))
+  filter(
+    str_detect(lad_code, "^E") |
+      str_detect(lad_code, "^W") |
+      str_detect(lad_code, "^S")
+  )
 
 # Rename
 lookup_postcode_lad <- postcode_lad
