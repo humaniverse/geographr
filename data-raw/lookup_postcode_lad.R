@@ -54,6 +54,17 @@ postcode_lad <-
       str_detect(lad_code, "^S")
   )
 
+# LAD names for Buckinghamshire unitary authority "E06000060"
+postcode_lad <-
+  postcode_lad %>%
+  mutate(
+    lad_name = if_else(
+      lad_code == "E06000060",
+      "Buckinghamshire",
+      lad_name
+    )
+  )
+
 # Rename
 lookup_postcode_lad <- postcode_lad
 

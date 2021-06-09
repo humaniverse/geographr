@@ -317,7 +317,7 @@
 #' A data set containing a lookup between postcodes and 2020 Local Authority
 #' Districts, for England, Wales, and Scotland.
 #'
-#' @format A data frame of class "tbl" with 2,581,797 rows and 3 variables:
+#' @format A data frame of class "tbl" with 2,568,780 rows and 3 variables:
 #' \describe{
 #'   \item{postcode}{Postcodes}
 #'   \item{lad_name}{LAD name}
