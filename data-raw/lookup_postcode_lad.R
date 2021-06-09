@@ -20,7 +20,7 @@ GET(
 
 unzip(zip_folder, exdir = tempdir())
 
-file <- file.path(tempdir(), "PCD_OA_LSOA_MSOA_LAD_MAY21_UK_LU.csv")
+file <- file.path(tempdir(), "NSPCL_NOV20_UK_LU.csv")
 
 postcode_lad <-
   read_csv(file)
