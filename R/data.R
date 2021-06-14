@@ -587,3 +587,19 @@
 #' }
 #' @source \url{https://ons.gov.uk/}
 "population_lad"
+
+#' Population density for Middle Layer Super Output Areas
+#'
+#' A data set containing population density for Middle Layer Super Output Areas
+#' based on mid-2019 population estimates and MSOA area in square kilometres
+#'
+#' @format A data frame of class "tbl" with 7,201 rows and 4 variables:
+#' \describe{
+#'   \item{msoa_code}{MSOA code}
+#'   \item{area_km_square}{MSOA area in square kilometres}
+#'   \item{total_population}{Total number of people living in each MSOA}
+#'   \item{density}{Population density = total_population / area_km_square}
+#'   ...
+#' }
+#' @source \url{https://ons.gov.uk/}
+"density_msoa"
