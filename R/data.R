@@ -530,7 +530,7 @@
 #' @format A data frame of class "tbl" with 20,928 rows and 94 variables:
 #' \describe{
 #'   \item{dz_code}{Data Zone code}
-#'   \item{total_population}{Total number of people living in each MSOA}
+#'   \item{total_population}{Total number of people living in each DZ}
 #'   \item{sex}{'Female', 'Male' or 'All'}
 #'   \item{`0`:`90+`}{Number of people in each single age group}
 #'   ...
@@ -545,7 +545,7 @@
 #' @format A data frame of class "tbl" with 3,837 rows and 94 variables:
 #' \describe{
 #'   \item{iz_code}{Intermediate Zone code}
-#'   \item{total_population}{Total number of people living in each MSOA}
+#'   \item{total_population}{Total number of people living in each IZ}
 #'   \item{sex}{'Female', 'Male' or 'All'}
 #'   \item{`0`:`90+`}{Number of people in each single age group}
 #'   ...
@@ -561,7 +561,7 @@
 #' \describe{
 #'   \item{soa_name}{Super Output Area name}
 #'   \item{soa_code}{Super Output Area code}
-#'   \item{total_population}{Total number of people living in each MSOA}
+#'   \item{total_population}{Total number of people living in each SOA}
 #'   \item{sex}{'Female', 'Male' or 'All'}
 #'   \item{`00-15`}{Number of people aged 0 to 15}
 #'   \item{`16-39`}{Number of people aged 16 to 39}
@@ -579,14 +579,30 @@
 #'
 #' @format A data frame of class "tbl" with 376 rows and 94 variables:
 #' \describe{
-#'   \item{lad_name}{LAD} name}
+#'   \item{lad_name}{LAD name}
 #'   \item{lad_code}{LAD code}
-#'   \item{total_population}{Total number of people living in each MSOA}
+#'   \item{total_population}{Total number of people living in each LAD}
 #'   \item{`0`:`90+`}{Number of people in each single age group}
 #'   ...
 #' }
 #' @source \url{https://ons.gov.uk/}
 "population_lad"
+
+#' Population estimates for Counties and Unitary Authorities (mid-2019)
+#'
+#' A data set containing mid-2019 population estimates for County and Unitary
+#' Authority Districts (April 2019 codes) in each devolved nation.
+#'
+#' @format A data frame of class "tbl" with 216 rows and 94 variables:
+#' \describe{
+#'   \item{county_ua_name}{County or Unitary Authority name}
+#'   \item{county_ua_code}{County or Unitary Authority code}
+#'   \item{total_population}{Total number of people living in each area}
+#'   \item{`0`:`90+`}{Number of people in each single age group}
+#'   ...
+#' }
+#' @source \url{https://ons.gov.uk/}
+"population_counties_ua"
 
 #' Population density for Middle Layer Super Output Areas
 #'
