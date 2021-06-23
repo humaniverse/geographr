@@ -4,9 +4,10 @@ The geographr package includes other open source data components. The following
 is a list of these components and their licenses (full copies of the license
 agreements used by these components are included below):
 
+- The Office for National Statistics (ONS), https://www.ons.gov.uk/, OGLv3.0
 - NHS Digital, https://digital.nhs.uk/, OGLv3.0
 - The Open Geography portal from the Office for National Statistics (ONS),
-https://geoportal.statistics.gov.uk/, OGLv3.0
+  https://geoportal.statistics.gov.uk/, OGLv3.0
 - SpatialData.gov.scot, https://spatialdata.gov.scot/, OGLv3.0
 - Public Health Scotland, https://www.opendata.nhs.scot/, OGLv3.0,
 - Open Data NI, https://www.opendatani.gov.uk/, OGLv3.0
