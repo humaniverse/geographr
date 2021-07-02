@@ -349,7 +349,7 @@
 #' lat/long coordinates) and their associated names and codes,
 #' as of July 2021.
 #'
-#' @format A data frame of class "sf" with 228 rows and 4 variables:
+#' @format A data frame of class "sf" with 7 rows and 4 variables:
 #' \describe{
 #'   \item{hb_code}{Health Board code}
 #'   \item{hb_alt_code}{Health Board alternative code}
