@@ -343,6 +343,23 @@
 #' @source \url{https://digital.nhs.uk/}
 "points_nhs_trusts"
 
+#' Health Boards in Wales (July 2021)
+#'
+#' A data set containing Welsh Health Board point geometries (i.e.,
+#' lat/long coordinates) and their associated names and codes,
+#' as of July 2021.
+#'
+#' @format A data frame of class "sf" with 228 rows and 4 variables:
+#' \describe{
+#'   \item{hb_code}{Health Board code}
+#'   \item{hb_alt_code}{Health Board alternative code}
+#'   \item{hb_name}{Health Board name}
+#'   \item{geometry}{point coordinates}
+#'   ...
+#' }
+#' @source \url{https://www.wales.nhs.uk/}
+"points_wales_health_boards"
+
 #' Rural-Urban Classifications for Lower Layer Super Output Areas (2011) in England and Wales
 #'
 #' A data set containing rural-urban classifications for LSOAs in England and Wales.
