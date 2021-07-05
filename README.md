@@ -205,6 +205,4 @@ changes.
 Developed by [Mike Page](https://github.com/MikeJohnPage) and [Matt
 Thomas](https://twitter.com/matthewgthomas) at the British Red Cross.
 
-[Contains public sector information licensed under the Open Government
-Licence
-v3.0.](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
+See [LICESNE](/LICENSE)
