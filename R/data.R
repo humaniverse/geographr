@@ -201,6 +201,21 @@
 #' @source \url{https://www.opendatani.gov.uk/}
 "boundaries_soa"
 
+#' Police Force Areas (2020)
+#'
+#' A data set containing 2020 Police Force Area geometries for England and Wales
+#' and their associated names and codes.
+#'
+#' @format A data frame of class "sf" with 43 rows and 3 variables:
+#' \describe{
+#'   \item{pfa_name}{Police Force Area name}
+#'   \item{pfa_code}{Police Force Area code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"boundaries_pfa"
+
 #' Lower Layer Super Output Area (2011) to Middle Layer Super Output Area (2011) Lookup
 #'
 #' A data set containing a lookup between 2011 Lower (LSOA) and Middle Layer Super Output Areas (MSOA).
