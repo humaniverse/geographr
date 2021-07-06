@@ -285,10 +285,11 @@
 #' A data set containing a lookup between 2020 Clinical Commissioning Groups
 #' (CCG) and  Sustainability and Transformation Partnerships (STP).
 #'
-#' @format A data frame of class "tbl" with 135 rows and 4 variables:
+#' @format A data frame of class "tbl" with 135 rows and 5 variables:
 #' \describe{
 #'   \item{ccg_name}{CCG name}
 #'   \item{ccg_code}{CCG code}
+#'   \item{ccg_nhs_code}{CCG's NHS code}
 #'   \item{stp_name}{STP name}
 #'   \item{stp_code}{STP code}
 #'   ...

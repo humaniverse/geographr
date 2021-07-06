@@ -21,6 +21,7 @@ ccg_stp <-
   select(
     ccg_name = CCG20NM,
     ccg_code = CCG20CD,
+    ccg_nhs_code = CCG20CDH,
     stp_name = STP20NM,
     stp_code = STP20CD
   )
