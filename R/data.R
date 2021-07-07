@@ -359,6 +359,24 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_postcode_lad"
 
+#' Small Areas (2011) to SOAs to Local Government Districts (December 2018)
+#'   Lookup with Area Classifications in Northern Ireland
+#'
+#' A data set containing a lookup between Small Areas, Super Output Areas,
+#'   and Local Government Districts in Northern Ireland
+#'
+#' @format A data frame of class "tbl" with 4,537 rows and 5 variables:
+#' \describe{
+#'   \item{sa_code}{Small Area code}
+#'   \item{soa_name}{Super Output Area name}
+#'   \item{soa_code}{Super Output Area code}
+#'   \item{lgd_name}{Local Government District name}
+#'   \item{lgd_code}{Local Government District code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_sa_soa_lgd"
+
 #' NHS Trusts (February 2021)
 #'
 #' A data set containing February 2021 NHS Trusts point geometries (i.e.,
