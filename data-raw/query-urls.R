@@ -9,6 +9,7 @@ query_urls <-
     ~data_set, ~type, ~notes, ~query_url, ~source,
 
     # Boundaries
+    "countries", "boundaries", "Countries (December 2020) UK BUC", "https://opendata.arcgis.com/datasets/bb7104d3a9c04937be57e408288282dc_0.geojson", "https://geoportal.statistics.gov.uk/datasets/countries-december-2020-uk-buc/explore?location=54.650000%2C-3.250000%2C6.04",
     "ccg", "boundaries", "April 2020 - Ultra generalised", "https://ons-inspire.esriuk.com/arcgis/rest/services/Health_Boundaries/Clinical_Commissioning_Groups_April_2020_EN_BUC/MapServer/1/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/clinical-commissioning-groups-april-2020-ultra-generalised-boundaries-en?geometry=-41.190%2C48.021%2C36.901%2C57.304",
     "counties_ua", "boundaries", "December 2019 - Ultra generalised", "https://ons-inspire.esriuk.com/arcgis/rest/services/Administrative_Boundaries/Counties_and_Unitary_Authorities_December_2019_Boundaries_UK_BUC2/MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/counties-and-unitary-authorities-december-2019-boundaries-uk-buc?geometry=-39.482%2C47.293%2C38.609%2C56.716",
     "lad", "boundaries", "December 2019 - Ultra generalised", "https://opendata.arcgis.com/datasets/3a4fa2ce68f642e399b4de07643eeed3_0.geojson", "https://geoportal.statistics.gov.uk/datasets/ons::local-authority-districts-december-2019-boundaries-uk-buc/about",
