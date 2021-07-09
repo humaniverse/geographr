@@ -671,6 +671,43 @@
 #' @source \url{https://ons.gov.uk/}
 "population_counties_ua"
 
+#' Populations estimates for ethnic group categories in LSOAs (Census 2011)
+#'
+#' 2011 population estimates for ethnic group categories in Lower Layer Super
+#'   Output Areas (LSOAs) in England and Wales.
+#'
+#' The overall categories are: White, Asian/Asian British,
+#'   Black/African/Caribbean/Black British, Mixed/multiple ethnic groups,
+#'   and Other ethnic group.
+#'
+#' @format A data frame of class "tbl" with 173,765 rows and 3 variables:
+#' \describe{
+#'   \item{lsoa_code}{Lower Layer Super Output Area code}
+#'   \item{ethnicity}{Ethnic group name}
+#'   \item{n_people}{Number of people}
+#'   ...
+#' }
+#' @source \url{https://ons.gov.uk/}
+"population_lsoa_ethnicity_census"
+
+#' Populations estimates for ethnic groups in LSOAs (Census 2011)
+#'
+#' 2011 population estimates for ethnic groups in Lower Layer Super
+#'   Output Areas (LSOAs) in England and Wales.
+#'
+#' The ethnic groups are listed here:
+#'   https://www.ethnicity-facts-figures.service.gov.uk/style-guide/ethnic-groups
+#'
+#' @format A data frame of class "tbl" with 625,554 rows and 3 variables:
+#' \describe{
+#'   \item{lsoa_code}{Lower Layer Super Output Area code}
+#'   \item{ethnicity}{Ethnic group name}
+#'   \item{n_people}{Number of people}
+#'   ...
+#' }
+#' @source \url{https://ons.gov.uk/}
+"population_lsoa_ethnicity_census_detailed"
+
 #' Population density for Middle Layer Super Output Areas
 #'
 #' A data set containing population density for Middle Layer Super Output Areas
