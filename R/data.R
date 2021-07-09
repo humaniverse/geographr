@@ -377,6 +377,27 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_sa_soa_lgd"
 
+#' Lower Layer Super Output Area to Clinical Commissioning Group to
+#'   Sustainability and Transformation Partnerships (April 2021) Lookup
+#'
+#' A data set containing a lookup between 2011 LSOAs, 2021 Clinical
+#'   Commissioning Groups (CCG) and Sustainability and Transformation
+#'   Partnerships (STP).
+#'
+#' @format A data frame of class "tbl" with 32,844 rows and 7 variables:
+#' \describe{
+#'   \item{lsoa_name}{LSOA name}
+#'   \item{lsoa_name}{LSOA code}
+#'   \item{ccg_name}{CCG name}
+#'   \item{ccg_code}{CCG code}
+#'   \item{ccg_nhs_code}{CCG's NHS code}
+#'   \item{stp_name}{STP name}
+#'   \item{stp_code}{STP code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_lsoa_ccg_stp"
+
 #' NHS Trusts (February 2021)
 #'
 #' A data set containing February 2021 NHS Trusts point geometries (i.e.,
