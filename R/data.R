@@ -398,6 +398,23 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_lsoa_ccg_stp"
 
+#' Trust to Middle Super Output Area (MSOA) lookup.
+#' 
+#' A data set containing a lookup between Trusts and MSOAs. As Trusts are not
+#' coterminous within MSOAs, a proportion value is provided based on the
+#' catchment areas the Trusts serve within the MSOAs.
+#'
+#' @format A data frame of class "tbl" with 62,662 rows and 3 variables:
+#' \describe{
+#'   \item{trust_code}{Trust code}
+#'   \item{msoa_code}{MSOA code}
+#'   \item{proportion}{The proportion of patients a Trust serves to the matching
+#'   MSOA}
+#'   ...
+#' }
+#' @source \url{https://app.box.com/s/qh8gzpzeo1firv1ezfxx2e6c4tgtrudl/}
+"lookup_trust_msoa"
+
 #' NHS Trusts (February 2021)
 #'
 #' A data set containing February 2021 NHS Trusts point geometries (i.e.,

@@ -1,26 +1,33 @@
-# Use this file to generate the data required
-# Put the function that calls the lookup in R/lookup.R
-
-# ---- Load libs ----
+# ---- Load ----
 library(tidyverse)
+library(devtools)
 library(httr)
 library(readxl)
 
+# Load package
+load_all(".")
+
 # ---- Load catchment population data ----
-# Source: https://app.box.com/s/qh8gzpzeo1firv1ezfxx2e6c4tgtrudl
+# Set query url
+query_url <-
+  query_urls %>%
+  filter(data_set == "trust_lad") %>%
+  pull(query_url)
+
+# Make GET request
 GET(
-  "https://app.box.com/index.php?rm=box_download_shared_file&shared_name=qh8gzpzeo1firv1ezfxx2e6c4tgtrudl&file_id=f_646039228900",
+  query_url,
   write_disk(tf <- tempfile(fileext = ".xlsx"))
 )
 
 # All admissions
-catchment_populations_raw <-
+catchment_populations <-
   read_excel(tf, sheet = "All Admissions")
 
 # Keep only the proportions and lookup codes
-proportions <-
-  catchment_populations_raw %>%
-  filter(CatchmentYear == 2018) %>% 
+catchment_proportions <-
+  catchment_populations %>%
+  filter(CatchmentYear == 2018) %>%
   select(
     msoa_code = msoa,
     trust_code = TrustCode,
@@ -29,13 +36,88 @@ proportions <-
 
 # Note that some MSOA's only have 90% patient coverage (i.e., 10% were not
 # attributed to any Trust within an MSOA):
-proportions %>% 
-  group_by(msoa_code) %>% 
-  summarise(total = sum(proportion)) %>% 
-  arrange(total)
+# catchment_proportions %>%
+#   group_by(msoa_code) %>%
+#   summarise(total = sum(proportion)) %>%
+#   arrange(total)
 
-# TODO:
-# 1. Extract URL link above into query-urls.R
-# 2. Check Trusts are up-to-date, or aligned with NHS capacity Trust codes.
-# 3. Export lookup table into R function that extracts away details:
-#    lookup_trust_msoa(data = "data with trust codes + variable (e.g., bed occupancy"))
+# ---- Update trusts ----
+# Source: https://digital.nhs.uk/services/organisation-data-service/file-downloads/miscellaneous
+# The "Successor Organisation" and "Archived Successor Organisations" document
+# Trust changes. The former covering the past financial year, and the latter all
+# historic changes before that.
+
+# Load successor data
+GET(
+  "https://files.digital.nhs.uk/assets/ods/current/succ.zip",
+  write_disk(tf <- tempfile(fileext = ".zip"))
+)
+
+unzip(tf, exdir = tempdir())
+
+successor_raw <-
+  read_csv(
+    list.files(tempdir(),
+      pattern = "succ.csv",
+      full.names = TRUE
+    )
+  )
+
+successor <-
+  successor_raw %>%
+  select(
+    old_code = `00C`,
+    new_code = `16C`
+  )
+
+# Load Archived Successor Organisations
+GET(
+  "https://files.digital.nhs.uk/assets/ods/current/succarc.zip",
+  write_disk(tf <- tempfile(fileext = ".zip"))
+)
+
+unzip(tf, exdir = tempdir())
+
+successor_archived_raw <-
+  read_csv(
+    list.files(tempdir(),
+      pattern = "succarc.csv",
+      full.names = TRUE
+    )
+  )
+
+successor_archived <-
+  successor_archived_raw %>%
+  select(
+    old_code = `00F`,
+    new_code = `13T`
+  )
+
+# Join all trust changes (note the data also contains non trusts)
+trust_changes <-
+  bind_rows(
+    successor,
+    successor_archived
+  )
+
+# Update old trusts in catchment_proportions
+catchment_proportions_updated_trusts <-
+  catchment_proportions %>%
+  left_join(
+    trust_changes,
+    by = c("trust_code" = "old_code")
+  ) %>%
+  mutate(
+    trust_code = if_else(
+      is.na(new_code),
+      trust_code,
+      new_code
+    )
+  ) %>%
+  select(-new_code) %>%
+  relocate(trust_code)
+
+lookup_trust_msoa <- catchment_proportions_updated_trusts
+
+# Save output to data/ folder
+usethis::use_data(lookup_trust_msoa, overwrite = TRUE)
