@@ -232,6 +232,21 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_pfa"
 
+#' Northern Ireland Health and Social Care Trusts (2017)
+#'
+#' A data set containing 2017 Health and Social Care Trust geometries for 
+#' Northern Ireland and their associated names and codes.
+#'
+#' @format A data frame of class "sf" with 5 rows and 3 variables:
+#' \describe{
+#'   \item{trust_name}{Health and Social Care Trust name}
+#'   \item{trust_code}{Health and Social Care Trust code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://www.opendatani.gov.uk/}
+"boundaries_trusts_ni"
+
 #' Lower Layer Super Output Area (2011) to Middle Layer Super Output Area (2011) Lookup
 #'
 #' A data set containing a lookup between 2011 Lower (LSOA) and Middle Layer Super Output Areas (MSOA).
