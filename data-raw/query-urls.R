@@ -24,6 +24,7 @@ query_urls <-
     "soa", "boundaries", "2001", "https://www.opendatani.gov.uk/dataset/678697e1-ae71-41f3-abba-0ef5f3f352c2/resource/80392e82-8bee-42de-a1e3-82d1cbaa983f/download/soa2001.json", "https://www.opendatani.gov.uk/dataset/nisra-open-data-boundaries-super-output-areas-2011/resource/80392e82-8bee-42de-a1e3-82d1cbaa983f",
     "pfa", "boundaries", "2020", "https://opendata.arcgis.com/datasets/2a1e3c23f1f24f15808275f52b8ae20d_0.geojson", "https://geoportal.statistics.gov.uk/datasets/ons::police-force-areas-december-2020-ew-buc/explore",
     "trusts_ni", "boundaries", "2018", "https://www.opendatani.gov.uk/dataset/0b04b46c-49af-45d5-b277-91b10937a01b/resource/7fa52dde-90b8-446e-bb79-4871d1028cb4/download/dohtrustboundary.zip", "https://www.opendatani.gov.uk/dataset/department-of-health-trust-boundaries/resource/7fa52dde-90b8-446e-bb79-4871d1028cb4",
+    "lhb", "boundaries", "2019", "https://ons-inspire.esriuk.com/arcgis/rest/services/Health_Boundaries/Local_Health_Boards_April_2019_Boundaries_WA_BUC/MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json", "https://geoportal.statistics.gov.uk/datasets/local-health-boards-april-2019-boundaries-wa-buc/explore?location=52.400000%2C-4.000000%2C8.70",
 
     # Points
     "nhs_trusts", "points", "Addresses of NHS Trusts to geocode", "https://files.digital.nhs.uk/assets/ods/current/etr.zip", "https://digital.nhs.uk/services/organisation-data-service/data-downloads/other-nhs-organisations",

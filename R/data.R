@@ -247,6 +247,21 @@
 #' @source \url{https://www.opendatani.gov.uk/}
 "boundaries_trusts_ni"
 
+#' Wales Local Health Boards (2019)
+#'
+#' A data set containing 2019 Local Health Board geometries for Wales and their 
+#' associated names and codes.
+#'
+#' @format A data frame of class "sf" with 7 rows and 3 variables:
+#' \describe{
+#'   \item{lhb_name}{Local Health Board name}
+#'   \item{lhb_code}{Local Health Board code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"boundaries_lhb"
+
 #' Lower Layer Super Output Area (2011) to Middle Layer Super Output Area (2011) Lookup
 #'
 #' A data set containing a lookup between 2011 Lower (LSOA) and Middle Layer Super Output Areas (MSOA).
