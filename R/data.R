@@ -445,6 +445,22 @@
 #' @source \url{https://app.box.com/s/qh8gzpzeo1firv1ezfxx2e6c4tgtrudl/}
 "lookup_trust_msoa"
 
+#' Local Authority Districts to County and Unitary Authorities lookup.
+#' 
+#' A data set containing a lookup between December 2019 Local Authority
+#' Districts and County and Unitary Authorities.
+#'
+#' @format A data frame of class "tbl" with 339 rows and 4 variables:
+#' \describe{
+#'   \item{lad_name}{LAD name}
+#'   \item{lad_code}{LAD code}
+#'   \item{county_ua_name}{County & UA name}
+#'   \item{county_ua_code}{County & UA code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_counties_ua_lad"
+
 #' NHS Trusts (February 2021)
 #'
 #' A data set containing February 2021 NHS Trusts point geometries (i.e.,
