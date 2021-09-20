@@ -234,7 +234,7 @@
 
 #' Northern Ireland Health and Social Care Trusts (2017)
 #'
-#' A data set containing 2017 Health and Social Care Trust geometries for 
+#' A data set containing 2017 Health and Social Care Trust geometries for
 #' Northern Ireland and their associated names and codes.
 #'
 #' @format A data frame of class "sf" with 5 rows and 3 variables:
@@ -249,7 +249,7 @@
 
 #' Wales Local Health Boards (2019)
 #'
-#' A data set containing 2019 Local Health Board geometries for Wales and their 
+#' A data set containing 2019 Local Health Board geometries for Wales and their
 #' associated names and codes.
 #'
 #' @format A data frame of class "sf" with 7 rows and 3 variables:
@@ -307,6 +307,22 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_msoa_lad"
+
+#' Local Authority District to Region (April 2019) Lookup in England
+#'
+#' A data set containing a lookup between 2019 Local Authority Districts (LAD)
+#' and 2019 English Regions.
+#'
+#' @format A data frame of class "tbl" with 317 rows and 4 variables:
+#' \describe{
+#'   \item{lad_name}{LAD name}
+#'   \item{lad_code}{LAD code}
+#'   \item{region_name}{Region name}
+#'   \item{region_code}{Region code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_lad_region"
 
 #' Data Zone (2011) to Intermediate Zone (2011) to LAD (December 2019) Lookup
 #'
@@ -429,7 +445,7 @@
 "lookup_lsoa_ccg_stp"
 
 #' Trust to Middle Super Output Area (MSOA) lookup.
-#' 
+#'
 #' A data set containing a lookup between Trusts and MSOAs. As Trusts are not
 #' coterminous within MSOAs, a proportion value is provided based on the
 #' catchment areas the Trusts serve within the MSOAs.
@@ -446,7 +462,7 @@
 "lookup_trust_msoa"
 
 #' Local Authority Districts to County and Unitary Authorities lookup.
-#' 
+#'
 #' A data set containing a lookup between December 2019 Local Authority
 #' Districts and County and Unitary Authorities.
 #'
