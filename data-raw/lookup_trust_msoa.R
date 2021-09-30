@@ -60,14 +60,21 @@ successor_raw <-
     list.files(tempdir(),
       pattern = "succ.csv",
       full.names = TRUE
+    ),
+    col_names = c(
+      "old_code",
+      "new_code",
+      "R",
+      "date",
+      "blank"
     )
   )
 
 successor <-
   successor_raw %>%
   select(
-    old_code = `00C`,
-    new_code = `16C`
+    old_code,
+    new_code
   )
 
 # Load Archived Successor Organisations
@@ -83,14 +90,21 @@ successor_archived_raw <-
     list.files(tempdir(),
       pattern = "succarc.csv",
       full.names = TRUE
+    ),
+    col_names = c(
+      "old_code",
+      "new_code",
+      "R",
+      "date",
+      "blank"
     )
   )
 
 successor_archived <-
   successor_archived_raw %>%
   select(
-    old_code = `00F`,
-    new_code = `13T`
+    old_code,
+    new_code
   )
 
 # Join all trust changes (note the data also contains non trusts)
@@ -117,7 +131,15 @@ catchment_proportions_updated_trusts <-
   select(-new_code) %>%
   relocate(trust_code)
 
-lookup_trust_msoa <- catchment_proportions_updated_trusts
+# Some Trust codes are repeated (e.g., "RAJ") as old trusts merge to the same
+# new or existing Trust. In these instances, the proportions need to be summed.
+catchment_proportions_summed <-
+  catchment_proportions_updated_trusts |>
+  group_by(msoa_code, trust_code) |>
+  summarise(proportion = sum(proportion)) |>
+  ungroup()
+
+lookup_trust_msoa <- catchment_proportions_summed
 
 # Save output to data/ folder
 usethis::use_data(lookup_trust_msoa, overwrite = TRUE)
