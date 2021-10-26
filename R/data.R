@@ -800,7 +800,8 @@
 #' \describe{
 #'   \item{trust_name}{Trust name}
 #'   \item{trust_code}{Trust code}
-#'   \item{population}{Total number of people living in each Trust}
+#'   \item{total_population}{Total number of people living in each Trust}
+#'   \item{`0`:`90`}{Number of people in each single age group}
 #'   ...
 #' }
 #' @source \url{https://data.gov.uk/}

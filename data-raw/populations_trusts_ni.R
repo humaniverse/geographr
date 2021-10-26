@@ -23,12 +23,16 @@ pop <-
   group_by(Geo_Code) |>
   mutate(total_population = sum(Population_Estimate)) |>
   ungroup() |>
+  pivot_wider(
+    names_from = Age,
+    values_from = Population_Estimate
+  ) |>
   select(
     trust_name = Geo_Name,
     trust_code = Geo_Code,
-    population = total_population
-  ) |>
-  distinct()
+    total_population,
+    `0`:`90`
+  )
 
 population_trusts_ni <- pop
 
