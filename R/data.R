@@ -791,6 +791,21 @@
 #' @source \url{https://ons.gov.uk/}
 "population_lsoa_ethnicity_census_detailed"
 
+#' Population estimates for Northern Ireland Health and Social Care Trusts (2020)
+#'
+#' A data set containing 2020 population estimates for Northern Ireland Health
+#' and Social Care Trusts
+#'
+#' @format A data frame of class "tbl" with 376 rows and 94 variables:
+#' \describe{
+#'   \item{trust_name}{Trust name}
+#'   \item{trust_code}{Trust code}
+#'   \item{population}{Total number of people living in each Trust}
+#'   ...
+#' }
+#' @source \url{https://data.gov.uk/}
+"population_trusts_ni"
+
 #' Population density for Middle Layer Super Output Areas
 #'
 #' A data set containing population density for Middle Layer Super Output Areas
