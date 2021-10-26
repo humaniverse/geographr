@@ -38,6 +38,19 @@ trusts_ni <-
     geometry
   )
 
+# Rename Trusts
+trusts_ni <-
+  trusts_ni |>
+  mutate(
+    trust_name = case_when(
+      trust_name == "Belfast Health and Social Care Trust" ~ "Belfast",
+      trust_name == "Northern Health and Social Care Trust" ~ "Norhern",
+      trust_name == "Western Health and Social Care Trust" ~ "Western",
+      trust_name == "Southern Health and Social Care Trust" ~ "Southern",
+      trust_name == "South Eastern Health and Social Care Trust" ~ "South Eastern"
+    )
+  )
+
 # Make sure geometries are valid
 trusts_ni <- st_make_valid(trusts_ni)
 
