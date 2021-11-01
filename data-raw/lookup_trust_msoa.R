@@ -143,4 +143,3 @@ lookup_trust_msoa <- catchment_proportions_summed
 
 # Save output to data/ folder
 usethis::use_data(lookup_trust_msoa, overwrite = TRUE)
-
