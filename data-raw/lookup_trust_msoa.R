@@ -11,7 +11,7 @@ load_all(".")
 # Set query url
 query_url <-
   query_urls %>%
-  filter(data_set == "trust_lad") %>%
+  filter(data_set == "trust_msoa") %>%
   pull(query_url)
 
 # Make GET request
@@ -27,7 +27,7 @@ catchment_populations <-
 # Keep only the proportions and lookup codes
 catchment_proportions <-
   catchment_populations %>%
-  filter(CatchmentYear == 2018) %>%
+  filter(CatchmentYear == 2019) %>%
   select(
     msoa_code = msoa,
     trust_code = TrustCode,
