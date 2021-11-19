@@ -444,7 +444,7 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_lsoa_ccg_stp"
 
-#' Trust to Middle Super Output Area (MSOA) lookup.
+#' Trust to Middle Super Output Area (MSOA) lookup (2021).
 #'
 #' A data set containing a lookup between Trusts and MSOAs. As Trusts are not
 #' coterminous within MSOAs, a proportion value is provided based on the
