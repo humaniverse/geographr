@@ -214,7 +214,7 @@
 #'   \item{geometry}{multipolygon coordinates}
 #'   ...
 #' }
-#' @source \url{https://www.opendatani.gov.uk/}
+#' @source \url{https://www.nisra.gov.uk/}
 "boundaries_soa"
 
 #' Police Force Areas (2020)
