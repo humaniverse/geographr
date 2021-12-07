@@ -202,9 +202,9 @@
 #' @source \url{https://spatialdata.gov.scot/}
 "boundaries_iz"
 
-#' Super Output Areas (2001)
+#' Super Output Areas (2011)
 #'
-#' A data set containing 2001 Northern Ireland Super Output Area geometries and
+#' A data set containing 2011 Northern Ireland Super Output Area geometries and
 #' their associated names and codes as used following the 2011 Census results.
 #'
 #' @format A data frame of class "sf" with 890 rows and 3 variables:

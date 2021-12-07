@@ -2,6 +2,7 @@
 library(tidyverse)
 library(sf)
 library(rmapshaper)
+library(httr)
 library(lobstr)
 library(devtools)
 
@@ -14,8 +15,19 @@ query_url <-
   filter(data_set == "soa") %>%
   pull(query_url)
 
+# Unzip and then read
+# GET and unzip shapefiles
+GET(
+  query_url,
+  write_disk(zip_folder <- tempfile(fileext = ".zip"))
+)
+
+unzip(zip_folder, exdir = tempdir())
+
+shp <- file.path(tempdir(), "SOA2011.shp")
+
 soa <-
-  read_sf(query_url) %>%
+  read_sf(shp) %>%
   st_transform(crs = 4326)
 
 # Select and rename vars
