@@ -44,7 +44,7 @@ trusts_ni <-
   mutate(
     trust_name = case_when(
       trust_name == "Belfast Health and Social Care Trust" ~ "Belfast",
-      trust_name == "Northern Health and Social Care Trust" ~ "Norhern",
+      trust_name == "Northern Health and Social Care Trust" ~ "Northern",
       trust_name == "Western Health and Social Care Trust" ~ "Western",
       trust_name == "Southern Health and Social Care Trust" ~ "Southern",
       trust_name == "South Eastern Health and Social Care Trust" ~ "South Eastern"
