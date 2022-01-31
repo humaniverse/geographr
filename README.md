@@ -169,6 +169,12 @@ the combined area of each Local Authority that they serve. Subsequent
 changes to Local Authorities will result in corresponding amendments to
 Health Board boundaries in order to maintain alignment.
 
+*Wales*: In 2003 Wales established 22 health boards that were
+coterminous with their 22 local authority areas. This has since been
+reformed to seven areas following the One Wales Strategy/Social Services
+and Well-being (Wales) Act 2014. These new health boards have mixed
+coterminosity with local authority areas.
+
 ### Postal
 
 #### Postcodes

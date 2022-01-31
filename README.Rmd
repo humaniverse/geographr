@@ -123,10 +123,17 @@ Health Boards with the combined area of each Local Authority that they serve.
 Subsequent changes to Local Authorities will result in corresponding amendments
 to Health Board boundaries in order to maintain alignment.
 
+*Wales*: In 2003 Wales established 22 health boards that were coterminous with
+their 22 local authority areas. This has since been reformed to seven areas
+following the One Wales Strategy/Social Services and Well-being (Wales) Act
+2014. These new health boards have mixed coterminosity with local authority
+areas.
+
 ### Postal
 
 #### Postcodes
-Postcodes are alphanumeric references comprising an outward code of 2–4 characters and an inward code of three characters.
+Postcodes are alphanumeric references comprising an outward code of 2–4
+characters and an inward code of three characters.
 
 ## Resources:
 
@@ -142,11 +149,13 @@ Postcodes are alphanumeric references comprising an outward code of 2–4 charac
 
 ## Contributing
 
-To contribute to this project, please follow [GitHub Flow](https://guides.github.com/introduction/flow/) when submitting changes.
+To contribute to this project, please follow [GitHub Flow](https://guides.github.com/introduction/flow/)
+when submitting changes.
 
 > Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
 
 ## Credits
-Developed by [Mike Page](https://github.com/MikeJohnPage) and [Matt Thomas](https://twitter.com/matthewgthomas) at the British Red Cross.
+Developed by [Mike Page](https://github.com/MikeJohnPage) and
+[Matt Thomas](https://twitter.com/matthewgthomas) at the British Red Cross.
 
 See [LICESNE](/LICENSE)
