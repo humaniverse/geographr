@@ -12,7 +12,13 @@ public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostat
 
 ## Overview
 
-geographr is an R package for mapping UK geographies.
+geographr is an R package for mapping UK geographies:
+
+-   `boundary_*` objects distribute boundaries (as [simple
+    feature](https://r-spatial.github.io/sf/) objects)
+-   `lookup_*` objects provide a set of lookup tables
+-   `ruc_*` objects provide a set of rural-urban classifications
+-   `calculate_*` functions solve common aggregation problems
 
 ## Installation
 
@@ -25,14 +31,6 @@ devtools::install_github("britishredcrosssociety/geographr")
 ```
 
 ## Development
-
-This project is under active development. Currently, the package is
-intended to:
-
-1.  distribute uk geographical geospatial data sets (boundaries and
-    lookups)  
-2.  provide functions to help lookup and aggregate between these
-    different data sets
 
 To add data sets to the package:
 
@@ -48,11 +46,6 @@ To add data sets to the package:
     generate data sets for both boundaries and lookups.
 -   Add documentation for the dataset in `R/data.R`.
 -   Update `LICENSE` by adding the license of the new data set.
-
-To add functions:
-
--   Add aggregate functions to `R/aggregate.R`
--   Add lookup functions to `R/lookup.R`
 
 ## UK geographies guide
 
