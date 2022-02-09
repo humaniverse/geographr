@@ -461,6 +461,25 @@
 #' @source \url{https://app.box.com/s/qh8gzpzeo1firv1ezfxx2e6c4tgtrudl/}
 "lookup_trust_msoa"
 
+
+#' Changes to England Local Authority codes over time (from 2019).
+#'
+#' A data set containing a lookup of the England Local Authority changes
+#' between 2019, 2020 and 2021.
+#'
+#' @format A data frame of class "tbl" with 307 rows and 6 variables:
+#' \describe{
+#'   \item{LAD19CD}{2019 LAD code}
+#'   \item{LAD19NM}{2019 LAD name}
+#'   \item{LAD20CD}{2020 LAD code}
+#'   \item{LAD20NM}{2020 LAD name}
+#'   \item{LAD21CD}{2021 LAD code}
+#'   \item{LAD21NM}{2021 LAD name}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/datasets/code-history-database-december-2021-for-the-united-kingdom/about}
+"lookup_lad_over_time"
+
 #' Local Authority Districts to County and Unitary Authorities lookup.
 #'
 #' A data set containing a lookup between December 2019 Local Authority
