@@ -3,6 +3,7 @@ library(httr)
 library(tidyverse)
 library(sf)
 library(devtools)
+library(lobstr)
 
 # Load package
 load_all(".")
