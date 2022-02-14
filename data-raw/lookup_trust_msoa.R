@@ -22,7 +22,7 @@ GET(
 
 # All admissions
 catchment_populations <-
-  read_excel(tf, sheet = "All Admissions")
+  read_excel("c:/users/040026704/Downloads/2021 Trust Catchment Populations_Supplementary MSOA Analysis.xlsx", sheet = "All Admissions")
 
 # Keep only the proportions and lookup codes
 catchment_proportions <-
