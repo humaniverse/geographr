@@ -45,6 +45,8 @@ To add data sets to the package:
 - Add documentation for the dataset in `R/data.R`. 
 - Update `LICENSE` by adding the license of the new data set.
 
+<img src='man/figures/file-structure.png' align="centre"/>
+
 ## UK geographies guide
 
 ### Census
