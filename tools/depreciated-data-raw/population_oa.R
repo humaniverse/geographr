@@ -59,12 +59,12 @@ for (file in pop_files) {
 
   # if the merged dataset doesn't exist, create it
   if (!exists("oa_pop")){
-    oa_pop <- read_excel(file, sheet = "Mid-2019 Persons", skip = 4) # %>%
+    oa_pop <- read_excel(file, sheet = "Mid-2019 Persons", skip = 4) # |>
       # select(OA11CD, LSOA11CD, `All Ages`)
 
   } else {
     # if the merged dataset does exist, append to it
-    temp_dataset <- read_excel(file, sheet = "Mid-2019 Persons", skip = 4) # %>%
+    temp_dataset <- read_excel(file, sheet = "Mid-2019 Persons", skip = 4) # |>
       # select(OA11CD, LSOA11CD, `All Ages`)
 
     oa_pop <- rbind(oa_pop, temp_dataset)
@@ -73,7 +73,7 @@ for (file in pop_files) {
 }
 
 oa_pop <-
-  oa_pop %>%
+  oa_pop |>
   rename(
     oa_code = OA11CD,
     lsoa_code = LSOA11CD,

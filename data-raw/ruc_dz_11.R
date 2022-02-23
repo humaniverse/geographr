@@ -8,20 +8,20 @@ load_all(".")
 # ---- Load Data Zone classifications ----
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(id == "ruc_dz_11") %>%
+  query_urls |>
+  filter(id == "ruc_dz_11") |>
   pull(query)
 
 ruc_dz <- read_csv(query_url)
 
 # Classifications
 ruc_dz <-
-  ruc_dz %>%
-  select(DZ_CODE, UR6FOLD) %>%
+  ruc_dz |>
+  select(DZ_CODE, UR6FOLD) |>
   mutate(RUC = case_when(
     UR6FOLD <= 4 ~ "Urban",
     UR6FOLD >= 5 ~ "Rural"
-  )) %>%
+  )) |>
   mutate(Classification = case_when(
     UR6FOLD %in% c(1) ~ "Large urban areas",
     UR6FOLD %in% c(2) ~ "Other urban areas",
@@ -30,7 +30,7 @@ ruc_dz <-
   ))
 
 ruc_dz <-
-  ruc_dz %>%
+  ruc_dz |>
   select(
     dz_11_code = DZ_CODE,
     ruc_16_code = UR6FOLD,

@@ -10,20 +10,20 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(id == "lsoa_11") %>%
+  query_urls |>
+  filter(id == "lsoa_11") |>
   pull(query)
 
 lsoa <-
   read_sf(query_url)
 
 lsoa <-
-  lsoa %>%
+  lsoa |>
   st_transform(crs = 4326)
 
 # Select and rename vars
 lsoa <-
-  lsoa %>%
+  lsoa |>
   select(
     lsoa_11_name = LSOA11NM,
     lsoa_11_code = LSOA11CD,
@@ -37,15 +37,15 @@ lsoa <- st_make_valid(lsoa)
 lsoa <- ms_simplify(lsoa)
 
 # Check geometry types are homogenous
-if (lsoa %>%
-  st_geometry_type() %>%
-  unique() %>%
+if (lsoa |>
+  st_geometry_type() |>
+  unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
 
-if (lsoa %>%
-  st_geometry_type() %>%
+if (lsoa |>
+  st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }

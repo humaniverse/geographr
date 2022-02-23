@@ -11,8 +11,8 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(id == "iz_11") %>%
+  query_urls |>
+  filter(id == "iz_11") |>
   pull(query)
 
 # GET and unzip shapefiles
@@ -28,12 +28,12 @@ unzip(zip_folder, exdir = tempdir())
 shp <- file.path(tempdir(), "SG_IntermediateZone_Bdry_2011.shp")
 
 iz <-
-  read_sf(shp) %>%
+  read_sf(shp) |>
   st_transform(crs = 4326)
 
 # Select and rename vars
 iz <-
-  iz %>%
+  iz |>
   select(
     iz_11_name = Name,
     iz_11_code = InterZone,
@@ -47,15 +47,15 @@ iz <- st_make_valid(iz)
 iz <- ms_simplify(iz)
 
 # Check geometry types are homogenous
-if (iz %>%
-  st_geometry_type() %>%
-  unique() %>%
+if (iz |>
+  st_geometry_type() |>
+  unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
 
-if (iz %>%
-  st_geometry_type() %>%
+if (iz |>
+  st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }

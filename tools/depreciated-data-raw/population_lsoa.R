@@ -9,8 +9,8 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(data_set == "pop_lsoa") %>%
+  query_urls |>
+  filter(data_set == "pop_lsoa") |>
   pull(query_url)
 
 GET(query_url,
@@ -33,13 +33,13 @@ lsoa_pop <- read_excel(file.path(unzip_dir, "SAPE22DT2-mid-2019-lsoa-syoa-estima
 
 # Select and rename vars
 lsoa_pop <-
-  lsoa_pop %>%
+  lsoa_pop |>
   select(
     lsoa_name = `LSOA Name`,
     lsoa_code = `LSOA Code`,
     `total_population` = `All Ages`,
     `0`:`90+`
-  ) %>%
+  ) |>
   distinct()
 
 # Rename

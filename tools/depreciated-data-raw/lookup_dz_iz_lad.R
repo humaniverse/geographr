@@ -9,8 +9,8 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(data_set == "dz_iz_lad") %>%
+  query_urls |>
+  filter(data_set == "dz_iz_lad") |>
   pull(query_url)
 
 GET(query_url,
@@ -20,7 +20,7 @@ dz_iz_lad <- read_excel(tf, sheet = "SIMD 2020v2 DZ lookup data")
 
 # Select and rename vars
 lookup_dz_iz_lad <-
-  dz_iz_lad %>%
+  dz_iz_lad |>
   select(
     dz_name = DZname,
     dz_code = DZ,
@@ -28,7 +28,7 @@ lookup_dz_iz_lad <-
     iz_code = IZcode,
     lad_name = LAname,
     lad_code = LAcode
-  ) %>%
+  ) |>
   distinct()
 
 # Save output to data/ folder

@@ -9,17 +9,17 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(id == "ccg_21") %>%
+  query_urls |>
+  filter(id == "ccg_21") |>
   pull(query)
 
 ccg <-
-  read_sf(query_url) %>%
+  read_sf(query_url) |>
   st_transform(crs = 4326)
 
 # Select and rename vars
 ccg <-
-  ccg %>%
+  ccg |>
   select(
     ccg_21_name = CCG21NM,
     ccg_21_code = CCG21CD,
@@ -30,15 +30,15 @@ ccg <-
 ccg <- st_make_valid(ccg)
 
 # Check geometry types are homogenous
-if (ccg %>%
-  st_geometry_type() %>%
-  unique() %>%
+if (ccg |>
+  st_geometry_type() |>
+  unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
 
-if (ccg %>%
-  st_geometry_type() %>%
+if (ccg |>
+  st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }

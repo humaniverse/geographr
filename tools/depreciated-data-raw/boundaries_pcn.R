@@ -18,13 +18,13 @@ gp_shp <- read_sf("https://files.digital.nhs.uk/assets/eDEC/eDecJan-Mar2020.kml"
 
 # Some GPs have more than one polygon - merge them
 gp_shp <-
-  gp_shp %>%
-  group_by(Name) %>%
+  gp_shp |>
+  group_by(Name) |>
   summarise()
 
 # Split `Name` column into Codes and Names
 gp_shp <-
-  gp_shp %>%
+  gp_shp |>
   separate(Name, c("Code", "Name"), sep = " - ")
 
 # Load GP to PCN lookup
@@ -46,7 +46,7 @@ gp_pcn <-
 
 # Select and rename vars
 gp_pcn <-
-  gp_pcn %>%
+  gp_pcn |>
   select(
     gp_code = `Partner\r\nOrganisation\r\nCode`,
     gp_name = `Partner\r\nName`,
@@ -56,14 +56,14 @@ gp_pcn <-
 
 # Join GP shapefile to PCN's
 pcn_shp_all <-
-  gp_shp %>%
-  left_join(gp_pcn, by = c("Code" = "gp_code")) %>%
+  gp_shp |>
+  left_join(gp_pcn, by = c("Code" = "gp_code")) |>
   filter(!is.na(pcn_code))
 
 # Create union in overlapping GP areas
 pcn <-
-  pcn_shp_all %>%
-  group_by(pcn_code, pcn_name) %>%
+  pcn_shp_all |>
+  group_by(pcn_code, pcn_name) |>
   summarise()
 
 # Make sure geometries are valid
@@ -71,18 +71,18 @@ pcn <- st_make_valid(pcn)
 
 # Reorder cols to be consistent with other data sets
 pcn <-
-  pcn %>%
+  pcn |>
   select(pcn_name, pcn_code, geometry)
 
 # Check geometry types are homogenous
-if (pcn %>%
-  st_geometry_type() %>%
-  unique() %>%
+if (pcn |>
+  st_geometry_type() |>
+  unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
-if (pcn %>%
-  st_geometry_type() %>%
+if (pcn |>
+  st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }

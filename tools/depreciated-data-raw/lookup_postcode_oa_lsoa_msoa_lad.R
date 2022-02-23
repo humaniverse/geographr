@@ -8,8 +8,8 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(data_set == "postcode_lad") %>%
+  query_urls |>
+  filter(data_set == "postcode_lad") |>
   pull(query_url)
 
 # GET and unzip file
@@ -27,7 +27,7 @@ postcodes <-
 
 # Select and rename vars
 postcode_oa_lsoa_msoa_lad <-
-  postcodes %>%
+  postcodes |>
   select(
     postcode = pcds,
     oa_code = oa11cd,
@@ -38,9 +38,9 @@ postcode_oa_lsoa_msoa_lad <-
 
 # Keep distinct values and clean postcode column
 postcode_oa_lsoa_msoa_lad <-
-  postcode_oa_lsoa_msoa_lad %>%
-  mutate(postcode = str_to_upper(postcode)) %>%
-  mutate(postcode = str_remove_all(postcode, " ")) %>%
+  postcode_oa_lsoa_msoa_lad |>
+  mutate(postcode = str_to_upper(postcode)) |>
+  mutate(postcode = str_remove_all(postcode, " ")) |>
   distinct()
 
 # Remove NI Postcodes which are distributed under their own license:
@@ -49,7 +49,7 @@ postcode_oa_lsoa_msoa_lad <-
 # Keep only Valid codes, as two "pseudo" codes appear in the data:
 # "L99999999" & "M99999999"
 postcode_oa_lsoa_msoa_lad <-
-  postcode_oa_lsoa_msoa_lad %>%
+  postcode_oa_lsoa_msoa_lad |>
   filter(
     str_detect(lad_code, "^E") |
       str_detect(lad_code, "^W") |

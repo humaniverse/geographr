@@ -9,17 +9,17 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(data_set == "towns_cities") %>%
+  query_urls |>
+  filter(data_set == "towns_cities") |>
   pull(query_url)
 
 towns_cities <-
-  read_sf(query_url) %>%
+  read_sf(query_url) |>
   st_transform(crs = 4326)
 
 # Select and rename vars
 towns_cities <-
-  towns_cities %>%
+  towns_cities |>
   select(
     town_city_name = TCITY15NM,
     town_city_code = TCITY15CD,
@@ -30,15 +30,15 @@ towns_cities <-
 towns_cities <- st_make_valid(towns_cities)
 
 # Check geometry types are homogenous
-if (towns_cities %>%
-  st_geometry_type() %>%
-  unique() %>%
+if (towns_cities |>
+  st_geometry_type() |>
+  unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
 
-if (towns_cities %>%
-  st_geometry_type() %>%
+if (towns_cities |>
+  st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }

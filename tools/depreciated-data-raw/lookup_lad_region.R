@@ -8,8 +8,8 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(data_set == "lad_region") %>%
+  query_urls |>
+  filter(data_set == "lad_region") |>
   pull(query_url)
 
 lad_region <-
@@ -17,8 +17,8 @@ lad_region <-
 
 # Select and rename vars
 lad_region <-
-  lad_region %>%
-  st_drop_geometry() %>%
+  lad_region |>
+  st_drop_geometry() |>
   select(
     lad_name = LAD19NM,
     lad_code = LAD19CD,

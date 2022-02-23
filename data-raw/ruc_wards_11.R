@@ -9,8 +9,8 @@ load_all(".")
 # ---- Load England and Wales ----
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(id == "ruc_wards_11") %>%
+  query_urls |>
+  filter(id == "ruc_wards_11") |>
   pull(query)
 
 ruc_wards <-
@@ -19,14 +19,14 @@ ruc_wards <-
 
 # Classifications
 ruc_wards <-
-  ruc_wards %>%
-  select(WD11CD, RUC11CD) %>%
+  ruc_wards |>
+  select(WD11CD, RUC11CD) |>
   mutate(
     RUC = case_when(
       RUC11CD %in% c("A1", "B1", "C1", "C2") ~ "Urban",
       RUC11CD %in% c("D1", "D2", "E1", "E2", "F1", "F2") ~ "Rural"
     )
-  ) %>%
+  ) |>
   mutate(
     Classification = case_when(
       RUC11CD %in% c("A1", "B1") ~ "Urban conurbation",
@@ -38,7 +38,7 @@ ruc_wards <-
   )
 
 ruc_wards <-
-  ruc_wards %>%
+  ruc_wards |>
   rename(ward_11_code = WD11CD, ruc_11_code = RUC11CD)
 
 # Rename

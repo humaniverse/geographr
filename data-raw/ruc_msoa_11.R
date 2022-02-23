@@ -9,8 +9,8 @@ load_all(".")
 # ---- Load England and Wales ----
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(id == "ruc_msoa_11") %>%
+  query_urls |>
+  filter(id == "ruc_msoa_11") |>
   pull(query)
 
 ruc_msoa <-
@@ -19,14 +19,14 @@ ruc_msoa <-
 
 # Classifications
 ruc_msoa <-
-  ruc_msoa %>%
-  select(MSOA11CD, RUC11CD) %>%
+  ruc_msoa |>
+  select(MSOA11CD, RUC11CD) |>
   mutate(
     RUC = case_when(
       RUC11CD %in% c("A1", "B1", "C1", "C2") ~ "Urban",
       RUC11CD %in% c("D1", "D2", "E1", "E2", "F1", "F2") ~ "Rural"
     )
-  ) %>%
+  ) |>
   mutate(
     Classification = case_when(
       RUC11CD %in% c("A1", "B1") ~ "Urban conurbation",
@@ -38,7 +38,7 @@ ruc_msoa <-
   )
 
 ruc_msoa <-
-  ruc_msoa %>%
+  ruc_msoa |>
   rename(msoa_11_code = MSOA11CD, ruc_11_code = RUC11CD)
 
 # Rename

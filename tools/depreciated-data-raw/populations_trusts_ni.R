@@ -9,8 +9,8 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(data_set == "pop_trusts_ni") %>%
+  query_urls |>
+  filter(data_set == "pop_trusts_ni") |>
   pull(query_url)
 
 pop_raw <-

@@ -7,8 +7,8 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(data_set == "lsoa_ward") %>%
+  query_urls |>
+  filter(data_set == "lsoa_ward") |>
   pull(query_url)
 
 lsoa_ward <-
@@ -16,13 +16,13 @@ lsoa_ward <-
 
 # Select and rename vars
 lsoa_ward <-
-  lsoa_ward %>%
+  lsoa_ward |>
   select(
     lsoa_name = LSOA11NM,
     lsoa_code = LSOA11CD,
     ward_name = WD19NM,
     ward_code = WD19CD
-  ) %>%
+  ) |>
   distinct()
 
 # Rename

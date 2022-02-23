@@ -11,8 +11,8 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(id == "soa_11") %>%
+  query_urls |>
+  filter(id == "soa_11") |>
   pull(query)
 
 # Unzip and then read
@@ -29,12 +29,12 @@ unzip(zip_folder, exdir = tempdir())
 shp <- file.path(tempdir(), "SOA2011.shp")
 
 soa <-
-  read_sf(shp) %>%
+  read_sf(shp) |>
   st_transform(crs = 4326)
 
 # Select and rename vars
 soa <-
-  soa %>%
+  soa |>
   select(
     soa_11_name = SOA_LABEL,
     soa_11_code = SOA_CODE,
@@ -48,15 +48,15 @@ soa <- st_make_valid(soa)
 soa <- ms_simplify(soa)
 
 # Check geometry types are homogenous
-if (soa %>%
-  st_geometry_type() %>%
-  unique() %>%
+if (soa |>
+  st_geometry_type() |>
+  unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
 
-if (soa %>%
-  st_geometry_type() %>%
+if (soa |>
+  st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }

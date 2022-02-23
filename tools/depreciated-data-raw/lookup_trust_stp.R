@@ -8,8 +8,8 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(data_set == "nhs_trusts") %>%
+  query_urls |>
+  filter(data_set == "nhs_trusts") |>
   pull(query_url)
 
 # Load raw trust data
@@ -44,8 +44,8 @@ trusts_raw <- read_csv(
 
 # Create open status
 trusts_clean <-
-  trusts_raw %>%
-  mutate(status = if_else(is.na(close_date), "open", "closed")) %>%
+  trusts_raw |>
+  mutate(status = if_else(is.na(close_date), "open", "closed")) |>
   select(
     -open_date,
     -close_date
@@ -53,7 +53,7 @@ trusts_clean <-
 
 # Drop cols
 trusts_clean <-
-  trusts_clean %>%
+  trusts_clean |>
   select(
     nhs_trust_code,
     stp_code = high_level_health_geography,

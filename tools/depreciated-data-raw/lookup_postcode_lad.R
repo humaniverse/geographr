@@ -8,8 +8,8 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(data_set == "postcode_lad") %>%
+  query_urls |>
+  filter(data_set == "postcode_lad") |>
   pull(query_url)
 
 # GET and unzip file
@@ -27,7 +27,7 @@ postcode_lad <-
 
 # Select and rename vars
 postcode_lad <-
-  postcode_lad %>%
+  postcode_lad |>
   select(
     postcode = pcds,
     lad_name = ladnm,
@@ -36,9 +36,9 @@ postcode_lad <-
 
 # Keep distinct values and clean postcode column
 postcode_lad <-
-  postcode_lad %>%
-  mutate(postcode = str_to_upper(postcode)) %>%
-  mutate(postcode = str_remove_all(postcode, " ")) %>%
+  postcode_lad |>
+  mutate(postcode = str_to_upper(postcode)) |>
+  mutate(postcode = str_remove_all(postcode, " ")) |>
   distinct()
 
 # Remove NI Postcodes which are distributed under their own license:
@@ -47,7 +47,7 @@ postcode_lad <-
 # Keep only Valid codes, as two "pseudo" codes appear in the data:
 # "L99999999" & "M99999999"
 postcode_lad <-
-  postcode_lad %>%
+  postcode_lad |>
   filter(
     str_detect(lad_code, "^E") |
       str_detect(lad_code, "^W") |
@@ -56,7 +56,7 @@ postcode_lad <-
 
 # LAD names for Buckinghamshire unitary authority "E06000060"
 postcode_lad <-
-  postcode_lad %>%
+  postcode_lad |>
   mutate(
     lad_name = if_else(
       lad_code == "E06000060",

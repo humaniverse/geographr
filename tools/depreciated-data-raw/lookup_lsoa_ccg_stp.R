@@ -8,8 +8,8 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(data_set == "lsoa_ccg_stp") %>%
+  query_urls |>
+  filter(data_set == "lsoa_ccg_stp") |>
   pull(query_url)
 
 lsoa_ccg_stp <-
@@ -17,8 +17,8 @@ lsoa_ccg_stp <-
 
 # Select and rename vars
 lsoa_ccg_stp <-
-  lsoa_ccg_stp %>%
-  st_drop_geometry() %>%
+  lsoa_ccg_stp |>
+  st_drop_geometry() |>
   select(
     lsoa_name = LSOA11NM,
     lsoa_code = LSOA11CD,
@@ -27,7 +27,7 @@ lsoa_ccg_stp <-
     ccg_nhs_code = CCG21CDH,
     stp_name = STP21NM,
     stp_code = STP21CD
-  ) %>%
+  ) |>
   distinct()
 
 # Rename

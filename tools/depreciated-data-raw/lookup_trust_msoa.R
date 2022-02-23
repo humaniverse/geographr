@@ -10,8 +10,8 @@ load_all(".")
 # ---- Load catchment population data ----
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(data_set == "trust_msoa") %>%
+  query_urls |>
+  filter(data_set == "trust_msoa") |>
   pull(query_url)
 
 # Make GET request
@@ -26,8 +26,8 @@ catchment_populations <-
 
 # Keep only the proportions and lookup codes
 catchment_proportions <-
-  catchment_populations %>%
-  filter(CatchmentYear == 2019) %>%
+  catchment_populations |>
+  filter(CatchmentYear == 2019) |>
   select(
     msoa_code = msoa,
     trust_code = TrustCode,
@@ -36,9 +36,9 @@ catchment_proportions <-
 
 # Note that some MSOA's only have 90% patient coverage (i.e., 10% were not
 # attributed to any Trust within an MSOA):
-# catchment_proportions %>%
-#   group_by(msoa_code) %>%
-#   summarise(total = sum(proportion)) %>%
+# catchment_proportions |>
+#   group_by(msoa_code) |>
+#   summarise(total = sum(proportion)) |>
 #   arrange(total)
 
 # ---- Update trusts ----
@@ -71,7 +71,7 @@ successor_raw <-
   )
 
 successor <-
-  successor_raw %>%
+  successor_raw |>
   select(
     old_code,
     new_code
@@ -101,7 +101,7 @@ successor_archived_raw <-
   )
 
 successor_archived <-
-  successor_archived_raw %>%
+  successor_archived_raw |>
   select(
     old_code,
     new_code
@@ -116,19 +116,19 @@ trust_changes <-
 
 # Update old trusts in catchment_proportions
 catchment_proportions_updated_trusts <-
-  catchment_proportions %>%
+  catchment_proportions |>
   left_join(
     trust_changes,
     by = c("trust_code" = "old_code")
-  ) %>%
+  ) |>
   mutate(
     trust_code = if_else(
       is.na(new_code),
       trust_code,
       new_code
     )
-  ) %>%
-  select(-new_code) %>%
+  ) |>
+  select(-new_code) |>
   relocate(trust_code)
 
 # Some Trust codes are repeated (e.g., "RAJ") as old trusts merge to the same

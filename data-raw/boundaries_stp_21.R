@@ -9,17 +9,17 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(id == "stp_21") %>%
+  query_urls |>
+  filter(id == "stp_21") |>
   pull(query)
 
 stp <-
-  read_sf(query_url) %>%
+  read_sf(query_url) |>
   st_transform(crs = 4326)
 
 # Select and rename vars
 stp <-
-  stp %>%
+  stp |>
   select(
     stp_21_name = STP21NM,
     stp_21_code = STP21CD,
@@ -30,14 +30,14 @@ stp <-
 stp <- st_make_valid(stp)
 
 # Check geometry types are homogenous
-if (stp %>%
-  st_geometry_type() %>%
-  unique() %>%
+if (stp |>
+  st_geometry_type() |>
+  unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
-if (stp %>%
-  st_geometry_type() %>%
+if (stp |>
+  st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }

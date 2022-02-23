@@ -11,8 +11,8 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(id == "hb_19") %>%
+  query_urls |>
+  filter(id == "hb_19") |>
   pull(query)
 
 # GET and unzip shapefiles
@@ -28,12 +28,12 @@ unzip(zip_folder, exdir = tempdir())
 shp <- paste0(tempdir(), "/SG_NHS_HealthBoards_2019.shp")
 
 hb <-
-  read_sf(shp) %>%
+  read_sf(shp) |>
   st_transform(crs = 4326)
 
 # Select and rename vars
 hb <-
-  hb %>%
+  hb |>
   select(
     hb_19_name = HBName,
     hb_19_code = HBCode,
@@ -47,15 +47,15 @@ hb <- st_make_valid(hb)
 hb <- ms_simplify(hb)
 
 # Check geometry types are homogenous
-if (hb %>%
-  st_geometry_type() %>%
-  unique() %>%
+if (hb |>
+  st_geometry_type() |>
+  unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
 
-if (hb %>%
-  st_geometry_type() %>%
+if (hb |>
+  st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }

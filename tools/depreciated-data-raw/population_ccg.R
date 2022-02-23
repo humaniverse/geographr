@@ -9,8 +9,8 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(data_set == "pop_ccg") %>%
+  query_urls |>
+  filter(data_set == "pop_ccg") |>
   pull(query_url)
 
 GET(query_url,
@@ -33,14 +33,14 @@ ccg_pop <- read_excel(file.path(unzip_dir, "SAPE22DT6a-mid-2019-ccg-2020-estimat
 
 # Select and rename vars
 ccg_pop <-
-  ccg_pop %>%
+  ccg_pop |>
   select(
     ccg_name = `CCG Name`,
     ccg_code = `CCG Code`,
     `total_population` = `All Ages`,
     `0`:`90+`
-  ) %>%
-  slice(-1) %>%  # First row is all NAs, so discard it
+  ) |>
+  slice(-1) |>  # First row is all NAs, so discard it
   distinct()
 
 # Rename

@@ -32,9 +32,9 @@ census_raw <-
 
 # Get top-line ethnic group categories
 population_lsoa_ethnicity_census <-
-  census_raw %>%
-  filter(RURAL_URBAN_NAME == "Total") %>%
-  select(lsoa_code = GEOGRAPHY_CODE, ethnicity = CELL_NAME, n_people = OBS_VALUE) %>%
+  census_raw |>
+  filter(RURAL_URBAN_NAME == "Total") |>
+  select(lsoa_code = GEOGRAPHY_CODE, ethnicity = CELL_NAME, n_people = OBS_VALUE) |>
   filter(
     ethnicity %in% c(
       "White", "Asian/Asian British", "Black/African/Caribbean/Black British",
@@ -44,9 +44,9 @@ population_lsoa_ethnicity_census <-
 
 # Get detailed ethnic group categories
 population_lsoa_ethnicity_census_detailed <-
-  census_raw %>%
-  filter(RURAL_URBAN_NAME == "Total") %>%
-  select(lsoa_code = GEOGRAPHY_CODE, ethnicity = CELL_NAME, n_people = OBS_VALUE) %>%
+  census_raw |>
+  filter(RURAL_URBAN_NAME == "Total") |>
+  select(lsoa_code = GEOGRAPHY_CODE, ethnicity = CELL_NAME, n_people = OBS_VALUE) |>
   filter(
     !ethnicity %in% c(
       "All usual residents", "White", "Asian/Asian British", "Black/African/Caribbean/Black British",

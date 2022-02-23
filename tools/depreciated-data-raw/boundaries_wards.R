@@ -9,17 +9,17 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(data_set == "wards") %>%
+  query_urls |>
+  filter(data_set == "wards") |>
   pull(query_url)
 
 wards <-
-  read_sf(query_url) %>%
+  read_sf(query_url) |>
   st_transform(crs = 4326)
 
 # Select and rename vars
 wards <-
-  wards %>%
+  wards |>
   select(
     ward_name = WD20NM,
     ward_code = WD20CD,
@@ -30,15 +30,15 @@ wards <-
 wards <- st_make_valid(wards)
 
 # Check geometry types are homogenous
-if (wards %>%
-  st_geometry_type() %>%
-  unique() %>%
+if (wards |>
+  st_geometry_type() |>
+  unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
 
-if (wards %>%
-  st_geometry_type() %>%
+if (wards |>
+  st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }

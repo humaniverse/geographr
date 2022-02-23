@@ -11,8 +11,8 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(data_set == "dz") %>%
+  query_urls |>
+  filter(data_set == "dz") |>
   pull(query_url)
 
 # GET and unzip shapefiles
@@ -26,12 +26,12 @@ unzip(zip_folder, exdir = tempdir())
 shp <- file.path(tempdir(), "SG_DataZone_Bdry_2011.shp")
 
 dz <-
-  read_sf(shp) %>%
+  read_sf(shp) |>
   st_transform(crs = 4326)
 
 # Select and rename vars
 dz <-
-  dz %>%
+  dz |>
   select(
     dz_name = Name,
     dz_code = DataZone,
@@ -45,15 +45,15 @@ dz <- st_make_valid(dz)
 dz <- ms_simplify(dz)
 
 # Check geometry types are homogenous
-if (dz %>%
-    st_geometry_type() %>%
-    unique() %>%
+if (dz |>
+    st_geometry_type() |>
+    unique() |>
     length() > 1) {
   stop("Incorrect geometry types")
 }
 
-if (dz %>%
-    st_geometry_type() %>%
+if (dz |>
+    st_geometry_type() |>
     unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }

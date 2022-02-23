@@ -12,8 +12,8 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(id == "nhs_trusts_22") %>%
+  query_urls |>
+  filter(id == "nhs_trusts_22") |>
   pull(query)
 
 # Load raw trust data
@@ -48,8 +48,8 @@ trusts_raw <- read_csv(
 
 # Create open status
 trusts_clean <-
-  trusts_raw %>%
-  mutate(status = if_else(is.na(close_date), "open", "closed")) %>%
+  trusts_raw |>
+  mutate(status = if_else(is.na(close_date), "open", "closed")) |>
   select(
     -open_date,
     -close_date
@@ -57,7 +57,7 @@ trusts_clean <-
 
 # Drop cols
 trusts_clean <-
-  trusts_clean %>%
+  trusts_clean |>
   select(
     nhs_trust_22_code = nhs_trust_code,
     nhs_trust_22_name = nhs_trust_name,
@@ -67,7 +67,7 @@ trusts_clean <-
 
 # Geocode
 trusts_geocoded <-
-  trusts_clean %>%
+  trusts_clean |>
   geocode(
     postalcode = postcode,
     method = "osm"
@@ -75,32 +75,32 @@ trusts_geocoded <-
 
 # Drop postcode column
 trusts_geocoded <-
-  trusts_geocoded %>%
+  trusts_geocoded |>
   select(-postcode)
 
 # Reorder cols
 trusts_geocoded <-
-  trusts_geocoded %>%
+  trusts_geocoded |>
   relocate(nhs_trust_22_name)
 
 # Convert to sf object
 trusts_sf <-
-  trusts_geocoded %>%
+  trusts_geocoded |>
   st_as_sf(coords = c("long", "lat"), crs = 4326)
 
 # Make sure geometries are valid
 trusts_sf <- st_make_valid(trusts_sf)
 
 # Check geometry types are homogenous
-if (trusts_sf %>%
-  st_geometry_type() %>%
-  unique() %>%
+if (trusts_sf |>
+  st_geometry_type() |>
+  unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
 
-if (trusts_sf %>%
-  st_geometry_type() %>%
+if (trusts_sf |>
+  st_geometry_type() |>
   unique() != "POINT") {
   stop("Incorrect geometry types")
 }

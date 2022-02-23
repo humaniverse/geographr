@@ -8,8 +8,8 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(data_set == "msoa_lad") %>%
+  query_urls |>
+  filter(data_set == "msoa_lad") |>
   pull(query_url)
 
 msoa_lad <-
@@ -17,7 +17,7 @@ msoa_lad <-
 
 # Select and rename vars
 msoa_lad <-
-  msoa_lad %>%
+  msoa_lad |>
   select(
     msoa_name = MSOA11NM,
     msoa_code = MSOA11CD,

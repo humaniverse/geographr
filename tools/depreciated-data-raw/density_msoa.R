@@ -9,8 +9,8 @@ load_all(".")
 # ---- Load MSOA area data ----
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(data_set == "msoa") %>%
+  query_urls |>
+  filter(data_set == "msoa") |>
   pull(query_url)
 
 msoa <-
@@ -18,23 +18,23 @@ msoa <-
 
 # Select and rename vars
 msoa <-
-  msoa %>%
+  msoa |>
   select(
     msoa_code = MSOA11CD,
     area_m_squared = Shape__Area
-  ) %>%
-  mutate(area_km_squared = area_m_squared / 1000^2) %>%
-  select(-area_m_squared) %>%
+  ) |>
+  mutate(area_km_squared = area_m_squared / 1000^2) |>
+  select(-area_m_squared) |>
   st_drop_geometry()
 
 # ---- Load MSOA population estimates ----
 msoa_pop <-
-  population_msoa %>%
+  population_msoa |>
   select(msoa_code, total_population)
 
 density_msoa <-
-  msoa %>%
-  left_join(msoa_pop) %>%
+  msoa |>
+  left_join(msoa_pop) |>
   mutate(density = total_population / area_km_squared)
 
 # Save output to data/ folder

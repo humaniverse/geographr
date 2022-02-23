@@ -11,8 +11,8 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(id == "trusts_ni_18") %>%
+  query_urls |>
+  filter(id == "trusts_ni_18") |>
   pull(query)
 
 # GET and unzip shapefiles
@@ -28,12 +28,12 @@ unzip(zip_folder, exdir = tempdir())
 shp <- paste0(tempdir(), "/2017trustBoundary/dohTrustBoundary.shp")
 
 trusts_ni <-
-  read_sf(shp) %>%
+  read_sf(shp) |>
   st_transform(crs = 4326)
 
 # Select and rename vars
 trusts_ni <-
-  trusts_ni %>%
+  trusts_ni |>
   select(
     trust_18_name = TrustName,
     trust_18_code = TrustCode,
@@ -60,15 +60,15 @@ trusts_ni <- st_make_valid(trusts_ni)
 trusts_ni <- ms_simplify(trusts_ni)
 
 # Check geometry types are homogenous
-if (trusts_ni %>%
-  st_geometry_type() %>%
-  unique() %>%
+if (trusts_ni |>
+  st_geometry_type() |>
+  unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
 
-if (trusts_ni %>%
-  st_geometry_type() %>%
+if (trusts_ni |>
+  st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }

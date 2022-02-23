@@ -9,17 +9,17 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(id == "counties_ua_21") %>%
+  query_urls |>
+  filter(id == "counties_ua_21") |>
   pull(query)
 
 counties_ua <-
-  read_sf(query_url) %>%
+  read_sf(query_url) |>
   st_transform(crs = 4326)
 
 # Select and rename vars
 counties_ua <-
-  counties_ua %>%
+  counties_ua |>
   select(
     county_ua_21_name = CTYUA21NM,
     county_ua_21_code = CTYUA21CD,
@@ -30,15 +30,15 @@ counties_ua <-
 counties_ua <- st_make_valid(counties_ua)
 
 # Check geometry types are homogenous
-if (counties_ua %>%
-  st_geometry_type() %>%
-  unique() %>%
+if (counties_ua |>
+  st_geometry_type() |>
+  unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
 
-if (counties_ua %>%
-  st_geometry_type() %>%
+if (counties_ua |>
+  st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }

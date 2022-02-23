@@ -8,8 +8,8 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(data_set == "ccg_stp") %>%
+  query_urls |>
+  filter(data_set == "ccg_stp") |>
   pull(query_url)
 
 ccg_stp <-
@@ -17,7 +17,7 @@ ccg_stp <-
 
 # Select and rename vars
 ccg_stp <-
-  ccg_stp %>%
+  ccg_stp |>
   select(
     ccg_name = CCG20NM,
     ccg_code = CCG20CD,

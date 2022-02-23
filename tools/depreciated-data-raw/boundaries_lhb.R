@@ -11,20 +11,20 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(data_set == "lhb") %>%
+  query_urls |>
+  filter(data_set == "lhb") |>
   pull(query_url)
 
 lhb <-
   read_sf(query_url)
 
 lhb <-
-  lhb %>%
+  lhb |>
   st_transform(crs = 4326)
 
 # Select and rename vars
 lhb <-
-  lhb %>%
+  lhb |>
   select(
     lhb_name = lhb19nm,
     lhb_code = lhb19cd,
@@ -38,15 +38,15 @@ lhb <- st_make_valid(lhb)
 lhb <- ms_simplify(lhb)
 
 # Check geometry types are homogenous
-if (lhb %>%
-  st_geometry_type() %>%
-  unique() %>%
+if (lhb |>
+  st_geometry_type() |>
+  unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
 
-if (lhb %>%
-  st_geometry_type() %>%
+if (lhb |>
+  st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }

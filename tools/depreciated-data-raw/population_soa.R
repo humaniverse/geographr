@@ -9,8 +9,8 @@ load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(data_set == "pop_soa") %>%
+  query_urls |>
+  filter(data_set == "pop_soa") |>
   pull(query_url)
 
 GET(query_url,
@@ -20,17 +20,17 @@ soa_pop <- read_excel(tf, sheet = "Flat")
 
 # Select and rename vars
 population_soa <-
-  soa_pop %>%
+  soa_pop |>
 
-  filter(area == "1. Super Output Areas" & year == "2019") %>%
-  pivot_wider(names_from = age, values_from = MYE) %>%
+  filter(area == "1. Super Output Areas" & year == "2019") |>
+  pivot_wider(names_from = age, values_from = MYE) |>
 
   # Rename gender column and relabel for consistency with other nations' population estimates
   mutate(sex = case_when(
     gender == "All persons" ~ "All",
     gender == "Males" ~ "Male",
     gender == "Females" ~ "Female"
-  )) %>%
+  )) |>
 
   select(
     soa_name = area_name,
@@ -38,7 +38,7 @@ population_soa <-
     `total_population` = `All ages`,
     sex,
     `00-15`:`65+`
-  ) %>%
+  ) |>
 
   distinct()
 
