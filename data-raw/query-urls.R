@@ -34,7 +34,8 @@ query_urls <-
 
     # Rural-Urban Classifications
     "ruc", "ruc_lsoa_11", "01.01.11", "OGLv3", "https://opendata.arcgis.com/datasets/276d973d30134c339eaecfc3c49770b3_0.geojson", "https://geoportal.statistics.gov.uk/datasets/rural-urban-classification-2011-of-lower-layer-super-output-areas-in-england-and-wales/explore",
-    "ruc", "ruc_msoa_11", "01.01.11", "OGLv3", "https://opendata.arcgis.com/datasets/0af77205a4644af3af2175d21a4ef4db_0.geojson", "https://geoportal.statistics.gov.uk/datasets/rural-urban-classification-2011-of-middle-layer-super-output-areas-in-england-and-wales/explore"
+    "ruc", "ruc_msoa_11", "01.01.11", "OGLv3", "https://opendata.arcgis.com/datasets/0af77205a4644af3af2175d21a4ef4db_0.geojson", "https://geoportal.statistics.gov.uk/datasets/rural-urban-classification-2011-of-middle-layer-super-output-areas-in-england-and-wales/explore",
+    "ruc", "ruc_wards_11", "01.01.11", "OGLv3", "https://opendata.arcgis.com/datasets/21bb76b77a144ee081e8d846b888962f_0.geojson", "https://geoportal.statistics.gov.uk/datasets/rural-urban-classification-2011-of-wards-in-england-and-wales/explore"
   )
 
 usethis::use_data(query_urls, internal = TRUE, overwrite = TRUE)

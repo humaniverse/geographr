@@ -313,3 +313,19 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "ruc_msoa_11"
+
+#' Rural-Urban Classifications for wards (2011) in England and Wales
+#'
+#' A data set containing rural-urban classifications for wards in England and
+#' Wales.
+#'
+#' @format A data frame of class "tbl" with 8,570 rows and 4 variables:
+#' \describe{
+#'   \item{ward_11_code}{Ward code}
+#'   \item{ruc_11_code}{Rural-Urban Classification code}
+#'   \item{RUC}{Whether the ward is classified as 'Rural' or 'Urban'}
+#'   \item{Classification}{A more detailed description of the classification}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"ruc_wards_11"
