@@ -37,8 +37,6 @@
 #' vulnerability and lower capacity) and this is where the weighting should be 
 #' focused.
 #' 
-#' @importFrom rlang .data
-#' 
 #' @export
 calculate_extent <-
   function(data,
@@ -48,33 +46,33 @@ calculate_extent <-
            weight_high_scores = TRUE) {
     data <-
       data |>
-      dplyr::mutate(.data$percentile = dplyr::ntile({{ var }}, 100))
+      dplyr::mutate(percentile = dplyr::ntile({{ var }}, 100))
 
     if (weight_high_scores) {
       data <-
         data |>
         dplyr::mutate(
-          .data$percentile = (max(.data$percentile, na.rm = TRUE) + 1) - .data$percentile
+          percentile = (max(percentile, na.rm = TRUE) + 1) - percentile
         )
     }
 
     data <-
       data |>
       dplyr::mutate(
-        .data$extent = dplyr::case_when(
-          .data$percentile <= 10 ~ {{ population }},
-          .data$percentile == 11 ~ {{ population }} * 0.95,
-          .data$percentile > 11 & .data$percentile <= 30 ~ {{ population }} * (0.95 - ((0.9 / 19) * (.data$percentile - 11))),
+        extent = dplyr::case_when(
+          percentile <= 10 ~ {{ population }},
+          percentile == 11 ~ {{ population }} * 0.95,
+          percentile > 11 & percentile <= 30 ~ {{ population }} * (0.95 - ((0.9 / 19) * (percentile - 11))),
           TRUE ~ 0
         )
       ) |>
       dplyr::group_by({{ higher_level_geography }}) |>
-      dplyr::summarise(.data$extent = sum(.data$extent) / sum({{ population }}))
+      dplyr::summarise(extent = sum(extent) / sum({{ population }}))
 
     if (!weight_high_scores) {
       data <-
         data |>
-        dplyr::mutate(.data$extent = .data$extent * -1)
+        dplyr::mutate(extent = extent * -1)
     }
 
     return(data)
