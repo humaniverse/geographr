@@ -111,7 +111,7 @@ if (obj_size(trusts_sf) > 50000000) {
 }
 
 # Rename
-points_nhs_trusts <- trusts_sf
+points_nhs_trusts_22 <- trusts_sf
 
 # Save output to data/ folder
-usethis::use_data(points_nhs_trusts, overwrite = TRUE)
+usethis::use_data(points_nhs_trusts_22, overwrite = TRUE)

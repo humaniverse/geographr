@@ -278,4 +278,4 @@
 #'   ...
 #' }
 #' @source \url{https://digital.nhs.uk/}
-"points_nhs_22_trusts"
+"points_nhs_trusts_22"
