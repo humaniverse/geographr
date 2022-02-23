@@ -44,7 +44,7 @@ calculate_extent <-
            weight_high_scores = TRUE) {
     data <-
       data |>
-      dplyr::mutate(percentile = ntile({{ var }}, 100))
+      dplyr::mutate(percentile = dplyr::ntile({{ var }}, 100))
 
     if (weight_high_scores) {
       data <-
