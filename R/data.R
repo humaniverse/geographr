@@ -146,7 +146,7 @@
 #' @format A data frame of class "sf" with 7 rows and 3 variables:
 #' \describe{
 #'   \item{lhb_20_name}{Local Health Board name}
-#'   \item{lhb_c20_ode}{Local Health Board code}
+#'   \item{lhb_20_code}{Local Health Board code}
 #'   \item{geometry}{multipolygon coordinates}
 #'   ...
 #' }
