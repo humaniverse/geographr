@@ -36,6 +36,8 @@
 #' because lower values in these outcomes indicate worse outcomes (higher
 #' vulnerability and lower capacity) and this is where the weighting should be 
 #' focused.
+#' 
+#' @export
 calculate_extent <-
   function(data,
            var,
