@@ -126,3 +126,19 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_msoa_11"
+
+#' Sustainability and Transformation Partnerships (April 2021)
+#'
+#' A data set containing 2021 Sustainability and Transformation Partnerships
+#' (STP) geometries and their associated names and codes. Boundaries are ultra
+#' generalised (500m).
+#'
+#' @format A data frame of class "sf" with 42 rows and 3 variables:
+#' \describe{
+#'   \item{stp_21_name}{STP name}
+#'   \item{stp_21_code}{STP code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"boundaries_stp_21"

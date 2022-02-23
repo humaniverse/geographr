@@ -17,7 +17,10 @@ query_urls <-
     "boundaries", "lad_19", "01.12.19", "OGLv3", "https://opendata.arcgis.com/datasets/3a4fa2ce68f642e399b4de07643eeed3_0.geojson", "https://geoportal.statistics.gov.uk/datasets/local-authority-districts-december-2019-boundaries-uk-buc/explore?location=55.340150%2C-3.316300%2C6.22",
     "boundaries", "lad_21", "01.12.21", "OGLv3", "https://opendata.arcgis.com/datasets/ac4ad96a586b4e4bab306dd59eb09401_0.geojson", "https://geoportal.statistics.gov.uk/datasets/local-authority-districts-december-2021-uk-buc/explore?location=57.654858%2C-11.079503%2C13.82",
     "boundaries", "lsoa_11", "01.12.11", "OGLv3", "https://opendata.arcgis.com/datasets/e9d10c36ebed4ff3865c4389c2c98827_0.geojson", "https://geoportal.statistics.gov.uk/datasets/lower-layer-super-output-areas-december-2011-boundaries-super-generalised-clipped-bsc-ew-v3/explore?location=52.837570%2C-2.489798%2C7.20",
-    "boundaries", "msoa_11", "01.12.11", "OGLv3", "https://opendata.arcgis.com/datasets/80223f1d571c405fb2fdf719c7e6da13_0.geojson", "https://geoportal.statistics.gov.uk/datasets/middle-layer-super-output-areas-december-2011-boundaries-super-generalised-clipped-bsc-ew-v3/explore?location=52.846044%2C-2.465779%2C7.21"
+    "boundaries", "msoa_11", "01.12.11", "OGLv3", "https://opendata.arcgis.com/datasets/80223f1d571c405fb2fdf719c7e6da13_0.geojson", "https://geoportal.statistics.gov.uk/datasets/middle-layer-super-output-areas-december-2011-boundaries-super-generalised-clipped-bsc-ew-v3/explore?location=52.846044%2C-2.465779%2C7.21",
+    "boundaries", "stp_21", "01.04.21", "OGLv3", "https://opendata.arcgis.com/datasets/7ee99c1d8ef4424bab4b933a5dbe6aca_0.geojson", "https://geoportal.statistics.gov.uk/datasets/sustainability-and-transformation-partnerships-april-2021-en-buc/explore?location=52.846526%2C-2.452657%2C7.21"
+
+
     # Points
 
     # Lookups
