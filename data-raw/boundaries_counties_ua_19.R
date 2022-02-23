@@ -22,7 +22,7 @@ counties_ua <-
   counties_ua %>%
   select(
     county_ua_19_name = ctyua19nm,
-    county_ua__19_code = ctyua19cd,
+    county_ua_19_code = ctyua19cd,
     geometry
   )
 
