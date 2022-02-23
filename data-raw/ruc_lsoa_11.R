@@ -2,7 +2,6 @@
 library(tidyverse)
 library(devtools)
 library(sf)
-library(janitor)
 
 # Load package
 load_all(".")
