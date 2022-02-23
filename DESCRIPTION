@@ -1,13 +1,13 @@
 Package: geographr
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
-Authors@R: 
-    person(given = "First",
-           family = "Last",
-           role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Title: R package for mapping UK geographies
+Version: 1.0.0
+Authors@R: c(
+    person("Mike", "Page", email = "mpage@redcross.org.uk", role = "cre"),
+    person("Matt", "Thomas", email = "mattthomas@redcross.org.uk", role = "aut"),
+    person("Aileen", "McDonald", email = "AileenMcDonald@redcross.org.uk", role = "aut"),
+    person(family = "British Red Cross", role = "cph")
+    )
+Description: A package to distribute and compute on UK geographrical data.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -15,3 +15,5 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Depends: 
     R (>= 2.10)
+Imports: 
+    dplyr
