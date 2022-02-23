@@ -30,12 +30,14 @@ query_urls <-
 
     # Points
     "points", "nhs_trusts_22", "23.04.2022", "OGLv3", "https://files.digital.nhs.uk/assets/ods/current/etr.zip", "https://digital.nhs.uk/services/organisation-data-service/file-downloads/other-nhs-organisations",
+
     # Lookups
 
     # Rural-Urban Classifications
     "ruc", "ruc_lsoa_11", "01.01.11", "OGLv3", "https://opendata.arcgis.com/datasets/276d973d30134c339eaecfc3c49770b3_0.geojson", "https://geoportal.statistics.gov.uk/datasets/rural-urban-classification-2011-of-lower-layer-super-output-areas-in-england-and-wales/explore",
     "ruc", "ruc_msoa_11", "01.01.11", "OGLv3", "https://opendata.arcgis.com/datasets/0af77205a4644af3af2175d21a4ef4db_0.geojson", "https://geoportal.statistics.gov.uk/datasets/rural-urban-classification-2011-of-middle-layer-super-output-areas-in-england-and-wales/explore",
-    "ruc", "ruc_wards_11", "01.01.11", "OGLv3", "https://opendata.arcgis.com/datasets/21bb76b77a144ee081e8d846b888962f_0.geojson", "https://geoportal.statistics.gov.uk/datasets/rural-urban-classification-2011-of-wards-in-england-and-wales/explore"
+    "ruc", "ruc_wards_11", "01.01.11", "OGLv3", "https://opendata.arcgis.com/datasets/21bb76b77a144ee081e8d846b888962f_0.geojson", "https://geoportal.statistics.gov.uk/datasets/rural-urban-classification-2011-of-wards-in-england-and-wales/explore",
+    "ruc", "ruc_dz_11", "01.01.16", "OGLv3", "https://www.gov.scot/binaries/content/documents/govscot/publications/advice-and-guidance/2018/03/scottish-government-urban-rural-classification-2016/documents/scottish-government-urban-rural-classification-2016-data-zone-lookup/scottish-government-urban-rural-classification-2016-data-zone-lookup/govscot%3Adocument/00544928.csv", "https://www.gov.scot/publications/scottish-government-urban-rural-classification-2016/pages/2/",
   )
 
 usethis::use_data(query_urls, internal = TRUE, overwrite = TRUE)

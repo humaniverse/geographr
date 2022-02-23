@@ -329,3 +329,18 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "ruc_wards_11"
+
+#' Rural-Urban Classifications for Data Zones (2011) in Scotland
+#'
+#' A data set containing rural-urban classifications for Data Zones in Scotland.
+#'
+#' @format A data frame of class "tbl" with 6,976 rows and 4 variables:
+#' \describe{
+#'   \item{dz_11_code}{Data Zone code}
+#'   \item{ruc_16_code}{Rural-Urban Classification code}
+#'   \item{RUC}{Whether the DZ is classified as 'Rural' or 'Urban'}
+#'   \item{Classification}{A more detailed description of the classification}
+#'   ...
+#' }
+#' @source \url{https://www.gov.scot/}
+"ruc_dz_11"
