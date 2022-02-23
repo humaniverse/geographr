@@ -142,3 +142,19 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_stp_21"
+
+#' Wards / Electoral Divisions (December 2021)
+#'
+#' A data set containing 2021 Ward / Electoral Division geometries and their
+#' associated names and codes. Boundaries are Super generalised (200m) - clipped
+#' to the coastline (Mean High Water mark).
+#'
+#' @format A data frame of class "sf" with 8,694 rows and 3 variables:
+#' \describe{
+#'   \item{ward_21_name}{ward name}
+#'   \item{ward_21_code}{ward code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"boundaries_wards_21"
