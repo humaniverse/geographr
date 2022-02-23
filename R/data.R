@@ -76,6 +76,21 @@
 #' @source \url{https://spatialdata.gov.scot/}
 "boundaries_dz_11"
 
+#' Intermediate Zones (2011)
+#'
+#' A data set containing 2011 Scottish Intermediate Zone geometries and their
+#' associated names and codes.
+#'
+#' @format A data frame of class "sf" with 1,279 rows and 3 variables:
+#' \describe{
+#'   \item{iz_11_name}{Intermediate Zone name}
+#'   \item{iz_11_code}{Intermediate Zone code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://spatialdata.gov.scot/}
+"boundaries_iz_11"
+
 #' Local Authority Districts (December 2019)
 #'
 #' A data set containing 2019 Local Authority Districts (LAD) geometries and
