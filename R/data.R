@@ -263,3 +263,19 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_wards_21"
+
+#' NHS Trusts (February 2022)
+#'
+#' A data set containing February 2022 NHS Trusts point geometries (i.e.,
+#' lat/long coordinates) and their associated names, codes, and open status.
+#'
+#' @format A data frame of class "sf" with 218 rows and 4 variables:
+#' \describe{
+#'   \item{nhs_trust_22_name}{NHS Trust name}
+#'   \item{nhs_trust_22_code}{NHS Trust code}
+#'   \item{status}{whether the Trust is 'open' or 'closed'}
+#'   \item{geometry}{point coordinates}
+#'   ...
+#' }
+#' @source \url{https://digital.nhs.uk/}
+"points_nhs_22_trusts"

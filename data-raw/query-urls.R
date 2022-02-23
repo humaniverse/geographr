@@ -26,10 +26,10 @@ query_urls <-
     "boundaries", "soa_11", "01.01.11", "OGLv3", "https://www.nisra.gov.uk/sites/nisra.gov.uk/files/publications/SOA2011_Esri_Shapefile_0.zip", "https://www.nisra.gov.uk/publications/super-output-area-boundaries-gis-format",
     "boundaries", "stp_21", "01.04.21", "OGLv3", "https://opendata.arcgis.com/datasets/7ee99c1d8ef4424bab4b933a5dbe6aca_0.geojson", "https://geoportal.statistics.gov.uk/datasets/sustainability-and-transformation-partnerships-april-2021-en-buc/explore?location=52.846526%2C-2.452657%2C7.21",
     "boundaries", "trusts_ni_18", "21.03.18", "OGLv3", "https://www.opendatani.gov.uk/dataset/0b04b46c-49af-45d5-b277-91b10937a01b/resource/7fa52dde-90b8-446e-bb79-4871d1028cb4/download/dohtrustboundary.zip", "https://www.opendatani.gov.uk/dataset/department-of-health-trust-boundaries/resource/7fa52dde-90b8-446e-bb79-4871d1028cb4",
-    "boundaries", "wards_21", "01.12.21", "OGLV3", "https://opendata.arcgis.com/datasets/bf9d32b1aa9941af84e6c2bf0c54b1bb_0.geojson", "https://geoportal.statistics.gov.uk/datasets/wards-december-2021-uk-bsc/explore"
+    "boundaries", "wards_21", "01.12.21", "OGLV3", "https://opendata.arcgis.com/datasets/bf9d32b1aa9941af84e6c2bf0c54b1bb_0.geojson", "https://geoportal.statistics.gov.uk/datasets/wards-december-2021-uk-bsc/explore",
 
     # Points
-
+    "points", "nhs_trusts_22", "23.04.2022", "OGLv3", "https://files.digital.nhs.uk/assets/ods/current/etr.zip", "https://digital.nhs.uk/services/organisation-data-service/file-downloads/other-nhs-organisations"
     # Lookups
 
     # Rural-Urban Classifications
