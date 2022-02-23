@@ -157,6 +157,21 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_msoa_11"
 
+#' Super Output Areas (2011)
+#'
+#' A data set containing 2011 Northern Ireland Super Output Area geometries and
+#' their associated names and codes as used following the 2011 Census results.
+#'
+#' @format A data frame of class "sf" with 890 rows and 3 variables:
+#' \describe{
+#'   \item{soa_11_name}{Super Output Area name}
+#'   \item{soa_11_code}{Super Output Area code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://www.nisra.gov.uk/}
+"boundaries_soa_11"
+
 #' Sustainability and Transformation Partnerships (April 2021)
 #'
 #' A data set containing 2021 Sustainability and Transformation Partnerships
