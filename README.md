@@ -34,10 +34,10 @@ devtools::install_github("britishredcrosssociety/geographr")
 
 To add data sets to the package:
 
-1.  Update `data-raw/query-urls.R`. Make sure to build and export the
-    tibble.
+1.  Update `data-raw/query-urls.R`. Keep to alphabetical ordering. Make
+    sure to build and export the tibble.
 2.  Add a file to `data-raw/`. See other files for template.
-3.  Document the data set in `R/data.R`.
+3.  Document the data set in `R/data.R`. Keep to alphabetical ordering.
 4.  Run `devtools::document()` to export documentation.
 5.  Run `devtools::check()` to check for errors/warnings/notes.
 6.  Update `LICENSE` by adding the license of the new data set if not
