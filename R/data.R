@@ -187,6 +187,21 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_msoa_11"
 
+#' Police Force Areas (2020)
+#'
+#' A data set containing 2020 Police Force Area geometries for England and Wales
+#' and their associated names and codes.
+#'
+#' @format A data frame of class "sf" with 43 rows and 3 variables:
+#' \describe{
+#'   \item{pfa_20_name}{Police Force Area name}
+#'   \item{pfa_20_code}{Police Force Area code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"boundaries_pfa_20"
+
 #' Super Output Areas (2011)
 #'
 #' A data set containing 2011 Northern Ireland Super Output Area geometries and
