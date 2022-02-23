@@ -138,6 +138,21 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_lad_21"
 
+#' Wales Local Health Boards (2020)
+#'
+#' A data set containing 2020 Local Health Board geometries for Wales and their
+#' associated names and codes.
+#'
+#' @format A data frame of class "sf" with 7 rows and 3 variables:
+#' \describe{
+#'   \item{lhb_20_name}{Local Health Board name}
+#'   \item{lhb_c20_ode}{Local Health Board code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"boundaries_lhb_20"
+
 #' Lower Layer Super Output Areas (2011)
 #'
 #' A data set containing 2011 Lower Super Output Area (LSOA) geometries and
