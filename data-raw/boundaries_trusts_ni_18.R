@@ -36,7 +36,7 @@ trusts_ni <-
   trusts_ni %>%
   select(
     trust_18_name = TrustName,
-    trust__18_code = TrustCode,
+    trust_18_code = TrustCode,
     geometry
   )
 
