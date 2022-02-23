@@ -61,6 +61,21 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_countries_20"
 
+#' Data Zones (2011)
+#'
+#' A data set containing 2011 Scottish Data Zone geometries and their associated
+#' names and codes.
+#'
+#' @format A data frame of class "sf" with 6,976 rows and 3 variables:
+#' \describe{
+#'   \item{dz_11_name}{Data Zone name}
+#'   \item{dz_11_code}{Data Zone code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://spatialdata.gov.scot/}
+"boundaries_dz_11"
+
 #' Local Authority Districts (December 2019)
 #'
 #' A data set containing 2019 Local Authority Districts (LAD) geometries and
