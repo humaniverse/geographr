@@ -44,3 +44,19 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_counties_ua_19"
+
+#' Counties and Unitary Authorities (May 2021)
+#'
+#' A data set containing 2021 County and Unitary Authority (UA) geometries and
+#' their associated names and codes. Boundaries are Ultra Generalised (500m) -
+#' clipped to the coastline (Mean High Water mark).
+#'
+#' @format A data frame of class "sf" with 217 rows and 3 variables:
+#' \describe{
+#'   \item{county_ua_21_name}{county and UA name}
+#'   \item{county_ua_21_code}{county and UA code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"boundaries_counties_ua_21"
