@@ -76,6 +76,21 @@
 #' @source \url{https://spatialdata.gov.scot/}
 "boundaries_dz_11"
 
+#' Health Boards (2019)
+#'
+#' A data set containing 2019 NHS Health Board geometries and their associated
+#' names and codes.
+#'
+#' @format A data frame of class "sf" with 14 rows and 3 variables:
+#' \describe{
+#'   \item{hb_19_name}{Health Board name}
+#'   \item{hb_19_code}{Health Board code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://spatialdata.gov.scot/}
+"boundaries_hb_19"
+
 #' Intermediate Zones (2011)
 #'
 #' A data set containing 2011 Scottish Intermediate Zone geometries and their
