@@ -10,7 +10,7 @@ load_all(".")
 # Set query url
 query_url <-
   query_urls %>%
-  filter(id == "countries_2020") %>%
+  filter(id == "countries_20") %>%
   pull(query)
 
 countries <-
