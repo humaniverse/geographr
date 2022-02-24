@@ -29,9 +29,10 @@ query_urls <-
     "boundaries", "wards_21", "01.12.21", "OGLV3", "https://opendata.arcgis.com/datasets/bf9d32b1aa9941af84e6c2bf0c54b1bb_0.geojson", "https://geoportal.statistics.gov.uk/datasets/wards-december-2021-uk-bsc/explore",
 
     # Points
-    "points", "nhs_trusts_22", "23.04.2022", "OGLv3", "https://files.digital.nhs.uk/assets/ods/current/etr.zip", "https://digital.nhs.uk/services/organisation-data-service/file-downloads/other-nhs-organisations",
+    "points", "nhs_trusts_22", "23.04.22", "OGLv3", "https://files.digital.nhs.uk/assets/ods/current/etr.zip", "https://digital.nhs.uk/services/organisation-data-service/file-downloads/other-nhs-organisations",
 
     # Lookups
+    "lookup", "lad_lad", "31.12.22", "OGLv3", "https://www.arcgis.com/sharing/rest/content/items/a8807f0914234a52b00edecdc34428fa/data", "https://geoportal.statistics.gov.uk/datasets/code-history-database-december-2021-for-the-united-kingdom/about",
 
     # Rural-Urban Classifications
     "ruc", "ruc_lsoa_11", "01.01.11", "OGLv3", "https://opendata.arcgis.com/datasets/276d973d30134c339eaecfc3c49770b3_0.geojson", "https://geoportal.statistics.gov.uk/datasets/rural-urban-classification-2011-of-lower-layer-super-output-areas-in-england-and-wales/explore",
