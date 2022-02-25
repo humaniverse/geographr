@@ -14,9 +14,9 @@ public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostat
 
 geographr is an R package for mapping UK geographies:
 
--   `boundary_*` objects distribute boundaries (as [simple
+-   `boundaries_*` objects distribute boundaries (as [simple
     feature](https://r-spatial.github.io/sf/) objects)
--   `point_*` objects distribute point geometries (as [simple
+-   `points_*` objects distribute point geometries (as [simple
     feature](https://r-spatial.github.io/sf/) objects)
 -   `lookup_*` objects provide a set of lookup tables
 -   `ruc_*` objects provide a set of rural-urban classifications
