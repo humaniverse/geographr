@@ -344,7 +344,6 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_lad_fra_21"
 
-
 #' Changes to England Local Authority codes over time (from 2019).
 #'
 #' A data set containing a lookup of the England Local Authority changes
