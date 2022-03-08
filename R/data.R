@@ -328,7 +328,6 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_lad_counties_21"
 
-
 #' Local Authority Districts to Fire and Rescue Authorities lookup (2021).
 #'
 #' A data set containing a lookup between April 2021 Local Authority
