@@ -459,9 +459,6 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_postcode_oa_lsoa_msoa_lad_20"
-
-
-
 #' NHS Trusts (February 2022)
 #'
 #' A data set containing February 2022 NHS Trusts point geometries (i.e.,
