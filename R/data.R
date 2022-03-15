@@ -278,7 +278,7 @@
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
-"lookup_lad_cauth_20"
+"lookup_lad_20_cauth_20"
 
 #' Local Authority Districts to County and Unitary Authorities lookup (2019).
 #'
@@ -294,7 +294,7 @@
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
-"lookup_lad_counties_19"
+"lookup_lad_19_counties_ua_19"
 
 #' Local Authority Districts to County and Unitary Authorities lookup (2020).
 #'
@@ -310,7 +310,7 @@
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
-"lookup_lad_counties_20"
+"lookup_lad_20_counties_ua_20"
 
 #' Local Authority Districts to County and Unitary Authorities lookup (2021).
 #'
@@ -326,7 +326,7 @@
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
-"lookup_lad_counties_21"
+"lookup_lad_21_counties_ua_21"
 
 #' Local Authority Districts to Fire and Rescue Authorities lookup (2021).
 #'
@@ -342,7 +342,7 @@
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
-"lookup_lad_fra_21"
+"lookup_lad_21_fra_21"
 
 #' Changes to England Local Authority codes over time (from 2019).
 #'
@@ -376,7 +376,7 @@
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
-"lookup_lsoa_lad_21"
+"lookup_lsoa_11_lad_21"
 
 #' Lower Layer Super Output Area (2011) to Middle Layer Super Output Area (2011) Lookup
 #'
@@ -391,7 +391,7 @@
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
-"lookup_lsoa_msoa_11"
+"lookup_lsoa_11_msoa_11"
 
 #' Middle Layer Super Output Area (2011) to LAD (December 2019) Lookup
 #'
@@ -407,7 +407,7 @@
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
-"lookup_msoa_lad_19"
+"lookup_msoa_11_lad_19"
 
 #' Middle Layer Super Output Area (2011) to LAD (December 2020) Lookup
 #'
@@ -423,7 +423,7 @@
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
-"lookup_msoa_lad_20"
+"lookup_msoa_11_lad_20"
 
 #' Middle Layer Super Output Area (2011) to LAD (December 2021) Lookup
 #'
@@ -439,7 +439,7 @@
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
-"lookup_msoa_lad_21"
+"lookup_msoa_11_lad_21"
 
 #' Postcode to Output Area (2011) to Lower Layer Super Output Area (2011) to
 #'   Middle Layer Super Output Area (2011) to Local Authority District (2020)
@@ -458,7 +458,7 @@
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
-"lookup_postcode_oa_lsoa_msoa_lad_20"
+"lookup_postcode_oa_11_lsoa_11_msoa_11_lad_20"
 #' NHS Trusts (February 2022)
 #'
 #' A data set containing February 2022 NHS Trusts point geometries (i.e.,
