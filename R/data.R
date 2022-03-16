@@ -264,6 +264,201 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_wards_21"
 
+#' Local Authority Districts to Combined Authorities lookup (2020).
+#'
+#' A data set containing a lookup between December 2020 Local Authority
+#' Districts and Combined Authorities (CAUTH).
+#'
+#' @format A data frame of class "tbl" with 53 rows and 4 variables:
+#' \describe{
+#'   \item{lad_20_name}{LAD name}
+#'   \item{lad_20_code}{LAD code}
+#'   \item{cauth_20_name}{County name}
+#'   \item{cauth_20_code}{County code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_lad_20_cauth_20"
+
+#' Local Authority Districts to County and Unitary Authorities lookup (2019).
+#'
+#' A data set containing a lookup between December 2019 Local Authority
+#' Districts and County and Unitary Authorities.
+#'
+#' @format A data frame of class "tbl" with 339 rows and 4 variables:
+#' \describe{
+#'   \item{lad_19_name}{LAD name}
+#'   \item{lad_19_code}{LAD code}
+#'   \item{county_ua_19_name}{County name}
+#'   \item{county_ua_19_code}{County code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_lad_19_counties_ua_19"
+
+#' Local Authority Districts to County and Unitary Authorities lookup (2020).
+#'
+#' A data set containing a lookup between December 2020 Local Authority
+#' Districts and County and Unitary Authorities.
+#'
+#' @format A data frame of class "tbl" with 336 rows and 4 variables:
+#' \describe{
+#'   \item{lad_20_name}{LAD name}
+#'   \item{lad_20_code}{LAD code}
+#'   \item{county_ua_20_name}{County name}
+#'   \item{county_ua_20_code}{County code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_lad_20_counties_ua_20"
+
+#' Local Authority Districts to County and Unitary Authorities lookup (2021).
+#'
+#' A data set containing a lookup between December 2021 Local Authority
+#' Districts and County and Unitary Authorities.
+#'
+#' @format A data frame of class "tbl" with 331 rows and 4 variables:
+#' \describe{
+#'   \item{lad_21_name}{LAD name}
+#'   \item{lad_21_code}{LAD code}
+#'   \item{county_ua_21_name}{County name}
+#'   \item{county_ua_21_code}{County code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_lad_21_counties_ua_21"
+
+#' Local Authority Districts to Fire and Rescue Authorities lookup (2021).
+#'
+#' A data set containing a lookup between April 2021 Local Authority
+#' Fire and Rescue Authorities (FRA)
+#'
+#' @format A data frame of class "tbl" with 331 rows and 4 variables:
+#' \describe{
+#'   \item{lad_21_name}{LAD name}
+#'   \item{lad_21_code}{LAD code}
+#'   \item{fra_21_name}{FRA name}
+#'   \item{fra_21_code}{FRA code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_lad_21_fra_21"
+
+#' Changes to England Local Authority codes over time (from 2019).
+#'
+#' A data set containing a lookup of the England Local Authority changes
+#' between 2019, 2020 and 2021.
+#'
+#' @format A data frame of class "tbl" with 382 rows and 6 variables:
+#' \describe{
+#'   \item{lad_19_name}{2019 LAD name}
+#'   \item{lad_19_code}{2019 LAD code}
+#'   \item{lad_20_name}{2020 LAD name}
+#'   \item{lad_20_code}{2020 LAD code}
+#'   \item{lad_21_name}{2021 LAD name}
+#'   \item{lad_21_code}{2021 LAD code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/datasets/code-history-database-december-2021-for-the-united-kingdom/about}
+"lookup_lad_lad"
+
+#' Lower Layer Super Output Area (2011) to LAD (December 2021) Lookup
+#'
+#' A data set containing a lookup between 2011 Lower Super Output Areas (LSOA)
+#' and 2021 Local Authority Districts (LAD).
+#'
+#' @format A data frame of class "tbl" with 34,753 rows and 4 variables:
+#' \describe{
+#'   \item{lsoa_11_name}{LSOA name}
+#'   \item{lsoa_11_code}{LSOA code}
+#'   \item{lad_21_name}{LAD name}
+#'   \item{lad_21_code}{LAD code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_lsoa_11_lad_21"
+
+#' Lower Layer Super Output Area (2011) to Middle Layer Super Output Area (2011) Lookup
+#'
+#' A data set containing a lookup between 2011 Lower (LSOA) and Middle Layer Super Output Areas (MSOA).
+#'
+#' @format A data frame of class "tbl" with 41,729 rows and 4 variables:
+#' \describe{
+#'   \item{lsoa_11_name}{LSOA name}
+#'   \item{lsoa_11_code}{LSOA code}
+#'   \item{msoa_11_name}{MSOA name}
+#'   \item{msoa_11_code}{MSOA code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_lsoa_11_msoa_11"
+
+#' Middle Layer Super Output Area (2011) to LAD (December 2019) Lookup
+#'
+#' A data set containing a lookup between 2011 Middle Super Output Areas (MSOA)
+#' and 2019 Local Authority Districts (LAD).
+#'
+#' @format A data frame of class "tbl" with 7,201 rows and 4 variables:
+#' \describe{
+#'   \item{msoa_11_name}{MSOA name}
+#'   \item{msoa_11_code}{MSOA code}
+#'   \item{lad_19_name}{LAD name}
+#'   \item{lad_19_code}{LAD code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_msoa_11_lad_19"
+
+#' Middle Layer Super Output Area (2011) to LAD (December 2020) Lookup
+#'
+#' A data set containing a lookup between 2011 Middle Super Output Areas (MSOA)
+#' and 2020 Local Authority Districts (LAD).
+#'
+#' @format A data frame of class "tbl" with 7,201 rows and 4 variables:
+#' \describe{
+#'   \item{msoa_11_name}{MSOA name}
+#'   \item{msoa_11_code}{MSOA code}
+#'   \item{lad_20_name}{LAD name}
+#'   \item{lad_20_code}{LAD code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_msoa_11_lad_20"
+
+#' Middle Layer Super Output Area (2011) to LAD (December 2021) Lookup
+#'
+#' A data set containing a lookup between 2011 Middle Super Output Areas (MSOA)
+#' and 2021 Local Authority Districts (LAD).
+#'
+#' @format A data frame of class "tbl" with 7,201 rows and 4 variables:
+#' \describe{
+#'   \item{msoa_11_name}{MSOA name}
+#'   \item{msoa_11_code}{MSOA code}
+#'   \item{lad_21_name}{LAD name}
+#'   \item{lad_21_code}{LAD code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_msoa_11_lad_21"
+
+#' Postcode to Output Area (2011) to Lower Layer Super Output Area (2011) to
+#'   Middle Layer Super Output Area (2011) to Local Authority District (2020)
+#'   Lookup
+#'
+#' A data set containing a lookup between postcodes, OAs, LSOAs, MSOAs, and
+#' 2020 Local Authority Districts, for England, Wales, and Scotland.
+#'
+#' @format A data frame of class "tbl" with 2,568,780 rows and 5 variables:
+#' \describe{
+#'   \item{postcode}{Postcodes}
+#'   \item{oa_11_code}{OA code}
+#'   \item{lsoa_11_code}{LSOA code}
+#'   \item{msoa_11_code}{MSOA code}
+#'   \item{lad_20_code}{LAD code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_postcode_oa_11_lsoa_11_msoa_11_lad_20"
 #' NHS Trusts (February 2022)
 #'
 #' A data set containing February 2022 NHS Trusts point geometries (i.e.,
@@ -345,20 +540,3 @@
 #' @source \url{https://www.gov.scot/}
 "ruc_dz_11"
 
-#' Changes to England Local Authority codes over time (from 2019).
-#'
-#' A data set containing a lookup of the England Local Authority changes
-#' between 2019, 2020 and 2021.
-#'
-#' @format A data frame of class "tbl" with 382 rows and 6 variables:
-#' \describe{
-#'   \item{lad_19_name}{2019 LAD name}
-#'   \item{lad_19_code}{2019 LAD code}
-#'   \item{lad_20_name}{2020 LAD name}
-#'   \item{lad_20_code}{2020 LAD code}
-#'   \item{lad_21_name}{2021 LAD name}
-#'   \item{lad_21_code}{2021 LAD code}
-#'   ...
-#' }
-#' @source \url{https://geoportal.statistics.gov.uk/datasets/code-history-database-december-2021-for-the-united-kingdom/about}
-"lookup_lad_lad"
