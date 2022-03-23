@@ -10,46 +10,46 @@ load_all(".")
 # Set query url
 query_url <-
   query_urls |>
-  filter(id == "countries_20") |>
+  filter(id == "ltla19") |>
   pull(query)
 
-countries <-
+lad <-
   read_sf(query_url) |>
   st_transform(crs = 4326)
 
 # Select and rename vars
-countries <-
-  countries |>
+lad <-
+  lad |>
   select(
-    country_20_name = CTRY20NM,
-    country_20_code = CTRY20CD,
+    ltla19_name = lad19nm,
+    ltla19_code = lad19cd,
     geometry
   )
 
 # Make sure geometries are valid
-countries <- st_make_valid(countries)
+lad <- st_make_valid(lad)
 
 # Check geometry types are homogenous
-if (countries |>
+if (lad |>
   st_geometry_type() |>
   unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
 
-if (countries |>
+if (lad |>
   st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }
 
 # Check object is below 50Mb GitHub warning limit
-if (obj_size(countries) > 50000000) {
+if (obj_size(lad) > 50000000) {
   stop("File is too large")
 }
 
 # Rename
-boundaries_countries_20 <- countries
+boundaries_ltla19 <- lad
 
 # Save output to data/ folder
-usethis::use_data(boundaries_countries_20, overwrite = TRUE)
+usethis::use_data(boundaries_ltla19, overwrite = TRUE)

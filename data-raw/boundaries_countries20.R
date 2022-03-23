@@ -1,8 +1,6 @@
 # ---- Load ----
 library(tidyverse)
-library(httr)
 library(sf)
-library(rmapshaper)
 library(lobstr)
 library(devtools)
 
@@ -12,52 +10,46 @@ load_all(".")
 # Set query url
 query_url <-
   query_urls |>
-  filter(id == "lhb_20") |>
+  filter(id == "countries20") |>
   pull(query)
 
-lhb <-
-  read_sf(query_url)
-
-lhb <-
-  lhb |>
+countries <-
+  read_sf(query_url) |>
   st_transform(crs = 4326)
 
 # Select and rename vars
-lhb <-
-  lhb |>
+countries <-
+  countries |>
   select(
-    lhb_20_name = LHB20NM,
-    lhb_20_code = LHB20CD,
+    country20_name = CTRY20NM,
+    country20_code = CTRY20CD,
     geometry
   )
 
 # Make sure geometries are valid
-lhb <- st_make_valid(lhb)
-
-# Simplify shape to reduce file size
-lhb <- ms_simplify(lhb)
+countries <- st_make_valid(countries)
 
 # Check geometry types are homogenous
-if (lhb |>
+if (countries |>
   st_geometry_type() |>
   unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
 
-if (lhb |>
+if (countries |>
   st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }
 
 # Check object is below 50Mb GitHub warning limit
-if (obj_size(lhb) > 50000000) {
+if (obj_size(countries) > 50000000) {
   stop("File is too large")
 }
 
 # Rename
-boundaries_lhb_20 <- lhb
+boundaries_countries20 <- countries
 
 # Save output to data/ folder
-usethis::use_data(boundaries_lhb_20, overwrite = TRUE)
+usethis::use_data(boundaries_countries20, overwrite = TRUE)

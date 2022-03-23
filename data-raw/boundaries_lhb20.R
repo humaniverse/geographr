@@ -1,6 +1,8 @@
 # ---- Load ----
 library(tidyverse)
+library(httr)
 library(sf)
+library(rmapshaper)
 library(lobstr)
 library(devtools)
 
@@ -10,46 +12,52 @@ load_all(".")
 # Set query url
 query_url <-
   query_urls |>
-  filter(id == "wards_21") |>
+  filter(id == "lhb20") |>
   pull(query)
 
-wards <-
-  read_sf(query_url) |>
+lhb <-
+  read_sf(query_url)
+
+lhb <-
+  lhb |>
   st_transform(crs = 4326)
 
 # Select and rename vars
-wards <-
-  wards |>
+lhb <-
+  lhb |>
   select(
-    ward_21_name = WD21NM,
-    ward_21_code = WD21CD,
+    lhb20_name = LHB20NM,
+    lhb20_code = LHB20CD,
     geometry
   )
 
 # Make sure geometries are valid
-wards <- st_make_valid(wards)
+lhb <- st_make_valid(lhb)
+
+# Simplify shape to reduce file size
+lhb <- ms_simplify(lhb)
 
 # Check geometry types are homogenous
-if (wards |>
+if (lhb |>
   st_geometry_type() |>
   unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
 
-if (wards |>
+if (lhb |>
   st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }
 
 # Check object is below 50Mb GitHub warning limit
-if (obj_size(wards) > 50000000) {
+if (obj_size(lhb) > 50000000) {
   stop("File is too large")
 }
 
 # Rename
-boundaries_wards_21 <- wards
+boundaries_lhb20 <- lhb
 
 # Save output to data/ folder
-usethis::use_data(boundaries_wards_21, overwrite = TRUE)
+usethis::use_data(boundaries_lhb20, overwrite = TRUE)

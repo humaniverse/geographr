@@ -1,6 +1,7 @@
 # ---- Load ----
 library(tidyverse)
 library(sf)
+library(rmapshaper)
 library(lobstr)
 library(devtools)
 
@@ -10,46 +11,52 @@ load_all(".")
 # Set query url
 query_url <-
   query_urls |>
-  filter(id == "counties_ua_19") |>
+  filter(id == "lsoa11") |>
   pull(query)
 
-counties_ua <-
-  read_sf(query_url) |>
+lsoa <-
+  read_sf(query_url)
+
+lsoa <-
+  lsoa |>
   st_transform(crs = 4326)
 
 # Select and rename vars
-counties_ua <-
-  counties_ua |>
+lsoa <-
+  lsoa |>
   select(
-    county_ua_19_name = ctyua19nm,
-    county_ua_19_code = ctyua19cd,
+    lsoa11_name = LSOA11NM,
+    lsoa11_code = LSOA11CD,
     geometry
   )
 
 # Make sure geometries are valid
-counties_ua <- st_make_valid(counties_ua)
+lsoa <- st_make_valid(lsoa)
+
+# Simplify shape to reduce file size
+lsoa <- ms_simplify(lsoa)
 
 # Check geometry types are homogenous
-if (counties_ua |>
+if (lsoa |>
   st_geometry_type() |>
   unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
 
-if (counties_ua |>
+if (lsoa |>
   st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }
 
-# Check object is below 50Mb GitHub warning limit
-if (obj_size(counties_ua) > 50000000) {
+# Check simplified shape is below 50Mb GitHub warning limit
+if (obj_size(lsoa) > 50000000) {
   stop("File is too large")
 }
 
 # Rename
-boundaries_counties_ua_19 <- counties_ua
+boundaries_lsoa11 <- lsoa
 
 # Save output to data/ folder
-usethis::use_data(boundaries_counties_ua_19, overwrite = TRUE)
+usethis::use_data(boundaries_lsoa11, overwrite = TRUE)

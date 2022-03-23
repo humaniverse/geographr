@@ -9,7 +9,7 @@ load_all(".")
 # Set query url
 query_url <-
   query_urls |>
-  filter(id == "lad_20_cauth_20") |>
+  filter(id == "ltla20_cauth20") |>
   pull(query)
 
 lad_cauth <-
@@ -19,14 +19,14 @@ lad_cauth <-
 lad_cauth <-
   lad_cauth |>
   select(
-    lad_20_name = LAD20NM,
-    lad_20_code = LAD20CD,
-    cauth_20_name = CAUTH20NM,
-    cauth_20_code = CAUTH20CD
+    ltla20_name = LAD20NM,
+    ltla20_code = LAD20CD,
+    cauth20_name = CAUTH20NM,
+    cauth20_code = CAUTH20CD
   )
 
 # Rename
-lookup_lad_20_cauth_20 <- lad_cauth
+lookup_ltla20_cauth20 <- lad_cauth
 
 # Save output to data/ folder
-usethis::use_data(lookup_lad_20_cauth_20, overwrite = TRUE)
+usethis::use_data(lookup_ltla20_cauth20, overwrite = TRUE)

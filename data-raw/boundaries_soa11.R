@@ -1,6 +1,8 @@
 # ---- Load ----
 library(tidyverse)
 library(sf)
+library(rmapshaper)
+library(httr)
 library(lobstr)
 library(devtools)
 
@@ -10,46 +12,62 @@ load_all(".")
 # Set query url
 query_url <-
   query_urls |>
-  filter(id == "lad_19") |>
+  filter(id == "soa11") |>
   pull(query)
 
-lad <-
-  read_sf(query_url) |>
+# Unzip and then read
+# GET and unzip shapefiles
+GET(
+  query_url,
+  write_disk(
+    zip_folder <- tempfile(fileext = ".zip")
+  )
+)
+
+unzip(zip_folder, exdir = tempdir())
+
+shp <- file.path(tempdir(), "SOA2011.shp")
+
+soa <-
+  read_sf(shp) |>
   st_transform(crs = 4326)
 
 # Select and rename vars
-lad <-
-  lad |>
+soa <-
+  soa |>
   select(
-    lad_19_name = lad19nm,
-    lad_19_code = lad19cd,
+    soa11_name = SOA_LABEL,
+    soa11_code = SOA_CODE,
     geometry
   )
 
 # Make sure geometries are valid
-lad <- st_make_valid(lad)
+soa <- st_make_valid(soa)
+
+# Simplify shape to reduce file size
+soa <- ms_simplify(soa)
 
 # Check geometry types are homogenous
-if (lad |>
+if (soa |>
   st_geometry_type() |>
   unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
 
-if (lad |>
+if (soa |>
   st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }
 
 # Check object is below 50Mb GitHub warning limit
-if (obj_size(lad) > 50000000) {
+if (obj_size(soa) > 50000000) {
   stop("File is too large")
 }
 
 # Rename
-boundaries_lad_19 <- lad
+boundaries_soa11 <- soa
 
 # Save output to data/ folder
-usethis::use_data(boundaries_lad_19, overwrite = TRUE)
+usethis::use_data(boundaries_soa11, overwrite = TRUE)

@@ -10,45 +10,46 @@ load_all(".")
 # Set query url
 query_url <-
   query_urls |>
-  filter(id == "stp_21") |>
+  filter(id == "wards21") |>
   pull(query)
 
-stp <-
+wards <-
   read_sf(query_url) |>
   st_transform(crs = 4326)
 
 # Select and rename vars
-stp <-
-  stp |>
+wards <-
+  wards |>
   select(
-    stp_21_name = STP21NM,
-    stp_21_code = STP21CD,
+    ward21_name = WD21NM,
+    ward21_code = WD21CD,
     geometry
   )
 
 # Make sure geometries are valid
-stp <- st_make_valid(stp)
+wards <- st_make_valid(wards)
 
 # Check geometry types are homogenous
-if (stp |>
+if (wards |>
   st_geometry_type() |>
   unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
-if (stp |>
+
+if (wards |>
   st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }
 
 # Check object is below 50Mb GitHub warning limit
-if (obj_size(stp) > 50000000) {
+if (obj_size(wards) > 50000000) {
   stop("File is too large")
 }
 
 # Rename
-boundaries_stp_21 <- stp
+boundaries_wards21 <- wards
 
 # Save output to data/ folder
-usethis::use_data(boundaries_stp_21, overwrite = TRUE)
+usethis::use_data(boundaries_wards21, overwrite = TRUE)

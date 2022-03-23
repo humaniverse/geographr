@@ -11,52 +11,52 @@ load_all(".")
 # Set query url
 query_url <-
   query_urls |>
-  filter(id == "lsoa_11") |>
+  filter(id == "msoa11") |>
   pull(query)
 
-lsoa <-
+msoa <-
   read_sf(query_url)
 
-lsoa <-
-  lsoa |>
+msoa <-
+  msoa |>
   st_transform(crs = 4326)
 
 # Select and rename vars
-lsoa <-
-  lsoa |>
+msoa <-
+  msoa |>
   select(
-    lsoa_11_name = LSOA11NM,
-    lsoa_11_code = LSOA11CD,
+    msoa11_name = MSOA11NM,
+    msoa11_code = MSOA11CD,
     geometry
   )
 
 # Make sure geometries are valid
-lsoa <- st_make_valid(lsoa)
+msoa <- st_make_valid(msoa)
 
 # Simplify shape to reduce file size
-lsoa <- ms_simplify(lsoa)
+msoa <- ms_simplify(msoa)
 
 # Check geometry types are homogenous
-if (lsoa |>
+if (msoa |>
   st_geometry_type() |>
   unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
 
-if (lsoa |>
+if (msoa |>
   st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }
 
 # Check simplified shape is below 50Mb GitHub warning limit
-if (obj_size(lsoa) > 50000000) {
+if (obj_size(msoa) > 50000000) {
   stop("File is too large")
 }
 
 # Rename
-boundaries_lsoa_11 <- lsoa
+boundaries_msoa11 <- msoa
 
 # Save output to data/ folder
-usethis::use_data(boundaries_lsoa_11, overwrite = TRUE)
+usethis::use_data(boundaries_msoa11, overwrite = TRUE)

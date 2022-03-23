@@ -12,7 +12,7 @@ load_all(".")
 # Set query url
 query_url <-
   query_urls |>
-  filter(id == "trusts_ni_18") |>
+  filter(id == "trusts_ni18") |>
   pull(query)
 
 # GET and unzip shapefiles
@@ -35,8 +35,8 @@ trusts_ni <-
 trusts_ni <-
   trusts_ni |>
   select(
-    trust_18_name = TrustName,
-    trust_18_code = TrustCode,
+    trust18_name = TrustName,
+    trust18_code = TrustCode,
     geometry
   )
 
@@ -44,12 +44,12 @@ trusts_ni <-
 trusts_ni <-
   trusts_ni |>
   mutate(
-    trust_18_name = case_when(
-      trust_18_name == "Belfast Health and Social Care Trust" ~ "Belfast",
-      trust_18_name == "Northern Health and Social Care Trust" ~ "Northern",
-      trust_18_name == "Western Health and Social Care Trust" ~ "Western",
-      trust_18_name == "Southern Health and Social Care Trust" ~ "Southern",
-      trust_18_name == "South Eastern Health and Social Care Trust" ~ "South Eastern"
+    trust18_name = case_when(
+      trust18_name == "Belfast Health and Social Care Trust" ~ "Belfast",
+      trust18_name == "Northern Health and Social Care Trust" ~ "Northern",
+      trust18_name == "Western Health and Social Care Trust" ~ "Western",
+      trust18_name == "Southern Health and Social Care Trust" ~ "Southern",
+      trust18_name == "South Eastern Health and Social Care Trust" ~ "South Eastern"
     )
   )
 
@@ -79,7 +79,7 @@ if (obj_size(trusts_ni) > 50000000) {
 }
 
 # Rename
-boundaries_trusts_ni_18 <- trusts_ni
+boundaries_trusts_ni18 <- trusts_ni
 
 # Save output to data/ folder
-usethis::use_data(boundaries_trusts_ni_18, overwrite = TRUE)
+usethis::use_data(boundaries_trusts_ni18, overwrite = TRUE)

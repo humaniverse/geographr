@@ -10,46 +10,46 @@ load_all(".")
 # Set query url
 query_url <-
   query_urls |>
-  filter(id == "pfa_20") |>
+  filter(id == "ccg21") |>
   pull(query)
 
-pfa <-
+ccg <-
   read_sf(query_url) |>
   st_transform(crs = 4326)
 
 # Select and rename vars
-pfa <-
-  pfa |>
+ccg <-
+  ccg |>
   select(
-    pfa_20_name = PFA20NM,
-    pfa_20_code = PFA20CD,
+    ccg21_name = CCG21NM,
+    ccg21_code = CCG21CD,
     geometry
   )
 
 # Make sure geometries are valid
-pfa <- st_make_valid(pfa)
+ccg <- st_make_valid(ccg)
 
 # Check geometry types are homogenous
-if (pfa |>
+if (ccg |>
   st_geometry_type() |>
   unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
 
-if (pfa |>
+if (ccg |>
   st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }
 
 # Check object is below 50Mb GitHub warning limit
-if (obj_size(pfa) > 50000000) {
+if (obj_size(ccg) > 50000000) {
   stop("File is too large")
 }
 
 # Rename
-boundaries_pfa_20 <- pfa
+boundaries_ccg21 <- ccg
 
 # Save output to data/ folder
-usethis::use_data(boundaries_pfa_20, overwrite = TRUE)
+usethis::use_data(boundaries_ccg21, overwrite = TRUE)

@@ -12,7 +12,7 @@ load_all(".")
 # Set query url
 query_url <-
   query_urls |>
-  filter(id == "hb_19") |>
+  filter(id == "hb19") |>
   pull(query)
 
 # GET and unzip shapefiles
@@ -35,8 +35,8 @@ hb <-
 hb <-
   hb |>
   select(
-    hb_19_name = HBName,
-    hb_19_code = HBCode,
+    hb19_name = HBName,
+    hb19_code = HBCode,
     geometry
   )
 
@@ -66,7 +66,7 @@ if (obj_size(hb) > 50000000) {
 }
 
 # Rename
-boundaries_hb_19 <- hb
+boundaries_hb19 <- hb
 
 # Save output to data/ folder
-usethis::use_data(boundaries_hb_19, overwrite = TRUE)
+usethis::use_data(boundaries_hb19, overwrite = TRUE)
