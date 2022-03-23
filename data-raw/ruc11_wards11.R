@@ -22,13 +22,13 @@ ruc_wards <-
   ruc_wards |>
   select(WD11CD, RUC11CD) |>
   mutate(
-    RUC = case_when(
+    ruc = case_when(
       RUC11CD %in% c("A1", "B1", "C1", "C2") ~ "Urban",
       RUC11CD %in% c("D1", "D2", "E1", "E2", "F1", "F2") ~ "Rural"
     )
   ) |>
   mutate(
-    Classification = case_when(
+    classification = case_when(
       RUC11CD %in% c("A1", "B1") ~ "Urban conurbation",
       RUC11CD %in% c("C1", "C2") ~ "Urban city and town",
       RUC11CD %in% c("D1", "D2") ~ "Rural town and fringe",

@@ -18,11 +18,11 @@ ruc_dz <- read_csv(query_url)
 ruc_dz <-
   ruc_dz |>
   select(DZ_CODE, UR6FOLD) |>
-  mutate(RUC = case_when(
+  mutate(ruc = case_when(
     UR6FOLD <= 4 ~ "Urban",
     UR6FOLD >= 5 ~ "Rural"
   )) |>
-  mutate(Classification = case_when(
+  mutate(classification = case_when(
     UR6FOLD %in% c(1) ~ "Large urban areas",
     UR6FOLD %in% c(2) ~ "Other urban areas",
     UR6FOLD %in% c(3, 4) ~ "Small towns",
@@ -34,8 +34,8 @@ ruc_dz <-
   select(
     dz11_code = DZ_CODE,
     ruc16_code = UR6FOLD,
-    RUC,
-    Classification
+    ruc,
+    classification
   )
 
 # Rename
