@@ -13,38 +13,6 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_ccg21"
 
-#' Counties and Unitary Authorities (December 2019)
-#'
-#' A data set containing 2019 County and Unitary Authority (UA) geometries and
-#' their associated names and codes. Boundaries are Ultra Generalised (500m) -
-#' clipped to the coastline (Mean High Water mark).
-#'
-#' @format A data frame of class "sf" with 216 rows and 3 variables:
-#' \describe{
-#'   \item{utla19_name}{county and UA name}
-#'   \item{utla19_code}{county and UA code}
-#'   \item{geometry}{multipolygon coordinates}
-#'   ...
-#' }
-#' @source \url{https://geoportal.statistics.gov.uk/}
-"boundaries_utla19"
-
-#' Counties and Unitary Authorities (May 2021)
-#'
-#' A data set containing 2021 County and Unitary Authority (UA) geometries and
-#' their associated names and codes. Boundaries are Ultra Generalised (500m) -
-#' clipped to the coastline (Mean High Water mark).
-#'
-#' @format A data frame of class "sf" with 217 rows and 3 variables:
-#' \describe{
-#'   \item{utla21_name}{county and UA name}
-#'   \item{utla21_code}{county and UA code}
-#'   \item{geometry}{multipolygon coordinates}
-#'   ...
-#' }
-#' @source \url{https://geoportal.statistics.gov.uk/}
-"boundaries_utla21"
-
 #' Countries (December 2020)
 #'
 #' A data set containing 2020 Country geometries and
@@ -106,6 +74,38 @@
 #' @source \url{https://spatialdata.gov.scot/}
 "boundaries_iz11"
 
+#' Wales Local Health Boards (2020)
+#'
+#' A data set containing 2020 Local Health Board geometries for Wales and their
+#' associated names and codes.
+#'
+#' @format A data frame of class "sf" with 7 rows and 3 variables:
+#' \describe{
+#'   \item{lhb20_name}{Local Health Board name}
+#'   \item{lhb20_code}{Local Health Board code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"boundaries_lhb20"
+
+#' Lower Layer Super Output Areas (2011)
+#'
+#' A data set containing 2011 Lower Super Output Area (LSOA) geometries and
+#' their associated names and codes. Full clipped boundaries were simplified
+#' using the Visvalingam algorithm set to a weighting of 0.7 with a retaining
+#' proportion of 0.05 points.
+#'
+#' @format A data frame of class "sf" with 34,076 rows and 3 variables:
+#' \describe{
+#'   \item{lsoa11_name}{LSOA name}
+#'   \item{lsoa11_code}{LSOA code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"boundaries_lsoa11"
+
 #' Local Authority Districts (December 2019)
 #'
 #' A data set containing 2019 Local Authority Districts (LAD) geometries and
@@ -138,37 +138,6 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_ltla21"
 
-#' Wales Local Health Boards (2020)
-#'
-#' A data set containing 2020 Local Health Board geometries for Wales and their
-#' associated names and codes.
-#'
-#' @format A data frame of class "sf" with 7 rows and 3 variables:
-#' \describe{
-#'   \item{lhb20_name}{Local Health Board name}
-#'   \item{lhb20_code}{Local Health Board code}
-#'   \item{geometry}{multipolygon coordinates}
-#'   ...
-#' }
-#' @source \url{https://geoportal.statistics.gov.uk/}
-"boundaries_lhb20"
-
-#' Lower Layer Super Output Areas (2011)
-#'
-#' A data set containing 2011 Lower Super Output Area (LSOA) geometries and
-#' their associated names and codes. Full clipped boundaries were simplified
-#' using the Visvalingam algorithm set to a weighting of 0.7 with a retaining
-#' proportion of 0.05 points.
-#'
-#' @format A data frame of class "sf" with 34,076 rows and 3 variables:
-#' \describe{
-#'   \item{lsoa11_name}{LSOA name}
-#'   \item{lsoa11_code}{LSOA code}
-#'   \item{geometry}{multipolygon coordinates}
-#'   ...
-#' }
-#' @source \url{https://geoportal.statistics.gov.uk/}
-"boundaries_lsoa11"
 
 #' Middle Layer Super Output Areas (2011)
 #'
@@ -248,6 +217,38 @@
 #' @source \url{https://www.opendatani.gov.uk/}
 "boundaries_trusts_ni18"
 
+#' Counties and Unitary Authorities (December 2019)
+#'
+#' A data set containing 2019 County and Unitary Authority (UA) geometries and
+#' their associated names and codes. Boundaries are Ultra Generalised (500m) -
+#' clipped to the coastline (Mean High Water mark).
+#'
+#' @format A data frame of class "sf" with 216 rows and 3 variables:
+#' \describe{
+#'   \item{utla19_name}{county and UA name}
+#'   \item{utla19_code}{county and UA code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"boundaries_utla19"
+
+#' Counties and Unitary Authorities (May 2021)
+#'
+#' A data set containing 2021 County and Unitary Authority (UA) geometries and
+#' their associated names and codes. Boundaries are Ultra Generalised (500m) -
+#' clipped to the coastline (Mean High Water mark).
+#'
+#' @format A data frame of class "sf" with 217 rows and 3 variables:
+#' \describe{
+#'   \item{utla21_name}{county and UA name}
+#'   \item{utla21_code}{county and UA code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"boundaries_utla21"
+
 #' Wards / Electoral Divisions (December 2021)
 #'
 #' A data set containing 2021 Ward / Electoral Division geometries and their
@@ -264,6 +265,53 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_wards21"
 
+#' NHS Trusts (February 2022)
+#'
+#' A data set containing February 2022 NHS Trusts point geometries (i.e.,
+#' lat/long coordinates) and their associated names, codes, and open status.
+#'
+#' @format A data frame of class "sf" with 218 rows and 4 variables:
+#' \describe{
+#'   \item{nhs_trust22_name}{NHS Trust name}
+#'   \item{nhs_trust22_code}{NHS Trust code}
+#'   \item{status}{whether the Trust is 'open' or 'closed'}
+#'   \item{geometry}{point coordinates}
+#'   ...
+#' }
+#' @source \url{https://digital.nhs.uk/}
+"points_nhs_trusts22"
+
+#' Lower Layer Super Output Area (2011) to LAD (December 2021) Lookup
+#'
+#' A data set containing a lookup between 2011 Lower Super Output Areas (LSOA)
+#' and 2021 Local Authority Districts (LAD).
+#'
+#' @format A data frame of class "tbl" with 34,753 rows and 4 variables:
+#' \describe{
+#'   \item{lsoa11_name}{LSOA name}
+#'   \item{lsoa11_code}{LSOA code}
+#'   \item{ltla21_name}{LAD name}
+#'   \item{ltla21_code}{LAD code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_lsoa11_ltla21"
+
+#' Lower Layer Super Output Area (2011) to Middle Layer Super Output Area (2011) Lookup
+#'
+#' A data set containing a lookup between 2011 Lower (LSOA) and Middle Layer Super Output Areas (MSOA).
+#'
+#' @format A data frame of class "tbl" with 41,729 rows and 4 variables:
+#' \describe{
+#'   \item{lsoa11_name}{LSOA name}
+#'   \item{lsoa11_code}{LSOA code}
+#'   \item{msoa11_name}{MSOA name}
+#'   \item{msoa11_code}{MSOA code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_lsoa11_msoa11"
+
 #' Local Authority Districts to Combined Authorities lookup (2020).
 #'
 #' A data set containing a lookup between December 2020 Local Authority
@@ -279,6 +327,88 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_ltla20_cauth20"
+
+#' Local Authority Districts to Fire and Rescue Authorities lookup (2021).
+#'
+#' A data set containing a lookup between April 2021 Local Authority
+#' Fire and Rescue Authorities (FRA)
+#'
+#' @format A data frame of class "tbl" with 331 rows and 4 variables:
+#' \describe{
+#'   \item{ltla21_name}{LAD name}
+#'   \item{ltla21_code}{LAD code}
+#'   \item{fra21_name}{FRA name}
+#'   \item{fra21_code}{FRA code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_ltla21_fra21"
+
+#' Changes to England Local Authority codes over time (from 2019).
+#'
+#' A data set containing a lookup of the England Local Authority changes
+#' between 2019, 2020 and 2021.
+#'
+#' @format A data frame of class "tbl" with 382 rows and 6 variables:
+#' \describe{
+#'   \item{ltla19_name}{2019 LAD name}
+#'   \item{ltla19_code}{2019 LAD code}
+#'   \item{ltla20_name}{2020 LAD name}
+#'   \item{ltla20_code}{2020 LAD code}
+#'   \item{ltla21_name}{2021 LAD name}
+#'   \item{ltla21_code}{2021 LAD code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/datasets/code-history-database-december-2021-for-the-united-kingdom/about}
+"lookup_ltla_ltla"
+
+#' Local Authority District to Region (December 2019) Lookup in England
+#'
+#' A data set containing a lookup between 2019 Local Authority Districts (LAD)
+#' and 2019 English Regions.
+#'
+#' @format A data frame of class "tbl" with 317 rows and 4 variables:
+#' \describe{
+#'   \item{ltla19_name}{LAD name}
+#'   \item{ltla19_code}{LAD code}
+#'   \item{region19_name}{Region name}
+#'   \item{region19_code}{Region code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_ltla19_region19"
+
+#' Local Authority District to Region (December 2020) Lookup in England
+#'
+#' A data set containing a lookup between 2020 Local Authority Districts (LAD)
+#' and 2020 English Regions.
+#'
+#' @format A data frame of class "tbl" with 314 rows and 4 variables:
+#' \describe{
+#'   \item{ltla20_name}{LAD name}
+#'   \item{ltla20_code}{LAD code}
+#'   \item{region20_name}{Region name}
+#'   \item{region20_code}{Region code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_ltla20_region20"
+
+#' Local Authority District to Region (April 2021) Lookup in England
+#'
+#' A data set containing a lookup between 2021 Local Authority Districts (LAD)
+#' and 2021 English Regions.
+#'
+#' @format A data frame of class "tbl" with 317 rows and 4 variables:
+#' \describe{
+#'   \item{ltla21_name}{LAD name}
+#'   \item{ltla21_code}{LAD code}
+#'   \item{region21_name}{Region name}
+#'   \item{region21_code}{Region code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_ltla21_region21"
 
 #' Local Authority Districts to County and Unitary Authorities lookup (2019).
 #'
@@ -327,71 +457,6 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_ltla21_utla21"
-
-#' Local Authority Districts to Fire and Rescue Authorities lookup (2021).
-#'
-#' A data set containing a lookup between April 2021 Local Authority
-#' Fire and Rescue Authorities (FRA)
-#'
-#' @format A data frame of class "tbl" with 331 rows and 4 variables:
-#' \describe{
-#'   \item{ltla21_name}{LAD name}
-#'   \item{ltla21_code}{LAD code}
-#'   \item{fra21_name}{FRA name}
-#'   \item{fra21_code}{FRA code}
-#'   ...
-#' }
-#' @source \url{https://geoportal.statistics.gov.uk/}
-"lookup_ltla21_fra21"
-
-#' Changes to England Local Authority codes over time (from 2019).
-#'
-#' A data set containing a lookup of the England Local Authority changes
-#' between 2019, 2020 and 2021.
-#'
-#' @format A data frame of class "tbl" with 382 rows and 6 variables:
-#' \describe{
-#'   \item{ltla19_name}{2019 LAD name}
-#'   \item{ltla19_code}{2019 LAD code}
-#'   \item{ltla20_name}{2020 LAD name}
-#'   \item{ltla20_code}{2020 LAD code}
-#'   \item{ltla21_name}{2021 LAD name}
-#'   \item{ltla21_code}{2021 LAD code}
-#'   ...
-#' }
-#' @source \url{https://geoportal.statistics.gov.uk/datasets/code-history-database-december-2021-for-the-united-kingdom/about}
-"lookup_ltla_ltla"
-
-#' Lower Layer Super Output Area (2011) to LAD (December 2021) Lookup
-#'
-#' A data set containing a lookup between 2011 Lower Super Output Areas (LSOA)
-#' and 2021 Local Authority Districts (LAD).
-#'
-#' @format A data frame of class "tbl" with 34,753 rows and 4 variables:
-#' \describe{
-#'   \item{lsoa11_name}{LSOA name}
-#'   \item{lsoa11_code}{LSOA code}
-#'   \item{ltla21_name}{LAD name}
-#'   \item{ltla21_code}{LAD code}
-#'   ...
-#' }
-#' @source \url{https://geoportal.statistics.gov.uk/}
-"lookup_lsoa11_ltla21"
-
-#' Lower Layer Super Output Area (2011) to Middle Layer Super Output Area (2011) Lookup
-#'
-#' A data set containing a lookup between 2011 Lower (LSOA) and Middle Layer Super Output Areas (MSOA).
-#'
-#' @format A data frame of class "tbl" with 41,729 rows and 4 variables:
-#' \describe{
-#'   \item{lsoa11_name}{LSOA name}
-#'   \item{lsoa11_code}{LSOA code}
-#'   \item{msoa11_name}{MSOA name}
-#'   \item{msoa11_code}{MSOA code}
-#'   ...
-#' }
-#' @source \url{https://geoportal.statistics.gov.uk/}
-"lookup_lsoa11_msoa11"
 
 #' Middle Layer Super Output Area (2011) to LAD (December 2019) Lookup
 #'
@@ -459,21 +524,21 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_postcode_oa11_lsoa11_msoa11_ltla20"
-#' NHS Trusts (February 2022)
+
+#' Rural-Urban Classifications for Data Zones (2011) in Scotland
 #'
-#' A data set containing February 2022 NHS Trusts point geometries (i.e.,
-#' lat/long coordinates) and their associated names, codes, and open status.
+#' A data set containing rural-urban classifications for Data Zones in Scotland.
 #'
-#' @format A data frame of class "sf" with 218 rows and 4 variables:
+#' @format A data frame of class "tbl" with 6,976 rows and 4 variables:
 #' \describe{
-#'   \item{nhs_trust22_name}{NHS Trust name}
-#'   \item{nhs_trust22_code}{NHS Trust code}
-#'   \item{status}{whether the Trust is 'open' or 'closed'}
-#'   \item{geometry}{point coordinates}
+#'   \item{dz11_code}{Data Zone code}
+#'   \item{ruc16_code}{Rural-Urban Classification code}
+#'   \item{ruc}{Whether the DZ is classified as 'Rural' or 'Urban'}
+#'   \item{classification}{A more detailed description of the classification}
 #'   ...
 #' }
-#' @source \url{https://digital.nhs.uk/}
-"points_nhs_trusts22"
+#' @source \url{https://www.gov.scot/}
+"ruc16_dz11"
 
 #' Rural-Urban Classifications for Lower Layer Super Output Areas (2011) in
 #' England and Wales
@@ -525,18 +590,5 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "ruc11_wards11"
 
-#' Rural-Urban Classifications for Data Zones (2011) in Scotland
-#'
-#' A data set containing rural-urban classifications for Data Zones in Scotland.
-#'
-#' @format A data frame of class "tbl" with 6,976 rows and 4 variables:
-#' \describe{
-#'   \item{dz11_code}{Data Zone code}
-#'   \item{ruc16_code}{Rural-Urban Classification code}
-#'   \item{ruc}{Whether the DZ is classified as 'Rural' or 'Urban'}
-#'   \item{classification}{A more detailed description of the classification}
-#'   ...
-#' }
-#' @source \url{https://www.gov.scot/}
-"ruc16_dz11"
+
 

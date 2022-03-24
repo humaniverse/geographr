@@ -121,7 +121,7 @@ if (obj_size(combined_changes_renamed) > 50000000) {
 }
 
 # Rename
-lookup_ltla_latla <- combined_changes_renamed
+lookup_ltla_ltla <- combined_changes_renamed
 
 # Save output to data/ folder
-usethis::use_data(lookup_ltla_latla, overwrite = TRUE)
+usethis::use_data(lookup_ltla_ltla, overwrite = TRUE)

@@ -39,7 +39,7 @@ ruc_lsoa <-
 
 ruc_lsoa <-
   ruc_lsoa |>
-  rename(lsoa11_code = LSOA11CD, ruc1111_code = RUC11CD)
+  rename(lsoa11_code = LSOA11CD, ruc11_code = RUC11CD)
 
 # Rename
 ruc11_lsoa11 <- ruc_lsoa

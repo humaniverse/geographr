@@ -12,7 +12,7 @@ load_all(".")
 # Set query url
 query_url <-
   query_urls |>
-  filter(id == "iz_11") |>
+  filter(id == "iz11") |>
   pull(query)
 
 # GET and unzip shapefiles
@@ -35,8 +35,8 @@ iz <-
 iz <-
   iz |>
   select(
-    iz_11_name = Name,
-    iz_11_code = InterZone,
+    iz11_name = Name,
+    iz11_code = InterZone,
     geometry
   )
 
@@ -66,7 +66,7 @@ if (obj_size(iz) > 50000000) {
 }
 
 # Rename
-boundaries_iz_11 <- iz
+boundaries_iz11 <- iz
 
 # Save output to data/ folder
-usethis::use_data(boundaries_iz_11, overwrite = TRUE)
+usethis::use_data(boundaries_iz11, overwrite = TRUE)
