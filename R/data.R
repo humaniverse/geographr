@@ -312,6 +312,38 @@
 #' @source \url{https://digital.nhs.uk/}
 "points_nhs_trusts22"
 
+#' Lower Layer Super Output Area (2011) to LAD (December 2019) Lookup
+#'
+#' A data set containing a lookup between 2011 Lower Super Output Areas (LSOA)
+#' and 2019 Local Authority Districts (LAD).
+#'
+#' @format A data frame of class "tbl" with 34,753 rows and 4 variables:
+#' \describe{
+#'   \item{lsoa11_name}{LSOA name}
+#'   \item{lsoa11_code}{LSOA code}
+#'   \item{ltla19_name}{LAD name}
+#'   \item{ltla19_code}{LAD code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_lsoa11_ltla19"
+
+#' Lower Layer Super Output Area (2011) to LAD (December 2020) Lookup
+#'
+#' A data set containing a lookup between 2011 Lower Super Output Areas (LSOA)
+#' and 2020 Local Authority Districts (LAD).
+#'
+#' @format A data frame of class "tbl" with 34,753 rows and 4 variables:
+#' \describe{
+#'   \item{lsoa11_name}{LSOA name}
+#'   \item{lsoa11_code}{LSOA code}
+#'   \item{ltla20_name}{LAD name}
+#'   \item{ltla20_code}{LAD code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_lsoa11_ltla20"
+
 #' Lower Layer Super Output Area (2011) to LAD (December 2021) Lookup
 #'
 #' A data set containing a lookup between 2011 Lower Super Output Areas (LSOA)
@@ -343,6 +375,22 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_lsoa11_msoa11"
 
+#' Local Authority Districts to Combined Authorities lookup (2019).
+#'
+#' A data set containing a lookup between December 2019 Local Authority
+#' Districts and Combined Authorities (CAUTH).
+#'
+#' @format A data frame of class "tbl" with 53 rows and 4 variables:
+#' \describe{
+#'   \item{ltla19_name}{LAD name}
+#'   \item{ltla19_code}{LAD code}
+#'   \item{cauth19_name}{County name}
+#'   \item{cauth19_code}{County code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_ltla19_cauth19"
+
 #' Local Authority Districts to Combined Authorities lookup (2020).
 #'
 #' A data set containing a lookup between December 2020 Local Authority
@@ -358,6 +406,22 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_ltla20_cauth20"
+
+#' Local Authority Districts to Combined Authorities lookup (2021).
+#'
+#' A data set containing a lookup between December 2021 Local Authority
+#' Districts and Combined Authorities (CAUTH).
+#'
+#' @format A data frame of class "tbl" with 53 rows and 4 variables:
+#' \describe{
+#'   \item{ltla21_name}{LAD name}
+#'   \item{ltla21_code}{LAD code}
+#'   \item{cauth21_name}{County name}
+#'   \item{cauth21_code}{County code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_ltla21_cauth21"
 
 #' Local Authority Districts to Fire and Rescue Authorities lookup (2021).
 #'
