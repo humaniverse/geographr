@@ -620,6 +620,22 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_postcode_oa11_lsoa11_msoa11_ltla20"
 
+#' Ward (December 2021) to LTLA (December 2021) Lookup
+#'
+#' A data set containing a lookup between 2021 wards and 2021 Lower Tier Local
+#' Authority Districts (LAD).
+#'
+#' @format A data frame of class "tbl" with 8,694 rows and 4 variables:
+#' \describe{
+#'   \item{ward21_name}{MSOA name}
+#'   \item{ward21_code}{MSOA code}
+#'   \item{ltla21_name}{LAD name}
+#'   \item{ltla21_code}{LAD code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_ward21_ltla21"
+
 #' Rural-Urban Classifications for Data Zones (2011) in Scotland
 #'
 #' A data set containing rural-urban classifications for Data Zones in Scotland.
