@@ -1,6 +1,6 @@
 Package: geographr
 Title: R package for mapping UK geographies
-Version: 1.0.0
+Version: 1.0.1
 Authors@R: c(
     person("Mike", "Page", email = "mpage@redcross.org.uk", role = "cre"),
     person("Matt", "Thomas", email = "mattthomas@redcross.org.uk", role = "aut"),
@@ -16,5 +16,5 @@ RoxygenNote: 7.1.2
 Depends: 
     R (>= 4.1.0)
 Imports: 
-    dplyr
+    dplyr,
     sf
