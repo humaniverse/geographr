@@ -55,6 +55,9 @@ query_urls <-
       "lookup", "postcode_oa11_lsoa11_msoa11_ltla20", "23.11.20", "OGLv3", "https://www.arcgis.com/sharing/rest/content/items/9f629cd0c2fb42beb0d79a474fee4776/data", "https://geoportal.statistics.gov.uk/datasets/9f629cd0c2fb42beb0d79a474fee4776/about",
       "lookup", "ward21_ltla21", "25.11.21", "OGLv3", "https://www.arcgis.com/sharing/rest/content/items/fe123ab719b2488ab41dd9c6aa84e79b/data", "https://geoportal.statistics.gov.uk/documents/ward-to-local-authority-district-december-2021-lookup-in-the-united-kingdom/about",
 
+      # Names and codes
+      "names_codes", "nhs_region21", "04.01.22", "OGLv3", "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/NHS_England_Regions_(April_2021)_in_England/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson", "https://geoportal.statistics.gov.uk/datasets/ons::nhs-england-region-april-2021-names-and-codes-in-england/about",
+
       # Rural-Urban Classifications
       "ruc", "ruc16_dz11", "01.01.16", "OGLv3", "https://www.gov.scot/binaries/content/documents/govscot/publications/advice-and-guidance/2018/03/scottish-government-urban-rural-classification-2016/documents/scottish-government-urban-rural-classification-2016-data-zone-lookup/scottish-government-urban-rural-classification-2016-data-zone-lookup/govscot%3Adocument/00544928.csv", "https://www.gov.scot/publications/scottish-government-urban-rural-classification-2016/pages/2/",
       "ruc", "ruc11_lsoa11", "01.01.11", "OGLv3", "https://opendata.arcgis.com/datasets/276d973d30134c339eaecfc3c49770b3_0.geojson", "https://geoportal.statistics.gov.uk/datasets/rural-urban-classification-2011-of-lower-layer-super-output-areas-in-england-and-wales/explore",
