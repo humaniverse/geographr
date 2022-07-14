@@ -29,7 +29,7 @@ You can install the development version from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("humaniverse/geographr")
+devtools::install_github("britishredcrosssociety/geographr")
 ```
 
 ## Development
@@ -179,6 +179,10 @@ characters and an inward code of three characters.
 
 -   [A Beginner’s Guide to UK
     Geography](misc/a-beginners-guide-to-uk-geography-2020-v1.0.pdf)
+
+-   Diagram of England health geographies:
+
+<img src='man/figures/health-boundaries-diagram.png' align="centre"/>
 
 -   Hierarchical Representation of UK Statistical Geographies:
 
