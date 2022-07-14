@@ -312,6 +312,20 @@
 #' @source \url{https://digital.nhs.uk/}
 "points_nhs_trusts22"
 
+#' NHS England Hopsitals (July 2022)
+#'
+#' A data set containing July 2022 NHS England hospital point geometries (i.e.,
+#' lat/long coordinates) and their associated names.
+#'
+#' @format A data frame of class "sf" with 1,416 rows and 2 variables:
+#' \describe{
+#'   \item{hospitalt22_name}{NHS England hospital}
+#'   \item{geometry}{point coordinates}
+#'   ...
+#' }
+#' @source \url{https://digital.nhs.uk/}
+"points_hospitals22"
+
 #' Lower Layer Super Output Area (2011) to LAD (December 2019) Lookup
 #'
 #' A data set containing a lookup between 2011 Lower Super Output Areas (LSOA)
