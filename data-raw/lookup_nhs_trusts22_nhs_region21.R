@@ -65,6 +65,12 @@ trusts_clean <-
     status
   )
 
+# Make Trust names titles case
+trusts_renamed <-
+  trusts_clean |>
+  mutate(nhs_trust22_name = str_to_title(nhs_trust22_name)) |>
+  mutate(nhs_trust22_name = str_replace(nhs_trust22_name, "Nhs", "NHS"))
+
 # ---- Load NHS regions ----
 # Set query url
 query_url <-
@@ -86,7 +92,7 @@ nhs_region <-
 
 # ---- Create lookup ----
 lookup_nhs_trusts22_nhs_region21 <-
-  trusts_clean |>
+  trusts_renamed |>
   left_join(nhs_region) |>
   relocate(status, .after = last_col())
 

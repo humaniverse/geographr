@@ -83,9 +83,15 @@ trusts_geocoded <-
   trusts_geocoded |>
   relocate(nhs_trust22_name)
 
+# Make Trust names title case
+trusts_renamed <-
+  trusts_geocoded |>
+  mutate(nhs_trust22_name = str_to_title(nhs_trust22_name)) |>
+  mutate(nhs_trust22_name = str_replace(nhs_trust22_name, "Nhs", "NHS"))
+
 # Convert to sf object
 trusts_sf <-
-  trusts_geocoded |>
+  trusts_renamed |>
   st_as_sf(coords = c("long", "lat"), crs = 4326)
 
 # Make sure geometries are valid
