@@ -601,6 +601,22 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_msoa11_ltla21"
 
+#' England NHS Trusts (2022) to STP/ICS (2021) Lookup
+#'
+#' A data set containing a lookup between 2022 England NHS Trusts and 2021 STP 
+#' areas.
+#'
+#' @format A data frame of class "tbl" with 209 rows and 4 variables:
+#' \describe{
+#'   \item{nhs_trust22_name}{NHS Trust name}
+#'   \item{nhs_trust22_code}{NHS Trust code}
+#'   \item{stp21_name}{STP name}
+#'   \item{stp21_code}{STP code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_nhs_trusts22_stp21"
+
 #' Postcode to Output Area (2011) to Lower Layer Super Output Area (2011) to
 #'   Middle Layer Super Output Area (2011) to Local Authority District (2020)
 #'   Lookup
