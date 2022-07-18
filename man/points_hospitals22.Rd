@@ -5,9 +5,9 @@
 \alias{points_hospitals22}
 \title{NHS England Hopsitals (July 2022)}
 \format{
-A data frame of class "sf" with 1,416 rows and 2 variables:
+A data frame of class "sf" with 1,061 rows and 2 variables:
 \describe{
-\item{hospitalt22_name}{NHS England hospital}
+\item{hospital22_name}{NHS England hospital}
 \item{geometry}{point coordinates}
 ...
 }

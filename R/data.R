@@ -317,9 +317,9 @@
 #' A data set containing July 2022 NHS England hospital point geometries (i.e.,
 #' lat/long coordinates) and their associated names.
 #'
-#' @format A data frame of class "sf" with 1,416 rows and 2 variables:
+#' @format A data frame of class "sf" with 1,061 rows and 2 variables:
 #' \describe{
-#'   \item{hospitalt22_name}{NHS England hospital}
+#'   \item{hospital22_name}{NHS England hospital}
 #'   \item{geometry}{point coordinates}
 #'   ...
 #' }

@@ -170,8 +170,13 @@ hospitals_select <-
   sf_hospitals |>
   select(hospital22_name = hospital_name)
 
+# Remove duplicate hospitals
+hospitals_distinct <-
+  hospitals_select |>
+  distinct()
+
 # Rename
-points_hospitals22 <- hospitals_select
+points_hospitals22 <- hospitals_distinct
 
 # Save output to data/ folder
 usethis::use_data(points_hospitals22, overwrite = TRUE)
