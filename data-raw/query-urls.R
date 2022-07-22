@@ -7,7 +7,7 @@ query_urls <-
    tribble(
 
       # Column Names
-      ~geog_type, ~id, ~date, ~license, ~query, ~source,
+      ~geog_type, ~id, ~publish_date, ~license, ~query, ~source,
 
       # Boundaries
       "boundaries", "ccg21", "01.04.21", "OGLv3", "https://opendata.arcgis.com/datasets/d6acd30ad71f4e14b4de808e58d9bc4c_0.geojson", "https://geoportal.statistics.gov.uk/datasets/clinical-commissioning-groups-april-2021-en-buc/explore?location=51.835875%2C-2.452657%2C6.00",
