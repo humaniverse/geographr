@@ -640,7 +640,7 @@
 
 #' England NHS Trusts (2022) to STP/ICS (2021) Lookup
 #'
-#' A data set containing a lookup between 2022 England NHS Trusts and 2021 STP 
+#' A data set containing a lookup between 2022 England NHS Trusts and 2021 STP
 #' areas.
 #'
 #' @format A data frame of class "tbl" with 209 rows and 4 variables:
@@ -771,3 +771,38 @@
 #' }
 #' @source \url{https://digital.nhs.uk/}
 "lookup_nhs_trusts22_nhs_region21"
+
+#' Small Areas (2011) to SOAs to Local Government Districts (December 2018)
+#'   Lookup with Area Classifications in Northern Ireland
+#'
+#' A data set containing a lookup between Small Areas, Super Output Areas,
+#'   and Local Government Districts in Northern Ireland
+#'
+#' @format A data frame of class "tbl" with 4,537 rows and 5 variables:
+#' \describe{
+#'   \item{sa11_code}{Small Area code}
+#'   \item{soa11_name}{Super Output Area name}
+#'   \item{soa11_code}{Super Output Area code}
+#'   \item{lgd18_name}{Local Government District name}
+#'   \item{lgd18_code}{Local Government District code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_sa11_soa11_lgd18"
+
+#' Data Zone (2011) to Intermediate Zone (2011) to LAD (December 2019) Lookup
+#'
+#' A data set containing a lookup between Data Zones, Intermediate Zones and Council Areas in Scotland
+#'
+#' @format A data frame of class "tbl" with 6,976 rows and 6 variables:
+#' \describe{
+#'   \item{dz11_name}{DZ name}
+#'   \item{dz11_code}{DZ code}
+#'   \item{iz11_name}{IZ name}
+#'   \item{iz11_code}{IZ code}
+#'   \item{ltla20_name}{LAD name}
+#'   \item{ltla20_code}{LAD code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_dz11_iz11_ltla20"
