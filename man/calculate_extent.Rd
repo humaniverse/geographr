@@ -2,7 +2,7 @@
 % Please edit documentation in R/calculate.R
 \name{calculate_extent}
 \alias{calculate_extent}
-\title{Calculate the 'extent' scores when aggreating up small areas}
+\title{Calculate the 'extent' scores when aggregating up small areas}
 \usage{
 calculate_extent(
   data,
