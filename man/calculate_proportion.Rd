@@ -5,23 +5,25 @@
 \title{Calculate proportion of small areas in the higher-level geography that are
 within the 10\% most deprived areas in the nation.}
 \usage{
-calculate_proportion(data, var, higher_level_geography, max_quantile = 1)
+calculate_proportion(data, var, higher_level_geography)
 }
 \arguments{
-\item{data}{Data frame containing a variable to be aggregated, lower level
-geography population estimates, and a higher level geographical
-grouping variable}
+\item{data}{Data frame containing a variable to be aggregated and a higher
+level geographical grouping variable}
 
-\item{var}{Name of the variable in the data frame containing the variable to
-be aggregated (e.g. decile) for the lower level geography}
+\item{var}{Name of the variable in the data frame for which you want to
+calculate proportions. It must have only two possible values}
 
 \item{higher_level_geography}{Name of the variable in the data frame
 containing the higher level geography names/codes}
-
-\item{max_quantile}{Get proportion of small areas categorised as less than
-or equal to \code{max_quantile} (default = 1)}
 }
 \description{
 Calculate proportion of small areas in the higher-level geography that are
 within the 10\% most deprived areas in the nation.
+}
+\examples{
+\dontrun{
+  calculate_proportion(IMD::imd_england_lsoa, IMD_decile, msoa_code, n_people)
+}
+
 }

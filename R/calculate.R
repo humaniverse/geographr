@@ -81,30 +81,48 @@ calculate_extent <-
 #' Calculate proportion of small areas in the higher-level geography that are
 #' within the 10% most deprived areas in the nation.
 #'
-#' @param data Data frame containing a variable to be aggregated, lower level
-#'        geography population estimates, and a higher level geographical
-#'        grouping variable
-#' @param var Name of the variable in the data frame containing the variable to
-#'        be aggregated (e.g. decile) for the lower level geography
+#' @param data Data frame containing a variable to be aggregated and a higher
+#'        level geographical grouping variable
+#' @param var Name of the variable in the data frame for which you want to
+#'        calculate proportions. It must have only two possible values
 #' @param higher_level_geography Name of the variable in the data frame
 #'        containing the higher level geography names/codes
-#' @param max_quantile Get proportion of small areas categorised as less than
-#'        or equal to `max_quantile` (default = 1)
+#'
+#' @examples
+#' \dontrun{
+#'   calculate_proportion(IMD::imd_england_lsoa, IMD_decile, msoa_code, n_people)
+#' }
 #'
 #' @importFrom rlang .data
+#' @importFrom rlang :=
 #' @export
 calculate_proportion <-
   function(data,
            var,
-           higher_level_geography,
-           max_quantile = 1) {
-    data |>
-      # Label LSOAs by whether they're in top 10% most-deprived then summarise by this label
-      dplyr::mutate(Top10 = ifelse({{ var }} <= max_quantile, "Top10", "Other")) |>
-      janitor::tabyl({{higher_level_geography}}, .data$Top10) |>
+           higher_level_geography) {
+    # Get the unique values of `var`...
+    var_values <-
+      data |>
+      dplyr::distinct({{var}}) |>
+      dplyr::pull({{var}})
 
-      # Calculate proportion of most deprived LSOAs
-      dplyr::mutate(Proportion = .data$Top10 / (.data$Top10 + .data$Other)) |>
-      dplyr::select({{ higher_level_geography }}, .data$Proportion) |>
+    #... make sure `var` only contains two possible values
+    if (length(var_values) != 2) {
+      stop("data$var must contain two possible values")
+    }
+
+    #... and use these unique values to make new `proportion` columns
+    prop_column_1 <- paste0("proportion_", var_values[1])
+    prop_column_2 <- paste0("proportion_", var_values[2])
+
+    # Count the number of each value of `var` in each `higher_level_geography`
+    data |>
+      janitor::tabyl({{higher_level_geography}}, {{var}}) |>
+
+      # Calculate proportions
+      dplyr::mutate(!!prop_column_1 := .data[[var_values[1]]] / (.data[[var_values[1]]] + .data[[var_values[2]]])) |>
+      dplyr::mutate(!!prop_column_2 := .data[[var_values[2]]] / (.data[[var_values[1]]] + .data[[var_values[2]]])) |>
+
+      dplyr::select({{ higher_level_geography }}, .data[[prop_column_1]], .data[[prop_column_2]]) |>
       tibble::as_tibble()
   }
