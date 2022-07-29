@@ -2,4 +2,5 @@
 
 export(calculate_extent)
 export(calculate_proportion)
+importFrom(rlang,":=")
 importFrom(rlang,.data)

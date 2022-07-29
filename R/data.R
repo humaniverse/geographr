@@ -806,3 +806,16 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_dz11_iz11_ltla20"
+
+#' Names and codes for NHS Scotland Health Boards (2014 - 2019)
+#'
+#' @format A data frame of class "tbl" with 18 rows and 4 variables:
+#' \describe{
+#'   \item{hb19_name}{Health Board name}
+#'   \item{hb19_code}{Health Board code}
+#'   \item{date_enacted}{Date Health Board Code was enacted}
+#'   \item{date_archived}{Date Health Board Code was archived}
+#'   ...
+#' }
+#' @source \url{https://www.opendata.nhs.scot/}
+"names_codes_hb19"

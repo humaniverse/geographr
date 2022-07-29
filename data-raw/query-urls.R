@@ -60,6 +60,7 @@ query_urls <-
 
       # Names and codes
       "names_codes", "nhs_region21", "04.01.22", "OGLv3", "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/NHS_England_Regions_(April_2021)_in_England/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson", "https://geoportal.statistics.gov.uk/datasets/ons::nhs-england-region-april-2021-names-and-codes-in-england/about",
+      "names_codes", "nhs_scotland_health_boards19", "17.06.20", "OGLv3", "https://www.opendata.nhs.scot/dataset/9f942fdb-e59e-44f5-b534-d6e17229cc7b/resource/652ff726-e676-4a20-abda-435b98dd7bdc/download/hb14_hb19.csv", "https://www.opendata.nhs.scot/dataset/geography-codes-and-labels/resource/652ff726-e676-4a20-abda-435b98dd7bdc",
 
       # Rural-Urban Classifications
       "ruc", "ruc16_dz11", "01.01.16", "OGLv3", "https://www.gov.scot/binaries/content/documents/govscot/publications/advice-and-guidance/2018/03/scottish-government-urban-rural-classification-2016/documents/scottish-government-urban-rural-classification-2016-data-zone-lookup/scottish-government-urban-rural-classification-2016-data-zone-lookup/govscot%3Adocument/00544928.csv", "https://www.gov.scot/publications/scottish-government-urban-rural-classification-2016/pages/2/",
