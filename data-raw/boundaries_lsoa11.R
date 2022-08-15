@@ -34,7 +34,8 @@ lsoa <-
 lsoa <- st_make_valid(lsoa)
 
 # Simplify shape to reduce file size
-lsoa <- ms_simplify(lsoa)
+# Set 'keep' argument to given level so keeps all LSOA rows
+lsoa <- ms_simplify(lsoa, keep = 0.895)
 
 # Check geometry types are homogenous
 if (lsoa |>

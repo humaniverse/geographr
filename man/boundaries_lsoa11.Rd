@@ -5,7 +5,7 @@
 \alias{boundaries_lsoa11}
 \title{Lower Layer Super Output Areas (2011)}
 \format{
-A data frame of class "sf" with 34,076 rows and 3 variables:
+A data frame of class "sf" with 34,753 rows and 3 variables:
 \describe{
 \item{lsoa11_name}{LSOA name}
 \item{lsoa11_code}{LSOA code}
@@ -23,6 +23,6 @@ boundaries_lsoa11
 A data set containing 2011 Lower Super Output Area (LSOA) geometries and
 their associated names and codes. Full clipped boundaries were simplified
 using the Visvalingam algorithm set to a weighting of 0.7 with a retaining
-proportion of 0.05 points.
+proportion of 0.895 points.
 }
 \keyword{datasets}
