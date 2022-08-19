@@ -34,7 +34,8 @@ msoa <-
 msoa <- st_make_valid(msoa)
 
 # Simplify shape to reduce file size
-msoa <- ms_simplify(msoa)
+# Set 'keep' argument to given level so keeps all MSOA rows
+msoa <- ms_simplify(msoa,  keep = 0.52)
 
 # Check geometry types are homogenous
 if (msoa |>

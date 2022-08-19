@@ -81,7 +81,7 @@ changes_2020 <-
   mutate(LAD20CD = if_else(is.na(LAD20CD), LAD19CD, LAD20CD)) |>
   mutate(LAD20NM = if_else(is.na(LAD20NM), LAD19NM, LAD20NM))
 
-# Take 2021 changes and apply to 2021 data
+# Take 2021 changes and apply to 2020 data
 changes_2021 <- changes_2020 |>
   left_join(
     filter(all_changes, year_prev == 2020),
