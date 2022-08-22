@@ -23,7 +23,6 @@ msoa_msoa_ltla <-
     msoa11_code = X_MSOA11CD,
     msoa21_name = MSOA21NM,
     msoa21_code = MSOA21CD,
-    change_category = CHGIND,
     ltla22_name = LAD22NM,
     ltla22_code = LAD22CD
   ) |>

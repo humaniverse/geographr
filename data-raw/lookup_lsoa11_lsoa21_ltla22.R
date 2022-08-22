@@ -22,7 +22,6 @@ lsoa_lsoa_ltla <-
     lsoa11_code = LSOA11CD,
     lsoa21_name = LSOA21NM,
     lsoa21_code = LSOA21CD,
-    change_category = CHGIND,
     ltla22_name = LAD22NM,
     ltla22_code = LAD22CD
   ) |>

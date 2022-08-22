@@ -354,19 +354,12 @@
 #' A data set containing a lookup between 2011 Lower Super Output Areas (LSOA)
 #' and 2021 Lower Super Output Areas (LSOA) and 2022 Local Authority Districts (LAD).
 #'
-#' For the change categories:
-#' U (no change from 2011 to 2021),
-#' S (2011 LSOA has been split between 2 or more 2021 LSOAS)
-#' M (2011 LSOA has been merged into another 1 or more 2011 to form a single 2021 LSOA)
-#' T (2011 LSOA has been redesigned because of ward and local authority boundary changes that occurred during the period between 2011 and 2021.)
-#'
-#' @format A data frame of class "tbl" with 2.000 rows and 7 variables:
+#' @format A data frame of class "tbl" with 34,753 rows and 6 variables:
 #' \describe{
 #'   \item{lsoa11_name}{LSOA 11 name}
 #'   \item{lsoa11_code}{LSOA 11 code}
 #'   \item{lsoa21_name}{LSOA 21 name}
 #'   \item{lsoa21_code}{LSOA 21 code}
-#'   \item{change_category}{Change category}
 #'   \item{ltla22_name}{LAD name}
 #'   \item{ltla22_code}{LAD code}
 #'   ...
@@ -665,14 +658,8 @@
 
 #' Middle Layer Super Output Area (2011) to Middle Layer Super Output Area (2021) to LAD (December 2022) Lookup
 #'
-#' A data set containing a lookup between 2011 Middle Super Output Areas (LSOA)
-#' and 2021 Middle Super Output Areas (LSOA) and 2022 Local Authority Districts (LAD).
-#'
-#' For the change categories:
-#' U (no change from 2011 to 2021),
-#' S (2011 MSOA has been split between 2 or more 2021 MSOAS)
-#' M (2011 MSOA has been merged into another 1 or more 2011 to form a single 2021 MSOA)
-#' T (2011 MSOA has been redesigned because of ward and local authority boundary changes that occurred during the period between 2011 and 2021.)
+#' A data set containing a lookup between 2011 Middle Super Output Areas (MSOA)
+#' and 2021 Middle Super Output Areas (MSOA) and 2022 Local Authority Districts (LAD).
 #'
 #' @format A data frame of class "tbl" with 2.000 rows and 7 variables:
 #' \describe{
@@ -680,7 +667,6 @@
 #'   \item{msoa11_code}{MSOA 11 code}
 #'   \item{msoa21_name}{MSOA 21 name}
 #'   \item{msoa21_code}{MSOA 21 code}
-#'   \item{change_category}{Change category}
 #'   \item{ltla22_name}{LAD name}
 #'   \item{ltla22_code}{LAD code}
 #'   ...
