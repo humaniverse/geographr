@@ -661,7 +661,7 @@
 #' A data set containing a lookup between 2011 Middle Super Output Areas (MSOA)
 #' and 2021 Middle Super Output Areas (MSOA) and 2022 Local Authority Districts (LAD).
 #'
-#' @format A data frame of class "tbl" with 2.000 rows and 7 variables:
+#' @format A data frame of class "tbl" with 7.201 rows and 6 variables:
 #' \describe{
 #'   \item{msoa11_name}{MSOA 11 name}
 #'   \item{msoa11_code}{MSOA 11 code}

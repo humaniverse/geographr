@@ -5,7 +5,7 @@
 \alias{boundaries_msoa11}
 \title{Middle Layer Super Output Areas (2011)}
 \format{
-A data frame of class "sf" with 7,083 rows and 3 variables:
+A data frame of class "sf" with 7,201 rows and 3 variables:
 \describe{
 \item{msoa11_name}{MSOA name}
 \item{msoa11_code}{MSOA code}

@@ -20,13 +20,12 @@ msoa_msoa_ltla <-
   msoa_msoa_ltla |>
   select(
     msoa11_name = MSOA11NM,
-    msoa11_code = X_MSOA11CD,
+    msoa11_code = MSOA11CD,
     msoa21_name = MSOA21NM,
     msoa21_code = MSOA21CD,
     ltla22_name = LAD22NM,
     ltla22_code = LAD22CD
   ) |>
-  st_drop_geometry() |>
   distinct()
 
 # Rename
