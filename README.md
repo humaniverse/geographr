@@ -14,13 +14,13 @@ public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostat
 
 geographr is an R package for mapping UK geographies:
 
--   `boundaries_*` objects distribute boundaries (as [simple
-    feature](https://r-spatial.github.io/sf/) objects)
--   `points_*` objects distribute point geometries (as [simple
-    feature](https://r-spatial.github.io/sf/) objects)
--   `lookup_*` objects provide a set of lookup tables
--   `ruc_*` objects provide a set of rural-urban classifications
--   `calculate_*` functions solve common aggregation problems
+- `boundaries_*` objects distribute boundaries (as [simple
+  feature](https://r-spatial.github.io/sf/) objects)
+- `points_*` objects distribute point geometries (as [simple
+  feature](https://r-spatial.github.io/sf/) objects)
+- `lookup_*` objects provide a set of lookup tables
+- `ruc_*` objects provide a set of rural-urban classifications
+- `calculate_*` functions solve common aggregation problems
 
 ## Installation
 
@@ -29,7 +29,7 @@ You can install the development version from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("britishredcrosssociety/geographr")
+devtools::install_github("humaniverse/geographr")
 ```
 
 ## Development
@@ -177,19 +177,19 @@ characters and an inward code of three characters.
 
 ## Resources:
 
--   [A Beginner’s Guide to UK
-    Geography](misc/a-beginners-guide-to-uk-geography-2020-v1.0.pdf)
+- [A Beginner’s Guide to UK
+  Geography](misc/a-beginners-guide-to-uk-geography-2020-v1.0.pdf)
 
--   Diagram of England health geographies:
+- Diagram of England health geographies:
 
 <img src='man/figures/health-boundaries-diagram.png' align="centre"/>
 
--   Hierarchical Representation of UK Statistical Geographies:
+- Hierarchical Representation of UK Statistical Geographies:
 
 <img src='man/figures/hierarchy-poster.png' align="centre"/>
 
--   Mappings of coterminous geographies from [PHE’s Technical
-    Aggregation Guide](https://fingertips.phe.org.uk/profile/guidance):
+- Mappings of coterminous geographies from [PHE’s Technical Aggregation
+  Guide](https://fingertips.phe.org.uk/profile/guidance):
 
 <img src='man/figures/coterminous-geographies.png' align="centre"/>
 
