@@ -186,6 +186,21 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_pfa20"
 
+#' Regions (December 2021)
+#'
+#' A data set containing December 2021 England Region geometries and
+#' their associated names and codes.
+#'
+#' @format A data frame of class "sf" with 890 rows and 3 variables:
+#' \describe{
+#'   \item{region21_name}{Region name}
+#'   \item{region21_code}{Region code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"boundaries_region21"
+
 #' Super Output Areas (2011)
 #'
 #' A data set containing 2011 Northern Ireland Super Output Area geometries and
