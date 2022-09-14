@@ -61,7 +61,6 @@ query_urls <-
       "lookup", "postcode_oa11_lsoa11_msoa11_ltla20", "23.11.20", "OGLv3", "https://www.arcgis.com/sharing/rest/content/items/9f629cd0c2fb42beb0d79a474fee4776/data", "https://geoportal.statistics.gov.uk/datasets/9f629cd0c2fb42beb0d79a474fee4776/about",
       "lookup", "ward21_ltla21", "25.11.21", "OGLv3", "https://www.arcgis.com/sharing/rest/content/items/fe123ab719b2488ab41dd9c6aa84e79b/data", "https://geoportal.statistics.gov.uk/documents/ward-to-local-authority-district-december-2021-lookup-in-the-united-kingdom/about",
 
-
       # Names and codes
       "names_codes", "nhs_region21", "04.01.22", "OGLv3", "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/NHS_England_Regions_(April_2021)_in_England/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson", "https://geoportal.statistics.gov.uk/datasets/ons::nhs-england-region-april-2021-names-and-codes-in-england/about",
       "names_codes", "nhs_scotland_health_boards19", "17.06.20", "OGLv3", "https://www.opendata.nhs.scot/dataset/9f942fdb-e59e-44f5-b534-d6e17229cc7b/resource/652ff726-e676-4a20-abda-435b98dd7bdc/download/hb14_hb19.csv", "https://www.opendata.nhs.scot/dataset/geography-codes-and-labels/resource/652ff726-e676-4a20-abda-435b98dd7bdc",

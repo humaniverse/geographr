@@ -870,3 +870,31 @@
 #' }
 #' @source \url{https://www.opendata.nhs.scot/}
 "names_codes_hb19"
+
+#' Local Authority District (2019) to British Red Cross area lookup
+#'
+#' A data set containing a lookup between UK Local Authority Districts and
+#' British Red Cross operational areas.
+#'
+#' @format A data frame of class "tbl" with 382 rows and 2 variables:
+#' \describe{
+#'   \item{ltla19_code}{LAD code}
+#'   \item{brc_area}{British Red Cross area name}
+#'   ...
+#' }
+#' @source \url{https://redcross.org.uk/}
+"lookup_ltla19_brc"
+
+#' Local Authority District (2021) to British Red Cross area lookup
+#'
+#' A data set containing a lookup between UK Local Authority Districts and
+#' British Red Cross operational areas.
+#'
+#' @format A data frame of class "tbl" with 382 rows and 2 variables:
+#' \describe{
+#'   \item{ltla21_code}{LAD code}
+#'   \item{brc_area}{British Red Cross area name}
+#'   ...
+#' }
+#' @source \url{https://redcross.org.uk/}
+"lookup_ltla21_brc"
