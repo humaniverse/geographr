@@ -295,6 +295,20 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_utla21"
 
+#' VCSEP regions (2022).
+#'
+#' A data set containing geometries for the Voluntary and Community Sector
+#' Emergency Partnership regions
+#'
+#' @format A data frame of class "tbl" with 5 rows and 2 variables:
+#' \describe{
+#'   \item{vcsep_region}{VCSEP region name}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://github.com/VCS-Emergencies-Partnership/ad-hoc-analysis/tree/main/analysis/vcsep_regions_boundaries}
+"boundaries_vcsep22"
+
 #' Wards / Electoral Divisions (December 2021)
 #'
 #' A data set containing 2021 Ward / Electoral Division geometries and their
@@ -622,6 +636,21 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_ltla21_utla21"
+
+#' Local Authority Districts to VCSEP regions lookup (2021).
+#'
+#' A data set containing a lookup between December 2021 Local Authority
+#' Districts and Voluntary and Community Sector Emergency Partnership regions
+#'
+#' @format A data frame of class "tbl" with 309 rows and 3 variables:
+#' \describe{
+#'   \item{ltla21_name}{LAD name}
+#'   \item{ltla21_code}{LAD code}
+#'   \item{vcsep_region}{VCSEP region name}
+#'   ...
+#' }
+#' @source \url{https://github.com/VCS-Emergencies-Partnership/ad-hoc-analysis/tree/main/analysis/vcsep_regions_boundaries}
+"lookup_ltla21_vcsep22"
 
 #' Middle Layer Super Output Area (2011) to LAD (December 2019) Lookup
 #'
