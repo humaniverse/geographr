@@ -355,6 +355,23 @@
 #' @source \url{https://digital.nhs.uk/}
 "points_hospitals22"
 
+#' Data Zone (2011) to Intermediate Zone (2011) to LAD (December 2019) Lookup
+#'
+#' A data set containing a lookup between Data Zones, Intermediate Zones and Council Areas in Scotland
+#'
+#' @format A data frame of class "tbl" with 6,976 rows and 6 variables:
+#' \describe{
+#'   \item{dz11_name}{DZ name}
+#'   \item{dz11_code}{DZ code}
+#'   \item{iz11_name}{IZ name}
+#'   \item{iz11_code}{IZ code}
+#'   \item{ltla20_name}{LAD name}
+#'   \item{ltla20_code}{LAD code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_dz11_iz11_ltla20"
+
 #' Lower Layer Super Output Area (2011) to Clinical Commissioning Group (2021)
 #' to Sustainability and Transformation Plan (2021) to Lower Tier Local
 #' Authority District (2021) Lookup
@@ -458,6 +475,34 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_lsoa11_msoa11"
+
+#' Local Authority District (2019) to British Red Cross area lookup
+#'
+#' A data set containing a lookup between UK Local Authority Districts and
+#' British Red Cross operational areas.
+#'
+#' @format A data frame of class "tbl" with 382 rows and 2 variables:
+#' \describe{
+#'   \item{ltla19_code}{LAD code}
+#'   \item{brc_area}{British Red Cross area name}
+#'   ...
+#' }
+#' @source \url{https://redcross.org.uk/}
+"lookup_ltla19_brc"
+
+#' Local Authority District (2021) to British Red Cross area lookup
+#'
+#' A data set containing a lookup between UK Local Authority Districts and
+#' British Red Cross operational areas.
+#'
+#' @format A data frame of class "tbl" with 382 rows and 2 variables:
+#' \describe{
+#'   \item{ltla21_code}{LAD code}
+#'   \item{brc_area}{British Red Cross area name}
+#'   ...
+#' }
+#' @source \url{https://redcross.org.uk/}
+"lookup_ltla21_brc"
 
 #' Local Authority Districts to Combined Authorities lookup (2019).
 #'
@@ -718,6 +763,46 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_msoa11_msoa21_ltla22"
 
+#' England NHS Trusts (2022) to MSOA (2011) Lookup
+#'
+#' A data set containing a lookup between 2022 England NHS Trusts and 2011 LSOA
+#' areas.
+#' 
+#' The population size of an MSOA is much smaller than the population of people
+#' who attend a given Trust. This means that the proportion of patients from an 
+#' MSOA that go to a Trust will be much higher than the proprotion of patients
+#' from a Trust that came from an MSOA. This is because Trusts serve many more
+#' MSOA's than MSOA patients go to different trusts.
+#'
+#' @format A data frame of class "tbl" with 574,104 rows and 4 variables:
+#' \describe{
+#'   \item{msoa11_code}{MSOA code}
+#'   \item{nhs_trust22_code}{NHS Trust code}
+#'   \item{proportion_msoa_went_to_trust}{The proportion of patients from all admissions from a given MSOA that went to a given Trust}
+#'   \item{proportion_trust_came_from_msoa}{The proportion of patients from all admissions from a given Trust that came from a given MSOA}
+#'   ...
+#' }
+#' @source \url{https://app.box.com/s/qh8gzpzeo1firv1ezfxx2e6c4tgtrudl}
+"lookup_nhs_trusts22_msoa11"
+
+#' NHS Trusts (February 2022) to NHS Regions (April 2021) Lookup
+#'
+#' A data set containing February 2022 NHS Trusts and their associated names,
+#' codes, and open status, with a lookup to NHS Regions (April 2021).
+#'
+#' @format A data frame of class "tbl" with 214 rows and 6 variables:
+#' \describe{
+#'   \item{nhs_trust22_code}{NHS Trust code}
+#'   \item{nhs_trust22_name}{NHS Trust name}
+#'   \item{nhs_region21_nhs_code}{NHS Region code (NHS version)}
+#'   \item{nhs_region21_ons_code}{NHS Region code (ONS version)}
+#'   \item{nhs_region21_name}{NHS Region name}
+#'   \item{status}{whether the Trust is 'open' or 'closed'}
+#'   ...
+#' }
+#' @source \url{https://digital.nhs.uk/}
+"lookup_nhs_trusts22_nhs_region21"
+
 #' England NHS Trusts (2022) to STP/ICS (2021) Lookup
 #'
 #' A data set containing a lookup between 2022 England NHS Trusts and 2021 STP
@@ -753,6 +838,24 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_postcode_oa11_lsoa11_msoa11_ltla20"
 
+#' Small Areas (2011) to SOAs to Local Government Districts (December 2018)
+#'   Lookup with Area Classifications in Northern Ireland
+#'
+#' A data set containing a lookup between Small Areas, Super Output Areas,
+#'   and Local Government Districts in Northern Ireland
+#'
+#' @format A data frame of class "tbl" with 4,537 rows and 5 variables:
+#' \describe{
+#'   \item{sa11_code}{Small Area code}
+#'   \item{soa11_name}{Super Output Area name}
+#'   \item{soa11_code}{Super Output Area code}
+#'   \item{lgd18_name}{Local Government District name}
+#'   \item{lgd18_code}{Local Government District code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_sa11_soa11_lgd18"
+
 #' Ward (December 2021) to LTLA (December 2021) Lookup
 #'
 #' A data set containing a lookup between 2021 wards and 2021 Lower Tier Local
@@ -768,6 +871,19 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_ward21_ltla21"
+
+#' Names and codes for NHS Scotland Health Boards (2014 - 2019)
+#'
+#' @format A data frame of class "tbl" with 18 rows and 4 variables:
+#' \describe{
+#'   \item{hb19_name}{Health Board name}
+#'   \item{hb19_code}{Health Board code}
+#'   \item{date_enacted}{Date Health Board Code was enacted}
+#'   \item{date_archived}{Date Health Board Code was archived}
+#'   ...
+#' }
+#' @source \url{https://www.opendata.nhs.scot/}
+"names_codes_hb19"
 
 #' Rural-Urban Classifications for Data Zones (2011) in Scotland
 #'
@@ -833,97 +949,3 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "ruc11_wards11"
-
-#' NHS Trusts (February 2022) to NHS Regions (April 2021) Lookup
-#'
-#' A data set containing February 2022 NHS Trusts and their associated names,
-#' codes, and open status, with a lookup to NHS Regions (April 2021).
-#'
-#' @format A data frame of class "tbl" with 214 rows and 6 variables:
-#' \describe{
-#'   \item{nhs_trust22_code}{NHS Trust code}
-#'   \item{nhs_trust22_name}{NHS Trust name}
-#'   \item{nhs_region21_nhs_code}{NHS Region code (NHS version)}
-#'   \item{nhs_region21_ons_code}{NHS Region code (ONS version)}
-#'   \item{nhs_region21_name}{NHS Region name}
-#'   \item{status}{whether the Trust is 'open' or 'closed'}
-#'   ...
-#' }
-#' @source \url{https://digital.nhs.uk/}
-"lookup_nhs_trusts22_nhs_region21"
-
-#' Small Areas (2011) to SOAs to Local Government Districts (December 2018)
-#'   Lookup with Area Classifications in Northern Ireland
-#'
-#' A data set containing a lookup between Small Areas, Super Output Areas,
-#'   and Local Government Districts in Northern Ireland
-#'
-#' @format A data frame of class "tbl" with 4,537 rows and 5 variables:
-#' \describe{
-#'   \item{sa11_code}{Small Area code}
-#'   \item{soa11_name}{Super Output Area name}
-#'   \item{soa11_code}{Super Output Area code}
-#'   \item{lgd18_name}{Local Government District name}
-#'   \item{lgd18_code}{Local Government District code}
-#'   ...
-#' }
-#' @source \url{https://geoportal.statistics.gov.uk/}
-"lookup_sa11_soa11_lgd18"
-
-#' Data Zone (2011) to Intermediate Zone (2011) to LAD (December 2019) Lookup
-#'
-#' A data set containing a lookup between Data Zones, Intermediate Zones and Council Areas in Scotland
-#'
-#' @format A data frame of class "tbl" with 6,976 rows and 6 variables:
-#' \describe{
-#'   \item{dz11_name}{DZ name}
-#'   \item{dz11_code}{DZ code}
-#'   \item{iz11_name}{IZ name}
-#'   \item{iz11_code}{IZ code}
-#'   \item{ltla20_name}{LAD name}
-#'   \item{ltla20_code}{LAD code}
-#'   ...
-#' }
-#' @source \url{https://geoportal.statistics.gov.uk/}
-"lookup_dz11_iz11_ltla20"
-
-#' Names and codes for NHS Scotland Health Boards (2014 - 2019)
-#'
-#' @format A data frame of class "tbl" with 18 rows and 4 variables:
-#' \describe{
-#'   \item{hb19_name}{Health Board name}
-#'   \item{hb19_code}{Health Board code}
-#'   \item{date_enacted}{Date Health Board Code was enacted}
-#'   \item{date_archived}{Date Health Board Code was archived}
-#'   ...
-#' }
-#' @source \url{https://www.opendata.nhs.scot/}
-"names_codes_hb19"
-
-#' Local Authority District (2019) to British Red Cross area lookup
-#'
-#' A data set containing a lookup between UK Local Authority Districts and
-#' British Red Cross operational areas.
-#'
-#' @format A data frame of class "tbl" with 382 rows and 2 variables:
-#' \describe{
-#'   \item{ltla19_code}{LAD code}
-#'   \item{brc_area}{British Red Cross area name}
-#'   ...
-#' }
-#' @source \url{https://redcross.org.uk/}
-"lookup_ltla19_brc"
-
-#' Local Authority District (2021) to British Red Cross area lookup
-#'
-#' A data set containing a lookup between UK Local Authority Districts and
-#' British Red Cross operational areas.
-#'
-#' @format A data frame of class "tbl" with 382 rows and 2 variables:
-#' \describe{
-#'   \item{ltla21_code}{LAD code}
-#'   \item{brc_area}{British Red Cross area name}
-#'   ...
-#' }
-#' @source \url{https://redcross.org.uk/}
-"lookup_ltla21_brc"
