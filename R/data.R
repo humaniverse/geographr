@@ -763,6 +763,21 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_msoa11_msoa21_ltla22"
 
+#' England NHS Trusts (2022) to LTLA (2021) Lookup
+#'
+#' A data set containing a lookup between 2022 England NHS Trusts and 2021 LTLA
+#' areas.
+#'
+#' @format A data frame of class "tbl" with 574,104 rows and 4 variables:
+#' \describe{
+#'   \item{ltla21_code}{LTLA code}
+#'   \item{nhs_trust22_code}{NHS Trust code}
+#'   \item{proportion_trust_came_from_ltla}{The proportion of patients from all admissions from a given Trust that came from a given LTLA}
+#'   ...
+#' }
+#' @source \url{https://app.box.com/s/qh8gzpzeo1firv1ezfxx2e6c4tgtrudl}
+"lookup_nhs_trusts22_ltla21"
+
 #' England NHS Trusts (2022) to MSOA (2011) Lookup
 #'
 #' A data set containing a lookup between 2022 England NHS Trusts and 2011 LSOA

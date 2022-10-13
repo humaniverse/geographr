@@ -41,12 +41,12 @@ catchment_populations_renamed <-
     catchment_year = CatchmentYear,
     trust_total_catchment,
     proportion_msoa_went_to_trust = proportion,
-    count_patients_from_msoa_to_trust = msoa_total_catchment
+    msoa_total_catchment
   )
 
 lookup_nhs_trusts22_msoa11 <-
   catchment_populations_renamed |>
-  mutate(proportion_trust_came_from_msoa = count_patients_from_msoa_to_trust / trust_total_catchment) |>
+  mutate(proportion_trust_came_from_msoa = msoa_total_catchment / trust_total_catchment) |>
   select(
     msoa11_code,
     nhs_trust22_code,
@@ -55,3 +55,17 @@ lookup_nhs_trusts22_msoa11 <-
   )
 
 usethis::use_data(lookup_nhs_trusts22_msoa11, overwrite = TRUE)
+
+lookup_nhs_trusts22_ltla21 <-
+  catchment_populations_renamed |>
+  left_join(lookup_msoa11_ltla21) |>
+  select(-ends_with("name"), -msoa11_code) |>
+  relocate(ltla21_code) |>
+  group_by(nhs_trust22_code, ltla21_code) |>
+  summarise(ltla_total_catchment = sum(msoa_total_catchment)) |>
+  mutate(trust_total_catchment = sum(ltla_total_catchment)) |>
+  mutate(proportion_trust_came_from_ltla = ltla_total_catchment / trust_total_catchment) |>
+  ungroup() |>
+  select(nhs_trust22_code, ltla21_code, proportion_trust_came_from_ltla)
+
+usethis::use_data(lookup_nhs_trusts22_ltla21, overwrite = TRUE)
