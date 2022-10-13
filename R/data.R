@@ -856,6 +856,20 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_sa11_soa11_lgd18"
 
+#' NHS Trust and Orginisation Changes
+#'
+#' A data set containing a lookup of NHS Trust and organisational changes
+#'
+#' @format A data frame of class "tbl" with 25,480 rows and 3 variables:
+#' \describe{
+#'   \item{old_code}{The old organisation code}
+#'   \item{new_code}{The new organisation code}
+#'   \item{date}{The date of the change}
+#'   ...
+#' }
+#' @source \url{https://digital.nhs.uk/}
+"lookup_trust_trust"
+
 #' Ward (December 2021) to LTLA (December 2021) Lookup
 #'
 #' A data set containing a lookup between 2021 wards and 2021 Lower Tier Local
