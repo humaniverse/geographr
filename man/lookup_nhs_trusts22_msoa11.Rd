@@ -31,4 +31,10 @@ MSOA that go to a Trust will be much higher than the proprotion of patients
 from a Trust that came from an MSOA. This is because Trusts serve many more
 MSOA's than MSOA patients go to different trusts.
 }
+\section{Copyright reference}{
+Office for Health Improvement & Disparities. NHS Acute (Hospital) Trust
+Catchment Populations. 18.10.2022. https://AcuteTrustCatchmentPopulation/app.powerbi.com
+© Crown copyright 2022
+}
+
 \keyword{datasets}

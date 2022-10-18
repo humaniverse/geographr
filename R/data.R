@@ -768,6 +768,12 @@
 #' A data set containing a lookup between 2022 England NHS Trusts and 2021 LTLA
 #' areas.
 #'
+#' # Copyright reference
+#'
+#' Office for Health Improvement & Disparities. NHS Acute (Hospital) Trust
+#' Catchment Populations. 18.10.2022. https://AcuteTrustCatchmentPopulation/app.powerbi.com
+#' © Crown copyright 2022
+#'
 #' @format A data frame of class "tbl" with 574,104 rows and 4 variables:
 #' \describe{
 #'   \item{ltla21_code}{LTLA code}
@@ -782,12 +788,18 @@
 #'
 #' A data set containing a lookup between 2022 England NHS Trusts and 2011 LSOA
 #' areas.
-#' 
+#'
 #' The population size of an MSOA is much smaller than the population of people
-#' who attend a given Trust. This means that the proportion of patients from an 
+#' who attend a given Trust. This means that the proportion of patients from an
 #' MSOA that go to a Trust will be much higher than the proprotion of patients
 #' from a Trust that came from an MSOA. This is because Trusts serve many more
 #' MSOA's than MSOA patients go to different trusts.
+#'
+#' # Copyright reference
+#'
+#' Office for Health Improvement & Disparities. NHS Acute (Hospital) Trust
+#' Catchment Populations. 18.10.2022. https://AcuteTrustCatchmentPopulation/app.powerbi.com
+#' © Crown copyright 2022
 #'
 #' @format A data frame of class "tbl" with 574,104 rows and 4 variables:
 #' \describe{

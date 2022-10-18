@@ -23,4 +23,10 @@ lookup_nhs_trusts22_ltla21
 A data set containing a lookup between 2022 England NHS Trusts and 2021 LTLA
 areas.
 }
+\section{Copyright reference}{
+Office for Health Improvement & Disparities. NHS Acute (Hospital) Trust
+Catchment Populations. 18.10.2022. https://AcuteTrustCatchmentPopulation/app.powerbi.com
+© Crown copyright 2022
+}
+
 \keyword{datasets}
