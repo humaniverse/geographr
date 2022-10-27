@@ -355,6 +355,24 @@
 #' @source \url{https://digital.nhs.uk/}
 "points_hospitals22"
 
+#' Clinical Commissioning Group (2021) to Sustainability and Transformation
+#' Partnership (2021) Lookup
+#'
+#' A data set containing a lookup between CCG and STP in Scotland
+#'
+#' @format A data frame of class "tbl" with 106 rows and 6 variables:
+#' \describe{
+#'   \item{ccg21_code}{CCG code}
+#'   \item{ccg21_nhs_code}{CCG's NHS code}
+#'   \item{ccg21_name}{CCG name}
+#'   \item{stp21_code}{STP code}
+#'   \item{stp21_nhs_code}{STP's NHS code}
+#'   \item{stp21_name}{STP name}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_ccg21_stp21"
+
 #' Data Zone (2011) to Intermediate Zone (2011) to LAD (December 2019) Lookup
 #'
 #' A data set containing a lookup between Data Zones, Intermediate Zones and Council Areas in Scotland
