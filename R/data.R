@@ -59,6 +59,21 @@
 #' @source \url{https://spatialdata.gov.scot/}
 "boundaries_hb19"
 
+#' Integrated Care Boards (2022)
+#'
+#' A data set containing July 2022 NHS Integrated Care Board geometries and
+#' their associated names and codes.
+#'
+#' @format A data frame of class "sf" with 106 rows and 3 variables:
+#' \describe{
+#'   \item{icb22_name}{Integrated Care Board name}
+#'   \item{icb22_code}{Integrated Care Board code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"boundaries_icb22"
+
 #' Intermediate Zones (2011)
 #'
 #' A data set containing 2011 Scottish Intermediate Zone geometries and their
