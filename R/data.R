@@ -928,6 +928,48 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_ward21_ltla21"
 
+#' LSOA (2011) to Ward (2017) Lookup
+#'
+#' A data set containing a lookup between 2011 LSOAs and 2021 wards in England
+#' and Wales.
+#'
+#' @format A data frame of class "tbl" with 34,753 rows and 2 variables:
+#' \describe{
+#'   \item{lsoa11_code}{LSOA 2011 code}
+#'   \item{ward17_code}{Ward 2017 code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_lsoa11_ward17"
+
+#' MSOA (2011) to Ward (2017) Lookup
+#'
+#' A data set containing a lookup between 2011 MSOAs and 2021 wards in England
+#' and Wales.
+#'
+#' @format A data frame of class "tbl" with 13,873 rows and 2 variables:
+#' \describe{
+#'   \item{msoa11_code}{MSOA 2011 code}
+#'   \item{ward17_code}{Ward 2017 code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_msoa11_ward17"
+
+#' MSOA (2021) to Ward (2017) Lookup
+#'
+#' A data set containing a lookup between 2021 MSOAs and 2021 wards in England
+#' and Wales.
+#'
+#' @format A data frame of class "tbl" with 13,865 rows and 2 variables:
+#' \describe{
+#'   \item{msoa21_code}{MSOA 2021 code}
+#'   \item{ward17_code}{Ward 2017 code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_msoa21_ward17"
+
 #' Names and codes for NHS Scotland Health Boards (2014 - 2019)
 #'
 #' @format A data frame of class "tbl" with 18 rows and 4 variables:
