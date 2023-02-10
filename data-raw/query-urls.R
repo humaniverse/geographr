@@ -32,6 +32,7 @@ query_urls <-
       "boundaries", "utla21", "15.09.21", "OGLv3", "https://opendata.arcgis.com/datasets/69109c4fbbc54f1f9d6e18000031a5fd_0.geojson", "https://geoportal.statistics.gov.uk/datasets/counties-and-unitary-authorities-may-2021-uk-buc/explore?location=55.340122%2C-3.316413%2C6.22",
       "boundaries", "vcsep22", "14.09.22", "OGLv3", "https://raw.githubusercontent.com/VCS-Emergencies-Partnership/ad-hoc-analysis/main/analysis/vcsep_regions_boundaries/vcsep_regions_updated/vcsep_regions_updated.geojson", "https://github.com/VCS-Emergencies-Partnership/ad-hoc-analysis/tree/main/analysis/vcsep_regions_boundaries",
       "boundaries", "wards21", "01.12.21", "OGLV3", "https://opendata.arcgis.com/datasets/bf9d32b1aa9941af84e6c2bf0c54b1bb_0.geojson", "https://geoportal.statistics.gov.uk/datasets/wards-december-2021-uk-bsc/explore",
+      "boundaries", "wards22", "25.11.22", "OGLV3", "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Wards_December_2022_Boundaries_UK_BSC/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson", "https://geoportal.statistics.gov.uk/datasets/ons::wards-december-2022-boundaries-uk-bsc/about",
 
       # Points
       "points", "nhs_trusts22", "23.04.22", "OGLv3", "https://files.digital.nhs.uk/assets/ods/current/etr.zip", "https://digital.nhs.uk/services/organisation-data-service/file-downloads/other-nhs-organisations",

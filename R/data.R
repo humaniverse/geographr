@@ -340,6 +340,22 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_wards21"
 
+#' Wards / Electoral Divisions (December 2022)
+#'
+#' A data set containing 2022 Ward / Electoral Division geometries and their
+#' associated names and codes. Boundaries are Super generalised (200m) - clipped
+#' to the coastline (Mean High Water mark).
+#'
+#' @format A data frame of class "sf" with 8,483 rows and 3 variables:
+#' \describe{
+#'   \item{ward22_name}{ward name}
+#'   \item{ward22_code}{ward code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"boundaries_wards22"
+
 #' NHS Trusts (February 2022)
 #'
 #' A data set containing February 2022 NHS Trusts point geometries (i.e.,
