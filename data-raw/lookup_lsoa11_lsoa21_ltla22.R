@@ -1,6 +1,7 @@
 # ---- Load ----
 library(tidyverse)
 library(devtools)
+library(sf)
 
 # Load package
 load_all(".")
@@ -11,8 +12,9 @@ query_url <-
   filter(id == "lsoa11_lsoa21_ltla22") |>
   pull(query)
 
-lsoa_lsoa_ltla <-
-  read_csv(query_url)
+raw <-
+  read_sf(query_url) |>
+  st_drop_geometry()
 
 # Select and rename vars
 lsoa_lsoa_ltla <-
