@@ -5,14 +5,16 @@
 \alias{lookup_lsoa11_lsoa21_ltla22}
 \title{Lower Layer Super Output Area (2011) to Lower Layer Super Output Area (2021) to LAD (December 2022) Lookup}
 \format{
-A data frame of class "tbl" with 34,753 rows and 6 variables:
+A data frame of class "tbl" with 35,795 rows and 8 variables:
 \describe{
 \item{lsoa11_name}{LSOA 11 name}
 \item{lsoa11_code}{LSOA 11 code}
+\item{change_code}{Change code containing U (unchanged from 2011 to 2021),
+M (merged), S (split) and X (irregular and fragmented change)}
 \item{lsoa21_name}{LSOA 21 name}
 \item{lsoa21_code}{LSOA 21 code}
-\item{ltla22_name}{LAD name}
-\item{ltla22_code}{LAD code}
+\item{ltla22_name}{LTLA name}
+\item{ltla22_code}{LTLA code}
 ...
 }
 }

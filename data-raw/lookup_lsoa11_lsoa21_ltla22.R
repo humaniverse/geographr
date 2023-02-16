@@ -1,6 +1,7 @@
 # ---- Load ----
 library(tidyverse)
 library(devtools)
+library(sf)
 
 # Load package
 load_all(".")
@@ -11,24 +12,22 @@ query_url <-
   filter(id == "lsoa11_lsoa21_ltla22") |>
   pull(query)
 
-lsoa_lsoa_ltla <-
-  read_csv(query_url)
+raw <-
+  read_sf(query_url) |>
+  st_drop_geometry()
 
 # Select and rename vars
-lsoa_lsoa_ltla <-
-  lsoa_lsoa_ltla |>
+lookup_lsoa11_lsoa21_ltla22 <- raw |>
   select(
     lsoa11_name = LSOA11NM,
-    lsoa11_code = LSOA11CD,
+    lsoa11_code = F_LSOA11CD,
+    change_code = CHGIND,
     lsoa21_name = LSOA21NM,
     lsoa21_code = LSOA21CD,
     ltla22_name = LAD22NM,
     ltla22_code = LAD22CD
   ) |>
   distinct()
-
-# Rename
-lookup_lsoa11_lsoa21_ltla22 <- lsoa_lsoa_ltla
 
 # Save output to data/ folder
 usethis::use_data(lookup_lsoa11_lsoa21_ltla22, overwrite = TRUE)
