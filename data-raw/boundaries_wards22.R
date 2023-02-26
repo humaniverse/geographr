@@ -3,6 +3,7 @@ library(tidyverse)
 library(sf)
 library(lobstr)
 library(devtools)
+library(rmapshaper)
 
 # Load package
 devtools::load_all(".")
@@ -29,27 +30,31 @@ wards <-
 # Make sure geometries are valid
 wards <- sf::st_make_valid(wards)
 
+# Simplify shape to reduce file size
+# Set 'keep' argument to given level so keeps all ward rows
+wards_simplified <- rmapshaper::ms_simplify(wards, keep = 0.605)
+
 # Check geometry types are homogenous
-if (wards |>
+if (wards_simplified |>
   sf::st_geometry_type() |>
   unique() |>
   length() > 1) {
   stop("Incorrect geometry types")
 }
 
-if (wards |>
+if (wards_simplified |>
   sf::st_geometry_type() |>
   unique() != "MULTIPOLYGON") {
   stop("Incorrect geometry types")
 }
 
 # Check object is below 50Mb GitHub warning limit
-if (lobstr::obj_size(wards) > 50000000) {
+if (lobstr::obj_size(wards_simplified) > 50000000) {
   stop("File is too large")
 }
 
 # Rename
-boundaries_wards22 <- wards
+boundaries_wards22 <- wards_simplified
 
 # Save output to data/ folder
 usethis::use_data(boundaries_wards22, overwrite = TRUE)
