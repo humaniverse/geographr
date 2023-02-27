@@ -7,7 +7,7 @@ Authors@R: c(
     person("Aileen", "McDonald", email = "AileenMcDonald@redcross.org.uk", role = "aut"),
     person(family = "British Red Cross", role = "cph")
     )
-Description: A package to distribute and compute on UK geographrical data.
+Description: A package to distribute and compute on UK geographical data.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
