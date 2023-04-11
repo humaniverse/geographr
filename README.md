@@ -117,6 +117,14 @@ and improving the health of the population they serve. ICS are supposed
 to be bring together NHS trusts, Clinical Commissioning Groups and local
 authorities.
 
+As part of the 2022 Health and Care Act, ICSs were formalised as legal
+entities into Integrated Care Boards (ICBs) and Integrated Care
+Partnernships (ICPs). See
+[here](https://digital.nhs.uk/services/organisation-data-service/upcoming-code-changes/implementation-of-icbs-from-april-2022)
+and
+[here](https://www.kingsfund.org.uk/publications/integrated-care-systems-explained)
+for more information. ICBs retain the old ICS codes.
+
 #### Clnical Comission Groups
 
 Replacement for PCT’s. They work with patients and healthcare
@@ -126,7 +134,9 @@ power to influence commissioning decisions for their patients. CCGs are
 groups of general practices (GPs) which come together in each area to
 commission the best services for their patients and population. CCGs are
 responsible for about 60% of the NHS budget, they commission most
-secondary care services.
+secondary care services. CCGs were decommisioned in July 2022 as part of
+the 2022 Health and Care Act. Sub Integrated Care Board Locations
+(SICBLs) have taken their place, retaining their codes.
 
 #### Primary Care Networks
 
@@ -187,7 +197,7 @@ characters and an inward code of three characters.
 
 - Diagram of England health geographies:
 
-<img src='man/figures/health-boundaries-diagram.png' align="centre"/>
+<img src='man/figures/health-boundaries-diagram-updated.png' align="centre"/>
 
 - Hierarchical Representation of UK Statistical Geographies:
 
