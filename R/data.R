@@ -509,6 +509,40 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_lsoa11_msoa11"
 
+#' LSOA (2011) to SICBL (2022) to ICB (2022) to LTLA (2022) Lookup
+#'
+#' A data set containing a lookup between 2011 LSOAs, 2022 Sub ICB Locations,
+#' 2022 IBCs and 2022 LTLAs in England.
+#'
+#' @format A data frame of class "tbl" with 32,844 rows and 8 variables:
+#' \describe{
+#'   \item{lsoa11_name}{LSOA 2011 name}
+#'   \item{lsoa11_code}{LSOA 2011 code}
+#'   \item{sicbl22_name}{Sub ICB Location 2022 name}
+#'   \item{sicbl22_code}{Sub ICB Location code 2022 (retains former CCG codes)}
+#'   \item{icb22_name}{ICB 2022 name}
+#'   \item{icb22_code}{ICB 2022 code (retains former ICS/STP codes)}
+#'   \item{ltla22_name}{LTLA 2022 name}
+#'   \item{ltla22_code}{LTLA 2022 code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_lsoa11_sicbl22_icb22_ltla22"
+
+#' LSOA (2011) to Ward (2017) Lookup
+#'
+#' A data set containing a lookup between 2011 LSOAs and 2021 wards in England
+#' and Wales.
+#'
+#' @format A data frame of class "tbl" with 34,753 rows and 2 variables:
+#' \describe{
+#'   \item{lsoa11_code}{LSOA 2011 code}
+#'   \item{ward17_code}{Ward 2017 code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_lsoa11_ward17"
+
 #' Local Authority District (2019) to British Red Cross area lookup
 #'
 #' A data set containing a lookup between UK Local Authority Districts and
@@ -964,20 +998,6 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_ward21_ltla21"
-
-#' LSOA (2011) to Ward (2017) Lookup
-#'
-#' A data set containing a lookup between 2011 LSOAs and 2021 wards in England
-#' and Wales.
-#'
-#' @format A data frame of class "tbl" with 34,753 rows and 2 variables:
-#' \describe{
-#'   \item{lsoa11_code}{LSOA 2011 code}
-#'   \item{ward17_code}{Ward 2017 code}
-#'   ...
-#' }
-#' @source \url{https://geoportal.statistics.gov.uk/}
-"lookup_lsoa11_ward17"
 
 #' MSOA (2011) to Ward (2017) Lookup
 #'
