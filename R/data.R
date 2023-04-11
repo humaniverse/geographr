@@ -64,7 +64,7 @@
 #' A data set containing July 2022 NHS Integrated Care Board geometries and
 #' their associated names and codes.
 #'
-#' @format A data frame of class "sf" with 106 rows and 3 variables:
+#' @format A data frame of class "sf" with 42 rows and 3 variables:
 #' \describe{
 #'   \item{icb22_name}{Integrated Care Board name}
 #'   \item{icb22_code}{Integrated Care Board code}

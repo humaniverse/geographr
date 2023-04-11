@@ -22,8 +22,8 @@ icb_raw <- read_sf(query_url) |>
 icb <-
   icb_raw |>
   select(
-    icb22_name = LOC22NM,
-    icb22_code = LOC22CD,
+    icb22_name = ICB22NM,
+    icb22_code = ICB22CD,
     geometry
   )
 
@@ -31,7 +31,7 @@ icb <-
 icb <- st_make_valid(icb)
 
 # Simplify shape to reduce file size
-icb <- ms_simplify(icb, keep = .15)
+icb <- ms_simplify(icb)
 
 # Check geometry types are homogenous
 if (icb |>

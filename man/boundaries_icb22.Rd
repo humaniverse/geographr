@@ -5,7 +5,7 @@
 \alias{boundaries_icb22}
 \title{Integrated Care Boards (2022)}
 \format{
-A data frame of class "sf" with 106 rows and 3 variables:
+A data frame of class "sf" with 42 rows and 3 variables:
 \describe{
 \item{icb22_name}{Integrated Care Board name}
 \item{icb22_code}{Integrated Care Board code}
