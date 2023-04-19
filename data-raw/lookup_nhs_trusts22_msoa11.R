@@ -56,6 +56,7 @@ lookup_nhs_trusts22_msoa11 <-
 
 usethis::use_data(lookup_nhs_trusts22_msoa11, overwrite = TRUE)
 
+# ---- LTLA lookup ----
 lookup_nhs_trusts22_ltla21 <-
   catchment_populations_renamed |>
   left_join(lookup_msoa11_ltla21) |>
@@ -69,3 +70,50 @@ lookup_nhs_trusts22_ltla21 <-
   select(nhs_trust22_code, ltla21_code, proportion_trust_came_from_ltla)
 
 usethis::use_data(lookup_nhs_trusts22_ltla21, overwrite = TRUE)
+
+# ---- ICB lookup ----
+# Create MSOA to ICB lookup
+msoa_icb <- lookup_lsoa11_sicbl22_icb22_ltla22 |>
+  left_join(lookup_lsoa11_msoa11) |>
+  distinct(msoa11_code, icb22_code)
+
+# Note: MSOAs are not perfectly coterminous with ICBs, with 9 MSOAs overlapping
+# across two different ICB's. This is 0.1 % of all MSOAs (9/8480 * 100)
+msoa_icb |>
+  count(msoa11_code) |>
+  filter(n > 1)
+
+# Save list of non-coterminous MSOAs
+non_coterminous_msoas <- msoa_icb |>
+  count(msoa11_code) |>
+  filter(n > 1) |>
+  pull(msoa11_code)
+
+# Assume populations in non coterminous MSOAs are split equally between the
+# two ICBs
+split_msoa_catchments <- catchment_populations_renamed |>
+  left_join(msoa_icb) |>
+  select(nhs_trust22_code, icb22_code, msoa11_code, msoa_total_catchment) |>
+  mutate(
+    msoa_total_catchment = if_else(
+      msoa11_code %in% non_coterminous_msoas,
+      msoa_total_catchment / 2,
+      msoa_total_catchment
+    )
+  )
+
+lookup_nhs_trusts22_icb22 <- split_msoa_catchments |>
+  group_by(nhs_trust22_code, icb22_code) |>
+  summarise(icb_total_catchment = sum(msoa_total_catchment)) |>
+  mutate(trust_total_catchment = sum(icb_total_catchment)) |>
+  mutate(proportion_trust_came_from_icb = icb_total_catchment / trust_total_catchment) |>
+  ungroup() |>
+  select(nhs_trust22_code, icb22_code, proportion_trust_came_from_icb)
+
+# Notes about above intermediate variables:
+# - icb_total_catchment = the number of people from an msoa that can be expected
+#   to attend the listed trust
+# - trust_total_catchment = The number of people from all ICBs that can be
+#   expected to attend the listed trust.
+
+usethis::use_data(lookup_nhs_trusts22_icb22, overwrite = TRUE)

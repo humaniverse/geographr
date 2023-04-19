@@ -830,6 +830,27 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_msoa11_msoa21_ltla22"
 
+#' England NHS Trusts (2022) to ICB (2022) Lookup
+#'
+#' A data set containing a lookup between 2022 England NHS Trusts and 2022
+#' Integrate Care Boards (ICBs).
+#'
+#' # Copyright reference
+#'
+#' Office for Health Improvement & Disparities. NHS Acute (Hospital) Trust
+#' Catchment Populations. 18.10.2022. https://AcuteTrustCatchmentPopulation/app.powerbi.com
+#' © Crown copyright 2022
+#'
+#' @format A data frame of class "tbl" with 1,321 rows and 3 variables:
+#' \describe{
+#'   \item{icb22_code}{ICB code}
+#'   \item{nhs_trust22_code}{NHS Trust code}
+#'   \item{proportion_trust_came_from_icb}{The proportion of patients from all admissions from a given Trust that came from a given ICB}
+#'   ...
+#' }
+#' @source \url{https://app.box.com/s/qh8gzpzeo1firv1ezfxx2e6c4tgtrudl}
+"lookup_nhs_trusts22_icb22"
+
 #' England NHS Trusts (2022) to LTLA (2021) Lookup
 #'
 #' A data set containing a lookup between 2022 England NHS Trusts and 2021 LTLA
