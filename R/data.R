@@ -514,14 +514,16 @@
 #' A data set containing a lookup between 2011 LSOAs, 2022 Sub ICB Locations,
 #' 2022 IBCs and 2022 LTLAs in England.
 #'
-#' @format A data frame of class "tbl" with 32,844 rows and 8 variables:
+#' @format A data frame of class "tbl" with 32,844 rows and 10 variables:
 #' \describe{
 #'   \item{lsoa11_name}{LSOA 2011 name}
 #'   \item{lsoa11_code}{LSOA 2011 code}
 #'   \item{sicbl22_name}{Sub ICB Location 2022 name}
 #'   \item{sicbl22_code}{Sub ICB Location code 2022 (retains former CCG codes)}
+#'   \item{sicbl22_code_h}{Sub ICB Location code 'h' 2022 (retains former CCG codes)}
 #'   \item{icb22_name}{ICB 2022 name}
 #'   \item{icb22_code}{ICB 2022 code (retains former ICS/STP codes)}
+#'   \item{icb22_code_h}{ICB 2022 code 'h' (retains former ICS/STP codes)}
 #'   \item{ltla22_name}{LTLA 2022 name}
 #'   \item{ltla22_code}{LTLA 2022 code}
 #'   ...

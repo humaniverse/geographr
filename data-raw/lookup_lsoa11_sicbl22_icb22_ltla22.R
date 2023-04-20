@@ -19,8 +19,10 @@ lookup_renamed <- lookup_raw |>
     lsoa11_code = LSOA11CD,
     sicbl22_name = SICBL22NM,
     sicbl22_code = SICBL22CD,
+    sicbl22_code_h = SICBL22CDH,
     icb22_name = ICB22NM,
     icb22_code = ICB22CD,
+    icb22_code_h = ICB22CDH,
     ltla22_name = LAD22NM,
     ltla22_code = LAD22CD,
   ) |>
