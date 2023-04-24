@@ -30,7 +30,7 @@ postcode_oa_lsoa_msoa_lad <-
   postcodes |>
   select(
     postcode = pcds,
-    oa121_code = oa21cd,
+    oa21_code = oa21cd,
     lsoa21_code = lsoa21cd,
     msoa21_code = msoa21cd,
     ltla22_code = ladcd
