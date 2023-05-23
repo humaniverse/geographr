@@ -403,6 +403,21 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_dz11_iz11_ltla20"
 
+#' Data Zone (2011) to Local Authority (2019) to Health Board (2019) Lookup
+#'
+#' A data set containing a lookup between Data Zones, Local Authorities (also
+#' called Council Areas) and Health Boards in Scotland
+#'
+#' @format A data frame of class "tbl" with 6,976 rows and 3 variables:
+#' \describe{
+#'   \item{dz11_code}{Data zone (2011) code}
+#'   \item{ltla19_code}{Local authortiy (2019) code}
+#'   \item{hb19_code}{Health board (2019) code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_dz11_ltla19_hb19"
+
 #' Lower Layer Super Output Area (2011) to Clinical Commissioning Group (2021)
 #' to Sustainability and Transformation Plan (2021) to Lower Tier Local
 #' Authority District (2021) Lookup
