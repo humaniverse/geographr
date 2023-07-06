@@ -1,4 +1,5 @@
 library(tidyverse)
+library(geographr)
 library(sf)
 
 # 11 Local Government Districts
@@ -28,7 +29,7 @@ western_trust <-
   c("Derry City and Strabane", "Fermanagh and Omagh")
 
 # Create dataset
-lookup_lgd21_hsct18 <- 
+lookup_ltla21_hsct18 <- 
   lgd |>
   mutate(
     trust18_name = case_match(
@@ -49,4 +50,4 @@ lookup_lgd21_hsct18 <-
       ))
 
 # Save output to data/ folder
-usethis::use_data(lookup_lgd21_hsct18, overwrite = TRUE)
+usethis::use_data(lookup_ltla21_hsct18, overwrite = TRUE)
