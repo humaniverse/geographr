@@ -418,6 +418,22 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_dz11_ltla19_hb19"
 
+#' Local Government District (2021) to Health and Social Care Trust (2018) Lookup
+#'
+#' A data set containing a lookup between Local Authorities (also
+#' called Local Government Districts) and Health and Social Care Trusts in Northern Ireland
+#'
+#' @format A data frame of class "tbl" with 11 rows and 4 variables:
+#' \describe{
+#'   \item{ltla21_name}{Local Government District (2021) name}
+#'   \item{ltla21_code}{Local Government District (2021) code}
+#'   \item{trust18_name}{HHealth and Social Care Trust (2018) name}
+#'   \item{trust18_code}{HHealth and Social Care Trust (2018) code}
+#'   ...
+#' }
+#' @source \url{https://www.nisra.gov.uk/sites/nisra.gov.uk/files/publications/Maps-of-NI-Health-Trusts-and-Local-Government-Districts.pdf}
+"lookup_lgd21_hsct18"
+
 #' Lower Layer Super Output Area (2011) to Clinical Commissioning Group (2021)
 #' to Sustainability and Transformation Plan (2021) to Lower Tier Local
 #' Authority District (2021) Lookup
