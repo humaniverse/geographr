@@ -9,8 +9,8 @@ A data frame of class "tbl" with 11 rows and 4 variables:
 \describe{
 \item{ltla21_name}{Local Government District (2021) name}
 \item{ltla21_code}{Local Government District (2021) code}
-\item{trust18_name}{HHealth and Social Care Trust (2018) name}
-\item{trust18_code}{HHealth and Social Care Trust (2018) code}
+\item{trust18_name}{Health and Social Care Trust (2018) name}
+\item{trust18_code}{Health and Social Care Trust (2018) code}
 ...
 }
 }
