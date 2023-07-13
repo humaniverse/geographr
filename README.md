@@ -193,7 +193,7 @@ characters and an inward code of three characters.
 ## Resources:
 
 - [A Beginner’s Guide to UK
-  Geography](misc/a-beginners-guide-to-uk-geography-2020-v1.0.pdf)
+  Geography](https://geoportal.statistics.gov.uk/documents/a-beginners-guide-to-uk-geography-2021-v1-0-1/explore)
 
 - Diagram of England health geographies:
 
@@ -201,7 +201,7 @@ characters and an inward code of three characters.
 
 - Hierarchical Representation of UK Statistical Geographies:
 
-<img src='man/figures/hierarchy-poster.png' align="centre"/>
+<img src='man/figures/hierarchy-poster-june-23.png' align="centre"/>
 
 - Mappings of coterminous geographies from [PHE’s Technical Aggregation
   Guide](https://fingertips.phe.org.uk/profile/guidance):
