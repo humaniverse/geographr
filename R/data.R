@@ -668,6 +668,22 @@
 #' @source \url{https://www.nisra.gov.uk/sites/nisra.gov.uk/files/publications/Maps-of-NI-Health-Trusts-and-Local-Government-Districts.pdf}
 "lookup_ltla21_hsct18"
 
+#' Wales Local Authority Districts (2021) to Local Health Boards (2022) Lookup
+#'
+#' A data set containing a lookup between Local Authorities (2021) and Local
+#' Health Boards (December 2022) in Wales.
+#'
+#' @format A data frame of class "tbl" with 22 rows and 4 variables:
+#' \describe{
+#'   \item{ltla21_code}{Local Government District (2021) code}
+#'   \item{ltla21_name}{Local Government District (2021) name}
+#'   \item{lhb22_code}{Local Health Board (2022) code}
+#'   \item{lhb22_name}{Local Health Board (2022) name}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_ltla21_lhb22"
+
 #' Changes to England Local Authority codes over time (from 2019).
 #'
 #' A data set containing a lookup of the England Local Authority changes
