@@ -23,7 +23,7 @@ raw <- read_excel(download,
                   sheet = "DZ2021_lookup")
 
 lookup_dz21_sdz21_dea14_lgd14 <- raw |>
-  rename_all(tolower) |>
+  rename_all(~str_replace_all(tolower(.), "20", "")) |>
   distinct()
 
 # Save output to data/ folder
