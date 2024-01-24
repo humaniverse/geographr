@@ -231,6 +231,21 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_region21"
 
+#' Super Data Zones (2021)
+#'
+#' A data set containing 2021 Northern Ireland Super Data Zones geometries and
+#' their associated names and codes as used following the 2021 Census results.
+#'
+#' @format A data frame of class "sf" with 850 rows and 3 variables:
+#' \describe{
+#'   \item{sdz21_name}{Super Data Zone name}
+#'   \item{sdz21_code}{Super Data Zone code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://www.nisra.gov.uk/}
+"boundaries_sdz21"
+
 #' Super Output Areas (2011)
 #'
 #' A data set containing 2011 Northern Ireland Super Output Area geometries and
