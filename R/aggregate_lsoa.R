@@ -1,6 +1,6 @@
 #' Aggregate LSOAs'21 to LSOA'11 for Left Behind Areas - England and Wales
 #'
-#' Changes were made in England and Wales to 2011 LSOAs in 2021 to reflect
+#' Changes were made in England and Wales to 2011 LSOA codes in 2021 to reflect
 #' population and household changes. Change codes:
 #' - U = Unchanged - 31,810 LSOAs remained unchanged from 2011 to 2021
 #' - S = Split - 834 LSOAs were split from 2011 to 2021 into two or more
@@ -18,8 +18,9 @@
 #'   their corresponding 2021 LSOA. Then group by 2011 LSOA, if any is
 #'   left-behind, consider the LSOA left-behind
 
-#' @param data Dataframe containing 2021 LSOA codes with LBA data
+#' @param data Dataframe containing 2021 LSOA codes with boolean LBA data
 #' @return Dataframe containing the aggregated 2011 LSOA codes
+#' @importFrom sf st_geometry
 #' @export
 #'
 aggregate_lba_lsoas <- function(data) {

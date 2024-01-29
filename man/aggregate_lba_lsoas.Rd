@@ -2,19 +2,19 @@
 % Please edit documentation in R/aggregate_lsoa.R
 \name{aggregate_lba_lsoas}
 \alias{aggregate_lba_lsoas}
-\title{Aggregate LSOAs'11 - LSOA'21 for Left Behind Areas}
+\title{Aggregate LSOAs'21 to LSOA'11 for Left Behind Areas - England and Wales}
 \usage{
 aggregate_lba_lsoas(data)
 }
 \arguments{
-\item{data}{Dataframe containing 2011 LSOA codes to be aggregated to 2021 LSOA codes}
+\item{data}{Dataframe containing 2021 LSOA codes with boolean LBA data}
 }
 \value{
-Dataframe containing the aggregated 2021 LSOA codes
+Dataframe containing the aggregated 2011 LSOA codes
 }
 \description{
-Changes were made to to 2011 LSOAs in 2021 to reflect population and household
-changes. Change codes:
+Changes were made in England and Wales to 2011 LSOA codes in 2021 to reflect
+population and household changes. Change codes:
 \itemize{
 \item U = Unchanged - 31,810 LSOAs remained unchanged from 2011 to 2021
 \item S = Split - 834 LSOAs were split from 2011 to 2021 into two or more
