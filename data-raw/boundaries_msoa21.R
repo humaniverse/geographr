@@ -25,17 +25,17 @@ msoa <-
 msoa <-
   msoa |>
   select(
-    msoa11_name = MSOA11NM,
-    msoa11_code = MSOA11CD,
+    msoa21_name = MSOA21NM,
+    msoa21_code = MSOA21CD,
     geometry
   )
 
-# Make sure geometries are valid
-msoa <- st_make_valid(msoa)
-
 # Simplify shape to reduce file size
 # Set 'keep' argument to given level so keeps all MSOA rows
-msoa <- ms_simplify(msoa,  keep = 0.52)
+msoa <- ms_simplify(msoa,  keep = 0.55)
+
+# Make sure geometries are valid
+msoa <- st_make_valid(msoa)
 
 # Check geometry types are homogenous
 if (msoa |>
@@ -57,7 +57,7 @@ if (obj_size(msoa) > 50000000) {
 }
 
 # Rename
-boundaries_msoa11 <- msoa
+boundaries_msoa21 <- msoa
 
 # Save output to data/ folder
-usethis::use_data(boundaries_msoa11, overwrite = TRUE)
+usethis::use_data(boundaries_msoa21, overwrite = TRUE)
