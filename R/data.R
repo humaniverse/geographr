@@ -201,6 +201,23 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_msoa11"
 
+#' Middle Layer Super Output Areas (2021)
+#'
+#' A data set containing 2021 Middle Super Output Area (MSOA) geometries and
+#' their associated names and codes. Super generalised (200m) boundaries were
+#' simplified using the Visvalingam algorithm set to a weighting of 0.7 with a
+#' retaining proportion of 0.05 points.
+#'
+#' @format A data frame of class "sf" with 7,264 rows and 3 variables:
+#' \describe{
+#'   \item{msoa21_name}{MSOA name}
+#'   \item{msoa21_code}{MSOA code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"boundaries_msoa21"
+
 #' Police Force Areas (2020)
 #'
 #' A data set containing 2020 Police Force Area geometries for England and Wales
