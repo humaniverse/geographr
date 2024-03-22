@@ -1182,6 +1182,20 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_msoa21_ward17"
 
+#' SOA (2001) to LGD (2014) Lookup
+#'
+#' A data set containing a lookup between SOA and LGD in Northern Ireland.
+#'
+#' @format A data frame of class "tbl" with 13,865 rows and 2 variables:
+#' \describe{
+#'   \item{soa01_code}{Super Output Area 2001 code}
+#'   \item{lgd14_code}{Local Government District 2014 code}
+#'   \item{ldg14_name}{Local Government District 2014 name}
+#'   ...
+#' }
+#' @source \url{https://www.nisra.gov.uk/publications/geography-lookup-tables}
+"lookup_soa01_lgd14"
+
 #' Names and codes for NHS Scotland Health Boards (2014 - 2019)
 #'
 #' @format A data frame of class "tbl" with 18 rows and 4 variables:
