@@ -851,6 +851,22 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_ltla21_region21"
 
+#' Local Authority District to Region (April 2023) Lookup in England
+#'
+#' A data set containing a lookup between 2023 Local Authority Districts (LAD)
+#' and 2023 English Regions.
+#'
+#' @format A data frame of class "tbl" with 296 rows and 4 variables:
+#' \describe{
+#'   \item{ltla23_name}{LAD name}
+#'   \item{ltla23_code}{LAD code}
+#'   \item{region23_name}{Region name}
+#'   \item{region23_code}{Region code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_ltla23_region23"
+
 #' Local Authority Districts to County and Unitary Authorities lookup (2019).
 #'
 #' A data set containing a lookup between December 2019 Local Authority
@@ -913,6 +929,38 @@
 #' }
 #' @source \url{https://github.com/VCS-Emergencies-Partnership/ad-hoc-analysis/tree/main/analysis/vcsep_regions_boundaries}
 "lookup_ltla21_vcsep22"
+
+#' Local Authority Districts (2022) to Local Authority Districts (2023).
+#'
+#' A data set containing a lookup between 2022 Local Authority
+#' Districts and 2023 Local Authority Districts.
+#'
+#' @format A data frame of class "tbl" with 374 rows and 4 variables:
+#' \describe{
+#'   \item{ltla22_code}{LAD 22 code}
+#'   \item{ltla22_name}{LAD 22 name}
+#'   \item{ltla23_code}{LAD 23 code}
+#'   \item{ltla23_name}{LAD 23 name}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_ltla22_ltla23"
+
+#' Lower Tier Local Authority (2023) to Upper Tier Local Authority (2023).
+#'
+#' A data set containing a lookup between Lower Tier Local Authority (2023) to
+#' Upper Tier Local Authority (2023).
+#'
+#' @format A data frame of class "tbl" with 318 rows and 4 variables:
+#' \describe{
+#'   \item{ltla23_code}{LTLA code}
+#'   \item{ltla23_name}{LTLA name}
+#'   \item{utla23_code}{UTLA code}
+#'   \item{utla23_name}{UTLA name}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_ltla23_utla23"
 
 #' Middle Layer Super Output Area (2011) to LAD (December 2019) Lookup
 #'
