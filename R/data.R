@@ -914,6 +914,22 @@
 #' @source \url{https://github.com/VCS-Emergencies-Partnership/ad-hoc-analysis/tree/main/analysis/vcsep_regions_boundaries}
 "lookup_ltla21_vcsep22"
 
+#' Local Authority Districts (2022) to Local Authority Districts (2023).
+#'
+#' A data set containing a lookup between 2022 Local Authority
+#' Districts and 2023 Local Authority Districts.
+#'
+#' @format A data frame of class "tbl" with 374 rows and 4 variables:
+#' \describe{
+#'   \item{ltla22_code}{LAD 22 code}
+#'   \item{ltla22_name}{LAD 22 name}
+#'   \item{ltla23_code}{LAD 23 code}
+#'   \item{ltla23_name}{LAD 23 name}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_ltla22_ltla23"
+
 #' Middle Layer Super Output Area (2011) to LAD (December 2019) Lookup
 #'
 #' A data set containing a lookup between 2011 Middle Super Output Areas (MSOA)
