@@ -851,6 +851,22 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_ltla21_region21"
 
+#' Local Authority District to Region (April 2023) Lookup in England
+#'
+#' A data set containing a lookup between 2023 Local Authority Districts (LAD)
+#' and 2023 English Regions.
+#'
+#' @format A data frame of class "tbl" with 296 rows and 4 variables:
+#' \describe{
+#'   \item{ltla23_name}{LAD name}
+#'   \item{ltla23_code}{LAD code}
+#'   \item{region23_name}{Region name}
+#'   \item{region23_code}{Region code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_ltla23_region23"
+
 #' Local Authority Districts to County and Unitary Authorities lookup (2019).
 #'
 #' A data set containing a lookup between December 2019 Local Authority
