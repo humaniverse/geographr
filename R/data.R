@@ -930,6 +930,22 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_ltla22_ltla23"
 
+#' Lower Tier Local Authority (2023) to Upper Tier Local Authority (2023).
+#'
+#' A data set containing a lookup between Lower Tier Local Authority (2023) to
+#' Upper Tier Local Authority (2023).
+#'
+#' @format A data frame of class "tbl" with 318 rows and 4 variables:
+#' \describe{
+#'   \item{ltla23_code}{LTLA code}
+#'   \item{ltla23_name}{LTLA name}
+#'   \item{utla23_code}{UTLA code}
+#'   \item{utla23_name}{UTLA name}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_ltla23_utla23"
+
 #' Middle Layer Super Output Area (2011) to LAD (December 2019) Lookup
 #'
 #' A data set containing a lookup between 2011 Middle Super Output Areas (MSOA)
