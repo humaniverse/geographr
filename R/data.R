@@ -450,6 +450,20 @@
 #' @source \url{https://digital.nhs.uk/}
 "points_hospitals22"
 
+#' Data Zone (2001) to Data Zone (2011) Lookup
+#'
+#' A data set containing a lookup between Data Zone 2001 and 2011 codes.
+#' This data was constructed from the 2024-1 Scottish Postcode Directory.
+#'
+#' @format A data frame of class "tbl" with 10,437 rows and 2 variables:
+#' \describe{
+#'   \item{dz01_code}{Data Zone code (2001)}
+#'   \item{dz11_code}{Data Zone code (2011)}
+#'   ...
+#' }
+#' @source \url{https://www.nrscotland.gov.uk}
+"lookup_dz01_dz11"
+
 #' Data Zone (2011) to Intermediate Zone (2011) to LAD (December 2019) Lookup
 #'
 #' A data set containing a lookup between Data Zones, Intermediate Zones and Council Areas in Scotland
