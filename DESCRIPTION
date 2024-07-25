@@ -18,6 +18,7 @@ Depends:
 Imports: 
     dplyr,
     janitor,
+    plumber,
     rlang,
     sf,
     tibble

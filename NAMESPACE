@@ -3,6 +3,7 @@
 export(aggregate_lba_lsoas)
 export(calculate_extent)
 export(calculate_proportion)
+export(run_api)
 importFrom(rlang,":=")
 importFrom(rlang,.data)
 importFrom(sf,st_geometry)
