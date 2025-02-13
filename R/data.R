@@ -640,6 +640,25 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_lsoa11_ltla21"
 
+#' Lower Layer Super Output Area (2021) to Ward (2024) to Local Authority District
+#' (2024) Lookup
+#'
+#' A data set containing a lookup between 2021 Lower Super Output Areas (LSOA)
+#' and 2024 Wards and Local Authority Districts.
+#'
+#' @format A data frame of class "tbl" with 35,672 rows and 6 variables:
+#' \describe{
+#'   \item{lsoa21_name}{LSOA name}
+#'   \item{lsoa21_code}{LSOA code}
+#'   \item{ward24_name}{Ward name}
+#'   \item{ward24_code}{Ward code}
+#'   \item{ltla24_name}{LAD name}
+#'   \item{ltla24_code}{LAD code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_lsoa21_ward24_ltla24"
+
 #' Lower Layer Super Output Area (2011) to Middle Layer Super Output Area (2011) Lookup
 #'
 #' A data set containing a lookup between 2011 Lower (LSOA) and Middle Layer Super Output Areas (MSOA).
