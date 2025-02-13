@@ -168,6 +168,21 @@ changes_2023 <-
   mutate(LAD23CD = if_else(is.na(LAD23CD), LAD22CD, LAD23CD)) |>
   mutate(LAD23NM = if_else(is.na(LAD23NM), LAD22NM, LAD23NM))
 
+# Find changes 2023 --> 2024
+changes_2024 <-
+  changes_2023 |>
+  left_join(
+    filter(all_changes, year_prev == 2023),
+    by = c("LAD23CD" = "code_prev")
+  ) |>
+  distinct(LAD23CD,
+           LAD23NM,
+           LAD24CD = code_new,
+           LAD24NM = name_new
+  ) |>
+  mutate(LAD24CD = if_else(is.na(LAD24CD), LAD23CD, LAD24CD)) |>
+  mutate(LAD24NM = if_else(is.na(LAD24NM), LAD23NM, LAD24NM))
+
 # Combine changes
 combined_changes <-
   changes_2017 |>
@@ -200,6 +215,11 @@ combined_changes <-
   full_join(
     changes_2023,
     by = c("LAD22CD", "LAD22NM")
+  ) |>
+
+  full_join(
+    changes_2024,
+    by = c("LAD23CD", "LAD23NM")
   )
 
 # Rename cols
@@ -221,7 +241,9 @@ combined_changes_renamed <-
     ltla22_name = LAD22NM,
     ltla22_code = LAD22CD,
     ltla23_name = LAD23NM,
-    ltla23_code = LAD23CD
+    ltla23_code = LAD23CD,
+    ltla24_name = LAD24NM,
+    ltla24_code = LAD24CD
   )
 
 # Check object is below 50Mb GitHub warning limit

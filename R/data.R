@@ -839,14 +839,26 @@
 #' A data set containing a lookup of the England Local Authority changes
 #' between 2019, 2020 and 2021.
 #'
-#' @format A data frame of class "tbl" with 382 rows and 6 variables:
+#' @format A data frame of class "tbl" with 393 rows and 18 variables:
 #' \describe{
+#'   \item{ltla16_name}{2016 LAD name}
+#'   \item{ltla16_code}{2016 LAD code}
+#'   \item{ltla17_name}{2017 LAD name}
+#'   \item{ltla17_code}{2017 LAD code}
+#'   \item{ltla18_name}{2018 LAD name}
+#'   \item{ltla18_code}{2018 LAD code}
 #'   \item{ltla19_name}{2019 LAD name}
 #'   \item{ltla19_code}{2019 LAD code}
 #'   \item{ltla20_name}{2020 LAD name}
 #'   \item{ltla20_code}{2020 LAD code}
 #'   \item{ltla21_name}{2021 LAD name}
 #'   \item{ltla21_code}{2021 LAD code}
+#'   \item{ltla22_name}{2022 LAD name}
+#'   \item{ltla22_code}{2022 LAD code}
+#'   \item{ltla23_name}{2023 LAD name}
+#'   \item{ltla23_code}{2023 LAD code}
+#'   \item{ltla24_name}{2024 LAD name}
+#'   \item{ltla24_code}{2024 LAD code}
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/datasets/code-history-database-december-2021-for-the-united-kingdom/about}
