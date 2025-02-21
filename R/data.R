@@ -533,6 +533,23 @@
 #' @source \url{https://nisra.gov.uk/}
 "lookup_dz21_sdz21_dea14_lgd14"
 
+#' Lower Layer Super Output Area 2001 to 2011 lookup
+#'
+#' A best fit lookup between lower layer super output areas as at December 2001
+#' and lower layer super output areas and local authority districts as at December
+#' 2011 in England and Wales.
+#'
+#' @format A data frame of class "tbl" with 34,917 rows and 5 variables:
+#' \describe{
+#'   \item{lsoa01_name}{LSOA 2001 name}
+#'   \item{lsoa01_code}{LSOA 2001 code}
+#'   \item{change_code}{U = no change; S = split; M = merged; X = an irregular
+#'   and fragmented relationship}
+#'   \item{lsoa11_name}{LSOA 2011 name}
+#'   \item{lsoa11_code}{LSOA 2011 code}
+#' }
+"lookup_lsoa01_lsoa11"
+
 #' Lower Layer Super Output Area (2011) to Clinical Commissioning Group (2021)
 #' to Sustainability and Transformation Plan (2021) to Lower Tier Local
 #' Authority District (2021) Lookup
