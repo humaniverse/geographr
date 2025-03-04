@@ -1283,6 +1283,28 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_postcode_oa21_lsoa21_msoa21_ltla22"
 
+#' Postcode (2025) to Output Area (2011 and 2021) to Lower Layer Super Output Area
+#' (2011 and 2021) to Middle Layer Super Output Area (2011 and 2021) to Local
+#' Authority District (2024) Lookup
+#'
+#' A data set containing a lookup between postcodes, OAs, LSOAs, MSOAs, and
+#' Local Authority Districts for the UK.
+#'
+#' @format A data frame of class "tbl" with 2,712,506 rows and 8 variables:
+#' \describe{
+#'   \item{postcode}{Postcodes}
+#'   \item{oa11_code}{OA 2011 code}
+#'   \item{lsoa11_code}{LSOA 2011 code}
+#'   \item{msoa11_code}{MSOA 2011 code}
+#'   \item{oa21_code}{OA 2021 code}
+#'   \item{lsoa21_code}{LSOA 2021 code}
+#'   \item{msoa21_code}{MSOA 2021 code}
+#'   \item{ltla24_code}{Local Authority District 2024 code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_postcode_oa_lsoa_msoa_ltla_2025"
+
 #' Small Areas (2011) to SOAs to Local Government Districts (December 2018)
 #'   Lookup with Area Classifications in Northern Ireland
 #'
