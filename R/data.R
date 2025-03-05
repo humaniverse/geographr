@@ -819,6 +819,22 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_ltla21_fra21"
 
+#' Local Authority Districts to Fire and Rescue Authorities lookup (2024).
+#'
+#' A data set containing a lookup between April 2024 Local Authority
+#' Fire and Rescue Authorities (FRA)
+#'
+#' @format A data frame of class "tbl" with 318 rows and 4 variables:
+#' \describe{
+#'   \item{ltla24_name}{LAD name}
+#'   \item{ltla24_code}{LAD code}
+#'   \item{fra24_name}{FRA name}
+#'   \item{fra24_code}{FRA code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_ltla24_fra24"
+
 #' Local Government District (2021) to Health and Social Care Trust (2018) Lookup
 #'
 #' A data set containing a lookup between Local Authorities (also
