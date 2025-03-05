@@ -36,5 +36,12 @@ lookup_postcode_oa_lsoa_msoa_ltla_2025 <-
     ltla24_code = oslaua
   )
 
+# Keep distinct values and clean postcode column
+lookup_postcode_oa_lsoa_msoa_ltla_2025 <-
+  lookup_postcode_oa_lsoa_msoa_ltla_2025 |>
+  mutate(postcode = str_to_upper(postcode)) |>
+  mutate(postcode = str_remove_all(postcode, " ")) |>
+  distinct()
+
 # Save output to data/ folder
 usethis::use_data(lookup_postcode_oa_lsoa_msoa_ltla_2025, overwrite = TRUE)
