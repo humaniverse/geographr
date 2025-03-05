@@ -1245,44 +1245,6 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_postcode_dz21_sdz21_dea14_lgd14"
 
-#' Postcode to Output Area (2011) to Lower Layer Super Output Area (2011) to
-#'   Middle Layer Super Output Area (2011) to Local Authority District (2020)
-#'   Lookup
-#'
-#' A data set containing a lookup between postcodes, OAs, LSOAs, MSOAs, and
-#' 2020 Local Authority Districts, for England, Wales, and Scotland.
-#'
-#' @format A data frame of class "tbl" with 2,568,780 rows and 5 variables:
-#' \describe{
-#'   \item{postcode}{Postcodes}
-#'   \item{oa11_code}{OA code}
-#'   \item{lsoa11_code}{LSOA code}
-#'   \item{msoa11_code}{MSOA code}
-#'   \item{ltla20_code}{LAD code}
-#'   ...
-#' }
-#' @source \url{https://geoportal.statistics.gov.uk/}
-"lookup_postcode_oa11_lsoa11_msoa11_ltla20"
-
-#' Postcode to Output Area (2021) to Lower Layer Super Output Area (2021) to
-#'   Middle Layer Super Output Area (2021) to Local Authority District (2022)
-#'   Lookup
-#'
-#' A data set containing a lookup between postcodes, OAs, LSOAs, MSOAs, and
-#' 2022 Local Authority Districts, for England, Wales, and Scotland.
-#'
-#' @format A data frame of class "tbl" with 2,600,236 rows and 5 variables:
-#' \describe{
-#'   \item{postcode}{Postcodes}
-#'   \item{oa21_code}{OA code}
-#'   \item{lsoa21_code}{LSOA code}
-#'   \item{msoa21_code}{MSOA code}
-#'   \item{ltla22_code}{LAD code}
-#'   ...
-#' }
-#' @source \url{https://geoportal.statistics.gov.uk/}
-"lookup_postcode_oa21_lsoa21_msoa21_ltla22"
-
 #' Postcode (2025) to Output Area (2011 and 2021) to Lower Layer Super Output Area
 #' (2011 and 2021) to Middle Layer Super Output Area (2011 and 2021) to Local
 #' Authority District (2024) Lookup
