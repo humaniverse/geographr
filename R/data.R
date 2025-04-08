@@ -136,6 +136,23 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_lsoa11"
 
+#' Lower Layer Super Output Areas (2021)
+#'
+#' A data set containing 2021 Lower Super Output Area (LSOA) geometries and
+#' their associated names and codes. Full clipped boundaries were simplified
+#' using the Visvalingam algorithm set to a weighting of 0.7 with a retaining
+#' proportion of 0.895 points.
+#'
+#' @format A data frame of class "sf" with 35,672 rows and 3 variables:
+#' \describe{
+#'   \item{lsoa21_name}{LSOA name}
+#'   \item{lsoa21_code}{LSOA code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"boundaries_lsoa21"
+
 #' Local Authority Districts (December 2019)
 #'
 #' A data set containing 2019 Local Authority Districts (LAD) geometries and
