@@ -836,6 +836,27 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_ltla21_fra21"
 
+#' Local Authority Districts to Community Safety Partnership to Police Force
+#' Area lookup (2024)
+#'
+#' A data set containing a lookup between November 2024 Local Authority,
+#' Community Safety Partnership (CSP), and Police Force Areas (PFA) in England
+#' and Wales.
+#'
+#' @format A data frame of class "tbl" with 332 rows and 6 variables:
+#' \describe{
+#' \item{ltla24_code}{LAD code}
+#' \item{ltla24_name}{LAD name}
+#' \item{csp24_code}{CSP code}
+#' \item{csp24_name}{CSP name}
+#' \item{pfa24_code}{PFA code}
+#' \item{pfa24_name}{PFA name}
+#' ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/datasets/ons::lad-to-community-safety-partnership-to-pfa-december-2024-lookup-in-ew/explore}
+"lookup_ltla24_csp24_pfa24"
+
+
 #' Local Authority Districts to Fire and Rescue Authorities lookup (2024).
 #'
 #' A data set containing a lookup between April 2024 Local Authority
