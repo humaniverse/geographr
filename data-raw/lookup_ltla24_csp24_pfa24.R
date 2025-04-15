@@ -35,4 +35,3 @@ lookup_ltla24_csp24_pfa24 <- ltla24_csp24_pfa24
 
 # Save output to data/ folder
 usethis::use_data(lookup_ltla24_csp24_pfa24, overwrite = TRUE)
-
