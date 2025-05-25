@@ -483,6 +483,25 @@
 #' @source \url{https://digital.nhs.uk/}
 "points_hospitals22"
 
+#' NHS Scotland Hopsitals (2024)
+#'
+#' A data set containing 2024 NHS Scotland hospital point geometries (i.e.,
+#' lat/long coordinates) and their associated names and addresses.
+#'
+#' @format A data frame of class "sf" with 309 rows and 7 variables:
+#' \describe{
+#'   \item{scotland_hospital24_code}{NHS Scotland hospital code}
+#'   \item{scotland_hospital24_name}{NHS Scotland hospital name}
+#'   \item{hb19_code}{Health Board code}
+#'   \item{hb19_name}{Health Board name}
+#'   \item{postcode}{Postcode}
+#'   \item{address}{Address}
+#'   \item{geometry}{point coordinates}
+#'   ...
+#' }
+#' @source \url{https://data.spatialhub.scot/}
+"points_scotland_hospitals24"
+
 #' Data Zone (2001) to Data Zone (2011) Lookup
 #'
 #' A data set containing a lookup between Data Zone 2001 and 2011 codes.
