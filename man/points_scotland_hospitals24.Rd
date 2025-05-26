@@ -25,6 +25,8 @@ points_scotland_hospitals24
 }
 \description{
 A data set containing 2024 NHS Scotland hospital point geometries (i.e.,
-lat/long coordinates) and their associated names and addresses.
+lat/long coordinates) and their associated names and addresses. Note that
+this data set contains the 14 standard regional boards, plus three additional
+special boards as described at \url{https://www.scot.nhs.uk/organisations/}.
 }
 \keyword{datasets}

@@ -486,7 +486,9 @@
 #' NHS Scotland Hopsitals (2024)
 #'
 #' A data set containing 2024 NHS Scotland hospital point geometries (i.e.,
-#' lat/long coordinates) and their associated names and addresses.
+#' lat/long coordinates) and their associated names and addresses. Note that
+#' this data set contains the 14 standard regional boards, plus three additional
+#' special boards as described at [https://www.scot.nhs.uk/organisations/](https://www.scot.nhs.uk/organisations/).
 #'
 #' @format A data frame of class "sf" with 309 rows and 7 variables:
 #' \describe{
