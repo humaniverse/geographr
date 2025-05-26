@@ -23,6 +23,10 @@ hospitals <- hospitals |>
     geometry
   )
 
+# Align hb names with other geographr::boundaries_hb19
+hospitals <- hospitals |>
+  mutate(hb19_name = str_remove(hb19_name, "^NHS "))
+
 # Make sure geometries are valid
 hospitals <- st_make_valid(hospitals)
 
