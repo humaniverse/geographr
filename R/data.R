@@ -119,6 +119,36 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "boundaries_lhb22"
 
+#' England and Wales Local Resilience Forums (2020)
+#'
+#' A data set containing 2020 Local Resilience Forum geometries for England and Wales and their
+#' associated names and codes.
+#'
+#' @format A data frame of class "sf" with 42 rows and 3 variables:
+#' \describe{
+#'   \item{lrf20_name}{Local Resilience Forum name}
+#'   \item{lrf20_code}{Local Resilience Forum code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"boundaries_lrf20"
+
+#' Scotland Local Resilience Partnerships (2019)
+#'
+#' A data set containing 2019 Local Resilience Partnership geometries for Scotland and their
+#' associated names and codes.
+#'
+#' @format A data frame of class "sf" with 12 rows and 3 variables:
+#' \describe{
+#'   \item{lrp19_name}{Local Resilience Partnership name}
+#'   \item{lrp19_code}{Local Resilience Partnership code}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://data.gov.uk/}
+"boundaries_lrp19"
+
 #' Lower Layer Super Output Areas (2011)
 #'
 #' A data set containing 2011 Lower Super Output Area (LSOA) geometries and
