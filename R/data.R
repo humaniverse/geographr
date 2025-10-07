@@ -44,6 +44,20 @@
 #' @source \url{https://spatialdata.gov.scot/}
 "boundaries_dz11"
 
+#' Emergency Preparedness Groups, Northern Ireland (2004)
+#'
+#' A data set containing 2004 NI Emergency Preparedness Group geometries and their associated
+#' names. Boundaries created by dissolving LGD geometries, from ONS.
+#'
+#' @format A data frame of class "sf" with 3 rows and 2 variables:
+#' \describe{
+#'   \item{epg04_name}{Emergency Preparedness Greoup name}
+#'   \item{geometry}{multipolygon coordinates}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk//}
+"boundaries_epg04"
+
 #' Health Boards (2019)
 #'
 #' A data set containing 2019 NHS Health Board geometries and their associated
@@ -1452,11 +1466,11 @@
 #'
 #' A data set containing a lookup between SOA and LGD in Northern Ireland.
 #'
-#' @format A data frame of class "tbl" with 13,865 rows and 2 variables:
+#' @format A data frame of class "tbl" with 890 rows and 3 variables:
 #' \describe{
 #'   \item{soa01_code}{Super Output Area 2001 code}
 #'   \item{lgd14_code}{Local Government District 2014 code}
-#'   \item{ldg14_name}{Local Government District 2014 name}
+#'   \item{lgd14_name}{Local Government District 2014 name}
 #'   ...
 #' }
 #' @source \url{https://www.nisra.gov.uk/publications/geography-lookup-tables}
