@@ -5,11 +5,11 @@
 \alias{lookup_soa01_lgd14}
 \title{SOA (2001) to LGD (2014) Lookup}
 \format{
-A data frame of class "tbl" with 13,865 rows and 2 variables:
+A data frame of class "tbl" with 890 rows and 3 variables:
 \describe{
 \item{soa01_code}{Super Output Area 2001 code}
 \item{lgd14_code}{Local Government District 2014 code}
-\item{ldg14_name}{Local Government District 2014 name}
+\item{lgd14_name}{Local Government District 2014 name}
 ...
 }
 }
