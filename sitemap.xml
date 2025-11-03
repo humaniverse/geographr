@@ -75,6 +75,7 @@
 <url><loc>https://humaniverse.github.io/geographr/reference/lookup_ltla23_utla23.html</loc></url>
 <url><loc>https://humaniverse.github.io/geographr/reference/lookup_ltla24_csp24_pfa24.html</loc></url>
 <url><loc>https://humaniverse.github.io/geographr/reference/lookup_ltla24_fra24.html</loc></url>
+<url><loc>https://humaniverse.github.io/geographr/reference/lookup_ltla24_region24.html</loc></url>
 <url><loc>https://humaniverse.github.io/geographr/reference/lookup_ltla_ltla.html</loc></url>
 <url><loc>https://humaniverse.github.io/geographr/reference/lookup_msoa11_ltla19.html</loc></url>
 <url><loc>https://humaniverse.github.io/geographr/reference/lookup_msoa11_ltla20.html</loc></url>
@@ -101,5 +102,8 @@
 <url><loc>https://humaniverse.github.io/geographr/reference/ruc11_msoa11.html</loc></url>
 <url><loc>https://humaniverse.github.io/geographr/reference/ruc11_wards11.html</loc></url>
 <url><loc>https://humaniverse.github.io/geographr/reference/ruc16_dz11.html</loc></url>
+<url><loc>https://humaniverse.github.io/geographr/reference/ruc21_lsoa21.html</loc></url>
+<url><loc>https://humaniverse.github.io/geographr/reference/ruc21_ltla24.html</loc></url>
+<url><loc>https://humaniverse.github.io/geographr/reference/ruc21_msoa21.html</loc></url>
 </urlset>
 
