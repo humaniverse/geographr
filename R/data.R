@@ -1048,6 +1048,22 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_ltla21_region21"
 
+#' Local Authority District to Region (April 2024) Lookup in England
+#'
+#' A data set containing a lookup between 2024 Local Authority Districts (LAD)
+#' and 2024 English Regions.
+#'
+#' @format A data frame of class "tbl" with 296 rows and 4 variables:
+#' \describe{
+#'   \item{ltla24_name}{LAD name}
+#'   \item{ltla24_code}{LAD code}
+#'   \item{region24_name}{Region name}
+#'   \item{region24_code}{Region code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_ltla24_region24"
+
 #' Local Authority Districts to County and Unitary Authorities lookup (2019).
 #'
 #' A data set containing a lookup between December 2019 Local Authority
@@ -1521,6 +1537,23 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "ruc11_lsoa11"
 
+#' Rural-Urban Classifications for Lower Layer Super Output Areas (2021) in
+#' England and Wales
+#'
+#' A data set containing rural-urban classifications for LSOAs in England and
+#' Wales.
+#'
+#' @format A data frame of class "tbl" with 35,672 rows and 4 variables:
+#' \describe{
+#'   \item{lsoa21_code}{LSOA code}
+#'   \item{ruc21_code}{Rural-Urban Classification code}
+#'   \item{ruc}{Whether the LSOA is classified as 'Rural' or 'Urban'}
+#'   \item{classification}{A more detailed description of the classification}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"ruc21_lsoa21"
+
 #' Rural-Urban Classifications for Middle Layer Super Output Areas (2011) in
 #' England and Wales
 #'
@@ -1538,6 +1571,23 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "ruc11_msoa11"
 
+#' Rural-Urban Classifications for Middle Layer Super Output Areas (2021) in
+#' England and Wales
+#'
+#' A data set containing rural-urban classifications for MSOAs in England and
+#' Wales.
+#'
+#' @format A data frame of class "tbl" with 7,264 rows and 4 variables:
+#' \describe{
+#'   \item{msoa21_code}{MSOA code}
+#'   \item{ruc21_code}{Rural-Urban Classification code}
+#'   \item{ruc}{Whether the MSOA is classified as 'Rural' or 'Urban'}
+#'   \item{classification}{A more detailed description of the classification}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"ruc21_msoa21"
+
 #' Rural-Urban Classifications for wards (2011) in England and Wales
 #'
 #' A data set containing rural-urban classifications for wards in England and
@@ -1553,3 +1603,19 @@
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "ruc11_wards11"
+
+#' Rural-Urban Classifications for Local Authorities (2024) in England and Wales
+#'
+#' A data set containing rural-urban classifications for Local Authorities in England and
+#' Wales.
+#'
+#' @format A data frame of class "tbl" with 318 rows and 4 variables:
+#' \describe{
+#'   \item{ltla24_code}{Local Authority code}
+#'   \item{ruc21_code}{Rural-Urban Classification code}
+#'   \item{ruc}{Whether the Local Authority is classified as 'Rural' or 'Urban'}
+#'   \item{classification}{A more detailed description of the classification}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"ruc21_ltla24"
