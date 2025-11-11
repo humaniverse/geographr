@@ -758,6 +758,24 @@
 #' @source \url{https://geoportal.statistics.gov.uk/}
 "lookup_lsoa21_ward24_ltla24"
 
+#' LSOA (2021) to SICBL to ICB to Cancer Alliances to LAD (April 2024) Lookup
+#'
+#' A data set containing a lookup between LSOA (2021), Sub Integrated Care Board
+#' Locations (SICBL) and Integrated Care Boards (ICB).
+#'
+#' @format A data frame of class "tbl" with 33,755 rows and 6 variables:
+#' \describe{
+#'   \item{lsoa21_name}{LSOA name}
+#'   \item{lsoa21_code}{LSOA code}
+#'   \item{sicbl24_name}{Sub Integrated Care Board Location name}
+#'   \item{sicbl24_code}{Sub Integrated Care Board Location code}
+#'   \item{icb24_name}{Integrated Care Board name}
+#'   \item{icb24_code}{Integrated Care Board code}
+#'   ...
+#' }
+#' @source \url{https://geoportal.statistics.gov.uk/}
+"lookup_lsoa21_icb24"
+
 #' Lower Layer Super Output Area (2011) to Middle Layer Super Output Area (2011) Lookup
 #'
 #' A data set containing a lookup between 2011 Lower (LSOA) and Middle Layer Super Output Areas (MSOA).
