@@ -29,6 +29,10 @@ A data frame of class "tbl" with 33,755 rows and 6 variables:
 
   Sub Integrated Care Board Location code
 
+- sicbl24_code_nhs:
+
+  Sub Integrated Care Board Location NHS code
+
 - icb24_name:
 
   Integrated Care Board name
@@ -36,6 +40,10 @@ A data frame of class "tbl" with 33,755 rows and 6 variables:
 - icb24_code:
 
   Integrated Care Board code
+
+- icb24_code_nhs:
+
+  Integrated Care Board NHS code
 
 ## Source
 
