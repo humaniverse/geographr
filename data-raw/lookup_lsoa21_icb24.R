@@ -25,8 +25,10 @@ lookup_lsoa21_icb24 <-
     lsoa21_code = LSOA21CD,
     sicbl24_name = SICBL24NM,
     sicbl24_code = SICBL24CD,
-    icb24_name = ICB24CDH,
-    icb24_code = ICB24CD
+    sicbl24_code_nhs = SICBL24CDH,
+    icb24_name = ICB24NM,
+    icb24_code = ICB24CD,
+    icb24_code_nhs = ICB24CDH
   )
 
 # Save output to data/ folder

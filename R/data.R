@@ -769,8 +769,10 @@
 #'   \item{lsoa21_code}{LSOA code}
 #'   \item{sicbl24_name}{Sub Integrated Care Board Location name}
 #'   \item{sicbl24_code}{Sub Integrated Care Board Location code}
+#'   \item{sicbl24_code_nhs}{Sub Integrated Care Board Location NHS code}
 #'   \item{icb24_name}{Integrated Care Board name}
 #'   \item{icb24_code}{Integrated Care Board code}
+#'   \item{icb24_code_nhs}{Integrated Care Board NHS code}
 #'   ...
 #' }
 #' @source \url{https://geoportal.statistics.gov.uk/}
