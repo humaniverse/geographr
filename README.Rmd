@@ -35,7 +35,12 @@ You can install the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
+# for versions of devtools earlier than 2.5.0 use `install_github()`
 devtools::install_github("humaniverse/geographr")
+
+# If you have devtools version 2.5.0 or greater use `pak`
+pak::pak("humaniverse/geographr")
+
 ```
 
 ## Development
