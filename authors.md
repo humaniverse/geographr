@@ -12,14 +12,14 @@
 
 ## Citation
 
-Thomas M, McDonald A (2025). *geographr: R package for mapping UK
+Thomas M, McDonald A (2026). *geographr: R package for mapping UK
 geographies*. R package version 1.0.1,
 <https://humaniverse.github.io/geographr/>.
 
     @Manual{,
       title = {geographr: R package for mapping UK geographies},
       author = {Matt Thomas and Aileen McDonald},
-      year = {2025},
+      year = {2026},
       note = {R package version 1.0.1},
       url = {https://humaniverse.github.io/geographr/},
     }
